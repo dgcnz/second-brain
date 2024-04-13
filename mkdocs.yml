@@ -1,6 +1,4 @@
-site_name: obsidian-mkdocs template
-# theme:
-#     name: simple-blog
+site_name: AI Notes
 theme:
   name: material
   palette:
@@ -13,12 +11,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - footnotes
-  # - attr_list
   - pymdownx.arithmatex:
       generic: true
-  # - pymdownx.superfences
-  # - pymdownx.details
-  # - pymdownx.magiclink
   - pymdownx.tasklist:
       custom_checkbox: true
   - def_list
@@ -41,13 +35,6 @@ plugins:
   - roamlinks
   - blog
   - callouts
-  # - rss:
-  #     match_path: blog/posts/.* 
-  #     date_from_meta:
-  #       as_creation: date
-  #     categories:
-  #       - categories
-  #       - tags
 
 extra_javascript:
   - javascripts/mathjax.js
