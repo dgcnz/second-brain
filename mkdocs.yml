@@ -2,9 +2,10 @@ site_name: obsidian-mkdocs template
 # theme:
 #     name: simple-blog
 theme:
-  name: 'material'
+  name: material
   palette:
-    scheme: slate
+    primary: white
+    accent: blue
 
 markdown_extensions:
   - nl2br

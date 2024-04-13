@@ -4,6 +4,7 @@
 locally optimal solution
 
 
+
 Variants:
 - robust kernel to give less weight to outliers
 - point-to-plane metrics (instead of ponit-to-point) works better for surfaces
