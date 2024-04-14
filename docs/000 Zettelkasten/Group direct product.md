@@ -10,4 +10,4 @@ $$
 (g_1, h_1) \cdot (g_2, h_2) = (g_1 * g_2, h_1 \Delta h_2)
 $$
 
-The resulting algebraic object satisfies the [[Group Axioms|Group Axioms]].
+The resulting algebraic object satisfies the [[./Group Axioms|Group Axioms]].
