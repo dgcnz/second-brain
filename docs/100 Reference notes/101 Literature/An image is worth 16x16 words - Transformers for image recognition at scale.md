@@ -21,5 +21,5 @@ TODO:
 
 Interesting insight about Hybrid ViTs (40 conv layers + transformer blocks): 
 - It is better on small data regimes but shows no improvement on large data regimes.
-![[../../images/vit_vs_resnet_accuracy.png|vit_vs_resnet_accuracy.png]]
+![[vit_vs_resnet_accuracy.png|vit_vs_resnet_accuracy.png]]
 
