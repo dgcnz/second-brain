@@ -34,7 +34,6 @@ plugins:
   - search
   - roamlinks
   - callouts
-  - meta
   - tags
 
 
