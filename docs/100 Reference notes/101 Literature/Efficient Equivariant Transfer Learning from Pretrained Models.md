@@ -10,6 +10,7 @@ Builds on top of [[Equi-Tuning - Group Equivariant Fine-Tuning of Pretrained Mod
 
 > [!done] Main idea
 > Lambda-Equitune: Weighted average with learned weights, $\lambda$.
+> 
 > $$
 > M_G^\lambda(x) = \frac{1}{\sum_{g \in G} \lambda(gx)} \sum_{g \in G} \lambda(gx) g^{-1} M(gx) 
 > $$
