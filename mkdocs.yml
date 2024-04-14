@@ -34,6 +34,9 @@ plugins:
   - search
   - roamlinks
   - callouts
+  - meta
+  - tags
+
 
 extra_javascript:
   # - javascripts/mathjax.js
