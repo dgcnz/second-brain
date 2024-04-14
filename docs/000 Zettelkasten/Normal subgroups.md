@@ -1,1 +1,0 @@
-Invariant/self-conjugate subgroup
