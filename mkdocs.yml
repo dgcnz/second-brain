@@ -11,6 +11,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - footnotes
+  - tables
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.tasklist:
