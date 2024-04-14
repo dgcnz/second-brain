@@ -21,7 +21,7 @@ share: true
 
 >[!done] Main idea
 > Replace patchify convolution with a small number of convolutional layers and drop one transformer block to make comparison fair.
-![[../../images/vitc_vs_vitp.png|vitc_vs_vitp.png]]
+![[vitc_vs_vitp.png|vitc_vs_vitp.png]]
 
 Notes for myself:
 - Interesting experimentation regarding #optimizability , maybe take into account into hessian analysis
