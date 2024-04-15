@@ -33,8 +33,6 @@ markdown_extensions:
 
 plugins:
   - mkdocs_frontmatter_plugin
-    exclude:
-      - share
   - search
   - roamlinks
   - callouts
