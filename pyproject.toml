@@ -13,7 +13,7 @@ mkdocs-simple-blog = "^0.0.9"
 mkdocs-material = "^9.5.17"
 mkdocs-roamlinks-plugin = "^0.3.2"
 mkdocs-rss-plugin = "^1.12.1"
-mkdocs-frontmatter-plugin = "0.1.1"
+mkdocs-frontmatter-plugin = "0.1.2"
 
 
 [build-system]
