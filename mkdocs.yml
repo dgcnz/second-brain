@@ -32,11 +32,11 @@ markdown_extensions:
       permalink: true
 
 plugins:
+  - mkdocs_frontmatter_plugin
   - search
   - roamlinks
   - callouts
   - tags
-  - mkdocs_frontmatter_plugin
 
 
 extra_javascript:
