@@ -393,13 +393,13 @@ tests = ["pytest"]
 
 [[package]]
 name = "mkdocs-frontmatter-plugin"
-version = "0.1.3"
+version = "0.1.4"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "mkdocs_frontmatter_plugin-0.1.3-py3-none-any.whl", hash = "sha256:85001e50738211f413f7c5e0213e20c2eb1da92ddfbc0fbe6b6a41e0a3346fba"},
-    {file = "mkdocs_frontmatter_plugin-0.1.3.tar.gz", hash = "sha256:265791a4c294b615cc3073985a432ffa4060b66497319d646851ba1dc006070c"},
+    {file = "mkdocs_frontmatter_plugin-0.1.4-py3-none-any.whl", hash = "sha256:d9a71f43177ea97bb6c7d57efaf8a988d32f6ebc2e3ee80c85b5d5349031ba4e"},
+    {file = "mkdocs_frontmatter_plugin-0.1.4.tar.gz", hash = "sha256:ade53a81876aa8ab501bf2efd2cbbbef78a5b0d6b2ddd7f8293cd0cdf1239e00"},
 ]
 
 [package.dependencies]
@@ -898,4 +898,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "d0173285771643d2e0faa313ae69ad7dfeb6c41f929d01acd193d22944fc3195"
+content-hash = "5955238e21ec4ac4842617f0e2792cf24f7f0022aeb8ab7d43457e776a2407d3"
