@@ -36,6 +36,7 @@ plugins:
   - roamlinks
   - callouts
   - tags
+  - mkdocs_frontmatter_plugin
 
 
 extra_javascript:

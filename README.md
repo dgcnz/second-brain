@@ -1,1 +1,2 @@
-# AI Notes
+# Second Brain
+
