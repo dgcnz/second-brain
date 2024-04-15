@@ -1,5 +1,7 @@
 ---
 share: true
+tags:
+  - optimizability
 ---
 
 - Remember: If a Hessian matrix is positive definite everywhere, then the function is convex => bad neg eigenvalues
