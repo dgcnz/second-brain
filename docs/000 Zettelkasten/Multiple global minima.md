@@ -16,4 +16,4 @@ The above modifications all produce the same output for every input. However, th
 **In overparameterized networks, there will also be families of solutions that behave identically at the data points but differently between them. All of these are also global minima.**
 
 References:
-- [[Understanding Deep Learning|Understanding Deep Learning]] (20.3.1)
+- [[Understanding Deep Learning - Chapter 20|Understanding Deep Learning - Chapter 20]] (20.3.1)

@@ -13,6 +13,9 @@ authors:
   - "[[Jakob Uszkoreit|Jakob Uszkoreit]]"
   - "[[Neil Houlsby|Neil Houlsby]]"
 share: true
+tags:
+  - vit
+  - transformers
 ---
 
 TODO: 
