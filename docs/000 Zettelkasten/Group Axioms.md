@@ -1,5 +1,7 @@
 ---
 share: true
+tags:
+  - math
 ---
 
 A group is a non-empty set $G$ together with a binary operation on $G$ ($\cdot$), that fulfills the following axioms:

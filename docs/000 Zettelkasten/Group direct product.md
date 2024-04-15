@@ -1,5 +1,7 @@
 ---
 share: true
+tags:
+  - math
 ---
 
 Given groups $G$ (with operation \*) and $H$ (with operation $\Delta$), the **direct product** $G \times H$ is defined as follows:
