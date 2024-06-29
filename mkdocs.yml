@@ -6,6 +6,8 @@ theme:
       primary: custom
   font: false
   language: en
+  locale: en
+
 
 
 markdown_extensions:
