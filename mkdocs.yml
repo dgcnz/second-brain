@@ -1,13 +1,13 @@
-site_name: AI Notes
+site_name: Second Brain
+site_url: https://dgcnz.github.io/ai-notes/
 theme:
   name: material
-  palette:
-    primary: white
-    accent: blue
+  palette: 
+    primary: custom
+  font: false
+
 
 markdown_extensions:
-  - blog:
-    post_dir: "100 Reference notes/101 Literature"
   - nl2br
   - admonition
   - pymdownx.details
@@ -24,6 +24,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.magiclink
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -34,12 +35,19 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - mkdocs_frontmatter_plugin
+  - mkdocs_frontmatter_plugin:
+      exclude:
+        - share
+        - tags
   - search
   - roamlinks
   - callouts
   - tags
-
+  - git-revision-date-localized:
+      type: timeago
+  - blogging:
+      dirs: # The directories to be included
+        - .
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -49,4 +57,8 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
 
 extra_css:
+  - https://fonts.cdnfonts.com/css/sf-pro-display
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - https://fonts.cdnfonts.com/css/sf-mono
+  - stylesheets/extra.css
+
