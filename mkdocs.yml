@@ -6,6 +6,8 @@ theme:
     accent: blue
 
 markdown_extensions:
+  - blog:
+    post_dir: "100 Reference notes/101 Literature"
   - nl2br
   - admonition
   - pymdownx.details
