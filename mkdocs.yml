@@ -50,7 +50,8 @@ plugins:
       type: timeago
   - blogging:
       dirs: # The directories to be included
-        - .
+        - "000 Zettelkasten"
+        - "100 Reference notes/101 Literature"
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
