@@ -1,14 +1,18 @@
 :root {
     --base-border-radius: 0.5rem;
+    --md-text-font: "SF Pro Display";
+    --md-code-font: "SF Mono";
+    --md-primary-fg-color:#000000;
+    --md-accent-fg-color: #0071e3; 
   }
 
 .md-content {
-  --md-typeset-a-color: #0071e3;
+    --md-typeset-a-color: #0071e3;
 }
 
   
-  /* Change font family of filename present on top of code block. */
-  .highlight span.filename {
+/* Change font family of filename present on top of code block. */
+.highlight span.filename {
     border-bottom: none;
     border-radius: var(--base-border-radius);
     display: inline;
@@ -17,92 +21,85 @@
     border-bottom-right-radius: 0;
     margin-bottom: 5px;
     text-align: center;
-  }
-  .highlight span.filename + pre > code {
+}
+.highlight span.filename + pre > code {
     border-radius: var(--base-border-radius);
     border-top-left-radius: 0;
-  }
-  .md-typeset pre > code {
+}
+.md-typeset pre > code {
     border-radius: var(--base-border-radius);
-  }
-  span.md-tag  {
+}
+span.md-tag  {
     background-color: white !important;  
     color: #0071e3 !important;
     border: 1px solid #0071e3 !important;
-  }
-  
-  /* Grid Cards */
-  .md-typeset .grid.cards > ul > li {
+}
+
+/* Grid Cards */
+.md-typeset .grid.cards > ul > li {
     border-radius: var(--base-border-radius);
-  }
-  .md-typeset .grid.cards > ul > li:hover {
-    box-shadow: 0 0 0.2rem #ffffff40;
-  }
-  
-  /* Markdown Button */
-  .md-typeset .md-button {
+}
+.md-typeset .grid.cards > ul > li:hover {
+        box-shadow: 0 0 0.2rem #ffffff40;
+}
+
+/* Markdown Button */
+.md-typeset .md-button {
     border-radius: var(--base-border-radius);
-  }
-  
-  /* Critic, Mark */
-  ins.critic,
-  del.critic {
+}
+
+/* Critic, Mark */
+ins.critic,
+del.critic {
     text-decoration: none;
-  }
-  
-  .md-typeset .critic,
-  .md-typeset mark {
+}
+
+.md-typeset .critic,
+.md-typeset mark {
     border-radius: 0.2rem;
     padding: 0 0.2rem;
-  }
-  
-  .md-typeset mark {
+}
+
+.md-typeset mark {
     box-shadow: 0 0 0 0.1rem var(--md-typeset-mark-color);
-  }
-  
-  .md-typeset ins.critic {
+}
+
+.md-typeset ins.critic {
     box-shadow: 0 0 0 0.1rem var(--md-typeset-ins-color);
-  }
-  
-  .md-typeset del.critic {
+}
+
+.md-typeset del.critic {
     box-shadow: 0 0 0 0.1rem var(--md-typeset-del-color);
-  }
-  
-  /* Forms */
-  .md-search__form {
+}
+
+/* Forms */
+.md-search__form {
     border-radius: var(--base-border-radius);
-  }
-  
-  [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
     border-top-right-radius: var(--base-border-radius);
     border-top-left-radius: var(--base-border-radius);
-  }
-  
-  [dir="ltr"] .md-search__output {
+}
+
+[dir="ltr"] .md-search__output {
     border-bottom-right-radius: var(--base-border-radius);
     border-bottom-left-radius: var(--base-border-radius);
-  }
-  
-  /* Blog - index.md */
-  .md-post--excerpt {
+}
+
+/* Blog - index.md */
+.md-post--excerpt {
     background-color: var(--md-accent-fg-color--transparent);
     box-shadow: 0 0 0 1rem var(--md-accent-fg-color--transparent);
     border-radius: var(--base-border-radius);
-  }
-  
-  /* Table */
-  .md-typeset table:not([class]) {
-    border-radius: var(--base-border-radius);
-  }
+}
 
-  th {
+/* Table */
+.md-typeset table:not([class]) {
+    border-radius: var(--base-border-radius);
+}
+
+th {
     background-color: #f2f2f2;
     color: black;
-  }
-
-  :root {
-    --md-text-font: "SF Pro Display";
-    --md-code-font: "SF Mono";
-    --md-primary-fg-color:#000000;
-    --md-accent-fg-color: #0071e3; 
-  }
+}

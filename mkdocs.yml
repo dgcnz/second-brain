@@ -3,7 +3,7 @@ site_url: https://dgcnz.github.io/second-brain/
 theme:
   name: material
   palette: 
-    primary: custom
+      primary: custom
   font: false
 
 
@@ -57,8 +57,8 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
 
 extra_css:
-  - https://fonts.cdnfonts.com/css/sf-pro-display
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - https://fonts.cdnfonts.com/css/sf-pro-display
   - https://fonts.cdnfonts.com/css/sf-mono
   - stylesheets/extra.css
 
