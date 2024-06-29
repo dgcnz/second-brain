@@ -5,6 +5,7 @@ theme:
   palette: 
       primary: custom
   font: false
+  language: en
 
 
 markdown_extensions:
