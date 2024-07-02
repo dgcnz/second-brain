@@ -25,4 +25,5 @@ share: true
 
 This maybe should not really be an issue: [[How do vision transformers work?|How do vision transformers work?]] explicitly constraint ViTs to only use local attention and they improve performance. So maybe this is an advantage? 
 
-- [ ] Finish reading in depth
+
+![[Pasted image 20240702135103.png|Pasted image 20240702135103.png]]
