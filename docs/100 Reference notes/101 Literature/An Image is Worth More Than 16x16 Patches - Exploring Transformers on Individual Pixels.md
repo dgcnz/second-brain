@@ -19,4 +19,5 @@ share: true
 
 
 Comments:
-- Seems to contradict [[How do vision transformers work?|How do vision transformers work?]] in their position that inductive biases do improve vits. Might be useful to cross-check this claim.
+- Seems to contradict [[How do vision transformers work?|How do vision transformers work?]] in their position that inductive biases do improve vits. 
+	- [ ] Might be useful to check this.
