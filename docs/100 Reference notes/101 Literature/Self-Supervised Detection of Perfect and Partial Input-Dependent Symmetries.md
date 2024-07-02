@@ -11,6 +11,5 @@ year:
 url: 
 share: true
 ---
-> [!info] Abstract
 
 
