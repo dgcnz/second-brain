@@ -14,7 +14,9 @@ They show that Vision Transformers scale better than ConvNets and Mixed Architec
 
 [[A ConvNet for the 2020s|A ConvNet for the 2020s]] proves that ResNets are outdated and improves the network with recent advances to match ViTs performance. 
 
-[[An Image is Worth More Than 16x16 Patches - Exploring Transformers on Individual Pixels|An Image is Worth More Than 16x16 Patches - Exploring Transformers on Individual Pixels]] tackles the toy question of dropping the convolutional stem that does the patchification in ViTs, with the intention of further reducing inductive biases. They prove that the resulting model (although unusable in practice), competes with ViTs.
+[[The Lie derivative for measuring learned equivariance|The Lie derivative for measuring learned equivariance]] shows surprising result: ViTs exhibit more translational equivariance after training than ConvNets, as measured per their Lie Derivative.
+
+[[An Image is Worth More Than 16x16 Patches - Exploring Transformers on Individual Pixels|An Image is Worth More Than 16x16 Patches - Exploring Transformers on Individual Pixels]] tackles the toy question of dropping the convolutional stem that does the patchification in ViTs, with the intention of further reducing inductive biases. They prove that the resulting model (although too computationally intensive to be used in practice), competes with ViTs.
 
 [[How do vision transformers work?|How do vision transformers work?]] argues that the benefit of Vision Transformers is not that they have less inductive biases, but that the their operations are input dependent (see [[Input-dependent convolutions|Input-dependent convolutions]]) and that Self Attention acts as a smoothing mechanism (that helps with better training dynamics on the large data regimes). They ablate this decision by constraining ViTs attention to be local, outperforming ViTs with global attention both in small and large data regimes. This is a strong indication that locality constraints are useful.  
 
