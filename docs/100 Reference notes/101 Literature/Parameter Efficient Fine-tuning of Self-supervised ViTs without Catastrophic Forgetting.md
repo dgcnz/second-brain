@@ -34,5 +34,5 @@ share: true
 
 ## Observations
 - Linear only fine-tuning does pretty well, kinda surprising.
-- It's kind of suprising that [[LoRa Adapters|LoRa Adapters]] do bad, but does it matter? What is the purpose of making LoRa resistant to catastrophic forgetting if the whole point of it is to be able to hot-swap modules depending on the task?
+- It's kind of suprising that [[LoRa Adapter|LoRa Adapter]] do bad, but does it matter? What is the purpose of making LoRa resistant to catastrophic forgetting if the whole point of it is to be able to hot-swap modules depending on the task?
 - Also worthy to point out that [[Block Expansion|Block Expansion]] requires training parameters in the order of millions while LoRa only requires thousands. 
