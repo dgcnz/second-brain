@@ -1,10 +1,13 @@
 ---
 authors:
   - "[[David W. Romero|David W. Romero]]"
+  - "[[Suhas Lohit|Suhas Lohit]]"
 tags:
   - dl2
-year: 
-url: 
+  - equivariance
+  - partial_equivariance
+year: 2021
+url: https://arxiv.org/abs/2110.10211
 share: true
 ---
 
