@@ -1,4 +1,0 @@
----
-affiliation: 
-share: true
----
