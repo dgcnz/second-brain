@@ -18,6 +18,8 @@ They show that Vision Transformers scale better than ConvNets and Mixed Architec
 
 [[How do vision transformers work?|How do vision transformers work?]] argues that the benefit of Vision Transformers is not that they have less inductive biases, but that the their operations are input dependent (see [[Input-dependent convolutions|Input-dependent convolutions]]) and that Self Attention acts as a smoothing mechanism (that helps with better training dynamics on the large data regimes). They ablate this decision by constraining ViTs attention to be local, outperforming ViTs with global attention both in small and large data regimes. This is a strong indication that locality constraints are useful.  
 
+[[Learning with Unmasked Tokens Drives Stronger Vision Learners|Learning with Unmasked Tokens Drives Stronger Vision Learners]] implicitly counter-argues [[How do vision transformers work?|How do vision transformers work?]] by noticing that MIM-trained ViTs exhibit localized attention maps and "fixing" it. Their approach outperforms other MIM-trained ViTs, so locality as good inductive bias is not definitely answered.
+
 ## ViTs vs Dense prediction tasks
 
 [[A ConvNet for the 2020s|A ConvNet for the 2020s]] mentions that ViTs struggle on dense prediction tasks and they require hierarchical architectural choices (Swin Transformer) to do well. These choices re-introduce inductive biases.
