@@ -11,6 +11,8 @@ authors:
 year: 2021
 tags:
   - paper
+  - efficient_dl
+  - peft
 url: https://arxiv.org/abs/2106.09685
 share: true
 ---
