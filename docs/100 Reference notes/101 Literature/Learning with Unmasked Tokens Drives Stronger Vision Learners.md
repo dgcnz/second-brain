@@ -23,7 +23,7 @@ share: true
 
 > However, MIM strategies often encounter challenges, such as local dependency on attention to understand entire context of an image. For example, liu _et al_. [[36](https://arxiv.org/html/2310.13593v2#bib.bib36)] revealed that MAE [[22](https://arxiv.org/html/2310.13593v2#bib.bib22)], a state-of-the-art MIM method, exhibits shorter average attention distances. Furthermore, we observe that attention map patterns by MAE substantiate extremely local behavior (See Fig. [1](https://arxiv.org/html/2310.13593v2#S2.F1 "Figure 1 ‣ 2.1.2 MIM formulation itself falls short in learning broader contexts. ‣ 2.1 MIM and Beyond ‣ 2 Preliminary ‣ Learning with Unmasked Tokens Drives Stronger Vision Learners")) indeed. In other words, the MAE-trained attention mechanism less integrates information across the entire image pixels and tends to focus on specific input regions. This is presumably attributed to MIM-pretraining, primarily dedicated to predicting low-level pixel details (_e.g_., color or texture) without a comprehensive understanding of less-regional information (_e.g_., the input structure or shape).
 
-This maybe should not really be an issue: [[How do vision transformers work?|How do vision transformers work?]] explicitly constraint ViTs to only use local attention and they improve performance. So maybe this is an advantage? 
+This maybe should not really be an issue: [[How do vision transformers work?|How do vision transformers work?]] explicitly constraint ViTs to only use local attention and they improve performance. So maybe this is an advantage? See [[Are less inductive biases better or worse?|Are less inductive biases better or worse?]].
 
 
 ![[Pasted image 20240702135103.png|Pasted image 20240702135103.png]]
