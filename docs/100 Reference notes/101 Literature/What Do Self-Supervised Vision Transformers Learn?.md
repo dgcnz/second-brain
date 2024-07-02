@@ -20,4 +20,11 @@ share: true
 
 ## Notes
 
-- [ ] Definitely read in depth🔺 
+Another certified banger™ by [[Naver AI Lab|Naver AI Lab]]. Also check [[How do vision transformers work?|How do vision transformers work?]] (the link might not be working because of the interrogation symbol on the name, will fix later).
+
+- [ ] Add annotations from Zotero 🔽
+
+
+
+
+
