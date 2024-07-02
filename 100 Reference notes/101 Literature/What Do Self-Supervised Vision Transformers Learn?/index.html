@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://dgcnz.github.io/second-brain/100%20Reference%20notes/101%20Literature/MobileCLIP%20-%20Fast%20Image-Text%20Models%20through%20Multi-Modal%20Reinforced%20Training/">
+        <link rel="canonical" href="https://dgcnz.github.io/second-brain/100%20Reference%20notes/101%20Literature/What%20Do%20Self-Supervised%20Vision%20Transformers%20Learn%3F/">
       
       
-        <link rel="prev" href="../Mixture%20of%20LoRa%20Experts/">
+        <link rel="prev" href="../Vision%20Transformers%20Need%20Registers/">
       
       
-        <link rel="next" href="../MobileViT%20-%20light-weight%2C%20general-purpose%2C%20and%20mobile-friendly%20vision%20transformer/">
+        <link rel="next" href="../../102%20Authors/Alex%20Flinth/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>MobileCLIP Fast Image Text Models through Multi Modal Reinforced Training - Second Brain</title>
+        <title>What Do Self Supervised Vision Transformers Learn? - Second Brain</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#notes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MobileCLIP   Fast Image Text Models through Multi Modal Reinforced Training
+              What Do Self Supervised Vision Transformers Learn?
             
           </span>
         </div>
@@ -1950,17 +1955,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../MobileCLIP%20-%20Fast%20Image-Text%20Models%20through%20Multi-Modal%20Reinforced%20Training/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1969,7 +1967,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2819,10 +2816,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../What%20Do%20Self-Supervised%20Vision%20Transformers%20Learn%3F/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    What Do Self Supervised Vision Transformers Learn?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2831,6 +2846,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6064,6 +6106,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6087,32 +6146,26 @@
     
     
     
-      <span class="md-tag">efficient_dl</span>
+      <span class="md-tag">dl_theory</span>
     
   
     
     
     
-      <span class="md-tag">efficient_vision</span>
+      <span class="md-tag">vit</span>
     
   
     
     
     
-      <span class="md-tag">computer_vision</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">multimodal</span>
+      <span class="md-tag">transformers</span>
     
   
 </nav>
 
 
 
-  <h1>MobileCLIP   Fast Image Text Models through Multi Modal Reinforced Training</h1>
+  <h1>What Do Self Supervised Vision Transformers Learn?</h1>
 
 <table>
 <thead>
@@ -6124,7 +6177,7 @@
 <tbody>
 <tr>
 <td>authors</td>
-<td><a href="../../102%20Authors/Pavan%20Kumar%20Anasosalu%20Vasu/">Pavan Kumar Anasosalu Vasu</a>, <a href="../../102%20Authors/Hadi%20Pouransari/">Hadi Pouransari</a>, <a href="../../102%20Authors/Fartash%20Faghri/">Fartash Faghri</a>, <a href="../../102%20Authors/Raviteja%20Vemulapalli/">Raviteja Vemulapalli</a>, <a href="../../102%20Authors/Oncel%20Tuzel/">Oncel Tuzel</a></td>
+<td><a href="../../102%20Authors/Namuk%20Park/">Namuk Park</a>, Wonjae Kim, <a href="../../102%20Authors/Byeongho%20Heo/">Byeongho Heo</a>, <a href="../../102%20Authors/Taekyung%20Kim/">Taekyung Kim</a>, Sangdoo Yun</td>
 </tr>
 <tr>
 <td>year</td>
@@ -6132,14 +6185,18 @@
 </tr>
 <tr>
 <td>url</td>
-<td><a href="https://arxiv.org/abs/2311.17049">https://arxiv.org/abs/2311.17049</a></td>
+<td><a href="https://arxiv.org/abs/2305.00729">https://arxiv.org/abs/2305.00729</a></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
+<div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>Contrastive pretraining of image-text foundation models, such as CLIP, demonstrated excellent zero-shot performance and improved robustness on a wide range of downstream tasks. However, these models utilize large transformer-based encoders with significant memory and latency overhead which pose challenges for deployment on mobile devices. In this work, we introduce MobileCLIP -- a new family of efficient image-text models optimized for runtime performance along with a novel and efficient training approach, namely multi-modal reinforced training. The proposed training approach leverages knowledge transfer from an image captioning model and an ensemble of strong CLIP encoders to improve the accuracy of efficient models. Our approach avoids train-time compute overhead by storing the additional knowledge in a reinforced dataset. MobileCLIP sets a new state-of-the-art latency-accuracy tradeoff for zero-shot classification and retrieval tasks on several datasets. Our MobileCLIP-S2 variant is 2.3× faster while more accurate compared to previous best CLIP model based on ViT-B/16. We further demonstrate the effectiveness of our multi-modal reinforced training by training a CLIP model based on ViT-B/16 image backbone and achieving +2.9% average performance improvement on 38 evaluation benchmarks compared to the previous best. Moreover, we show that the proposed approach achieves 10×-1000× improved learning efficiency when compared with non-reinforced CLIP training. Code and models are available at <a href="https://github.com/apple/ml-mobileclip">this https URL</a> .</p>
+<p>We present a comparative study on how and why contrastive learning (CL) and masked image modeling (MIM) differ in their representations and in their performance of downstream tasks. In particular, we demonstrate that self-supervised Vision Transformers (ViTs) have the following properties: (1) CL trains self-attentions to capture longer-range global patterns than MIM, such as the shape of an object, especially in the later layers of the ViT architecture. This CL property helps ViTs linearly separate images in their representation spaces. However, it also makes the self-attentions collapse into homogeneity for all query tokens and heads. Such homogeneity of self-attention reduces the diversity of representations, worsening scalability and dense prediction performance. (2) CL utilizes the low-frequency signals of the representations, but MIM utilizes high-frequencies. Since low- and high-frequency information respectively represent shapes and textures, CL is more shape-oriented and MIM more texture-oriented. (3) CL plays a crucial role in the later layers, while MIM mainly focuses on the early layers. Upon these analyses, we find that CL and MIM can complement each other and observe that even the simplest harmonization can help leverage the advantages of both methods. The code is available at <a href="https://github.com/naver-ai/cl-vs-mim">this https URL</a>.</p>
 </div>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Definitely read in depth🔺 </li>
+</ul>
 
 
 
@@ -6160,7 +6217,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-06-15T17:50:16+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-06-15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-02T12:30:38+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-02</span>
   </span>
 
     
