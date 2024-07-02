@@ -9,6 +9,5 @@ Storing integers consumes less memory while you can keep fully precision on the 
 
 Resources:
 - https://scikit-learn.org/stable/auto_examples/cluster/plot_color_quantization.html
-- https://hanlab.mit.edu/courses/2023-fall-65940
-
-![[Pasted image 20240613132833.png|Pasted image 20240613132833.png]]Source: https://www.dropbox.com/scl/fi/eos92o2fgys6gk0gizogl/lec05.pdf?rlkey=2hohvi8jcvjw3f8m8vugfa2mz&e=2&dl=0
+- [[TinyML and Efficient Deep Learning Computing - Lecture 5|TinyML and Efficient Deep Learning Computing - Lecture 5]]
+![[Pasted image 20240613132833.png|Pasted image 20240613132833.png]]

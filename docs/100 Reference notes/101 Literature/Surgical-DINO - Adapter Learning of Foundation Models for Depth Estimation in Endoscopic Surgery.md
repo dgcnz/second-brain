@@ -20,4 +20,4 @@ References:
 - [[LoRA - Low-Rank Adaptation of Large Language Models|LoRA - Low-Rank Adaptation of Large Language Models]]
 
 Keywords:
-- [[LoRa Adapters|LoRa Adapters]]
+- [[LoRa Adapter|LoRa Adapter]]

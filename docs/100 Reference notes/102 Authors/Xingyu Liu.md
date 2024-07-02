@@ -1,5 +1,5 @@
 ---
 affiliation:
-  - CMU
+  - "[[Carnegie Mellon University|Carnegie Mellon University]]"
 share: true
 ---
