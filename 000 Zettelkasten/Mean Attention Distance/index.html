@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://dgcnz.github.io/second-brain/100%20Reference%20notes/101%20Literature/R-MAE%20-%20Regions%20Meet%20Masked%20Autoencoders/">
+        <link rel="canonical" href="https://dgcnz.github.io/second-brain/000%20Zettelkasten/Mean%20Attention%20Distance/">
       
       
-        <link rel="prev" href="../ProxylessNAS%20-%20Direct%20Neural%20Architecture%20Search%20on%20Target%20Task%20and%20Hardware/">
+        <link rel="prev" href="../Maximal%20pruning%20and%20functional%20recovery/">
       
       
-        <link rel="next" href="../Refusal%20in%20Language%20Models%20Is%20Mediated%20by%20a%20Single%20Direction/">
+        <link rel="next" href="../Multiple%20global%20minima/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>R MAE Regions Meet Masked Autoencoders - Second Brain</title>
+        <title>Mean Attention Distance - Second Brain</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/timeago.css">
+      <link rel="stylesheet" href="../../css/timeago.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
@@ -50,9 +50,9 @@
     
       <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-mono">
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,11 +75,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#note" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Second Brain" class="md-header__button md-logo" aria-label="Second Brain" data-md-component="logo">
+    <a href="../.." title="Second Brain" class="md-header__button md-logo" aria-label="Second Brain" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -112,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              R MAE   Regions Meet Masked Autoencoders
+              Mean Attention Distance
             
           </span>
         </div>
@@ -187,7 +182,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Second Brain" class="md-nav__button md-logo" aria-label="Second Brain" data-md-component="logo">
+    <a href="../.." title="Second Brain" class="md-nav__button md-logo" aria-label="Second Brain" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -205,7 +200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -222,17 +217,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -246,7 +243,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             000 Zettelkasten
@@ -260,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/2D%20Convolutions/" class="md-nav__link">
+      <a href="../2D%20Convolutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -281,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Are%20less%20inductive%20biases%20better%20or%20worse%3F/" class="md-nav__link">
+      <a href="../Are%20less%20inductive%20biases%20better%20or%20worse%3F/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -302,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Bit%20Palettization/" class="md-nav__link">
+      <a href="../Bit%20Palettization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -323,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Block%20Expansion/" class="md-nav__link">
+      <a href="../Block%20Expansion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Convergence%20rate%20and%20Hessian%20spectra/" class="md-nav__link">
+      <a href="../Convergence%20rate%20and%20Hessian%20spectra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -365,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Depthwise%20separable%20convolutions/" class="md-nav__link">
+      <a href="../Depthwise%20separable%20convolutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -386,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Do%20Vision%20Foundation%20models%20exist%3F/" class="md-nav__link">
+      <a href="../Do%20Vision%20Foundation%20models%20exist%3F/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -407,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Effect%20of%20weight%20symmetries%20on%20training%20dynamics/" class="md-nav__link">
+      <a href="../Effect%20of%20weight%20symmetries%20on%20training%20dynamics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -428,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Equivariance%20Initialization/" class="md-nav__link">
+      <a href="../Equivariance%20Initialization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -449,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Grokking/" class="md-nav__link">
+      <a href="../Grokking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Group%20Axioms/" class="md-nav__link">
+      <a href="../Group%20Axioms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Group%20direct%20product/" class="md-nav__link">
+      <a href="../Group%20direct%20product/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Hardware-specific%20structured%20pruning/" class="md-nav__link">
+      <a href="../Hardware-specific%20structured%20pruning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Input-dependent%20convolutions/" class="md-nav__link">
+      <a href="../Input-dependent%20convolutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -554,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/K-Means-based%20Quantization/" class="md-nav__link">
+      <a href="../K-Means-based%20Quantization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -575,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/KV%20Cache/" class="md-nav__link">
+      <a href="../KV%20Cache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -596,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/LoRa%20Adapter/" class="md-nav__link">
+      <a href="../LoRa%20Adapter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -617,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/LoRa%20Adapters/" class="md-nav__link">
+      <a href="../LoRa%20Adapters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Masked%20Image%20Modelling/" class="md-nav__link">
+      <a href="../Masked%20Image%20Modelling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Maximal%20pruning%20and%20functional%20recovery/" class="md-nav__link">
+      <a href="../Maximal%20pruning%20and%20functional%20recovery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,10 +674,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Mean%20Attention%20Distance/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -689,6 +693,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -701,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Multiple%20global%20minima/" class="md-nav__link">
+      <a href="../Multiple%20global%20minima/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -722,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Non-translationally%20equivariant%20convolutions/" class="md-nav__link">
+      <a href="../Non-translationally%20equivariant%20convolutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Priors%20over%20Neural%20Network%20weights/" class="md-nav__link">
+      <a href="../Priors%20over%20Neural%20Network%20weights/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../000%20Zettelkasten/Representation%20%28Group%20Theory%29/" class="md-nav__link">
+      <a href="../Representation%20%28Group%20Theory%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,19 +794,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -815,7 +818,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             100 Reference notes
@@ -826,19 +829,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -852,7 +853,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             101 Literature
@@ -866,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../A%20Brief%20Review%20of%20Hypernetworks%20in%20Deep%20Learning/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/A%20Brief%20Review%20of%20Hypernetworks%20in%20Deep%20Learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -887,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../A%20ConvNet%20for%20the%202020s/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/A%20ConvNet%20for%20the%202020s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -908,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../A%20Hierarchy%20of%20Graph%20Neural%20Networks%20Based%20on%20Learnable%20Local%20Features/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/A%20Hierarchy%20of%20Graph%20Neural%20Networks%20Based%20on%20Learnable%20Local%20Features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../A%20general%20theory%20of%20correct%2C%20incorrect%2C%20and%20extrinsic%20equivariance/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/A%20general%20theory%20of%20correct%2C%20incorrect%2C%20and%20extrinsic%20equivariance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../A%20survey%20of%20quantization%20methods%20for%20efficient%20neural%20network%20inference/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/A%20survey%20of%20quantization%20methods%20for%20efficient%20neural%20network%20inference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Adapting%20Vision%20Foundation%20Models%20for%20Plant%20Phenotyping/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Adapting%20Vision%20Foundation%20Models%20for%20Plant%20Phenotyping/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../An%20Image%20is%20Worth%20More%20Than%2016x16%20Patches%20-%20Exploring%20Transformers%20on%20Individual%20Pixels/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/An%20Image%20is%20Worth%20More%20Than%2016x16%20Patches%20-%20Exploring%20Transformers%20on%20Individual%20Pixels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../An%20Investigation%20into%20Neural%20Net%20Optimization%20via%20Hessian%20Eigenvalue%20Density/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/An%20Investigation%20into%20Neural%20Net%20Optimization%20via%20Hessian%20Eigenvalue%20Density/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../An%20image%20is%20worth%2016x16%20words%20-%20Transformers%20for%20image%20recognition%20at%20scale/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/An%20image%20is%20worth%2016x16%20words%20-%20Transformers%20for%20image%20recognition%20at%20scale/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Approximately%20equivariant%20networks%20for%20imperfectly%20symmetric%20dynamics/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Approximately%20equivariant%20networks%20for%20imperfectly%20symmetric%20dynamics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1076,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Approximation-Generalization%20Trade-offs%20under%20%28Approximate%29%20Group%20Equivariance/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Approximation-Generalization%20Trade-offs%20under%20%28Approximate%29%20Group%20Equivariance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Autoequivariant%20Network%20Search%20via%20Group%20Decomposition/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Autoequivariant%20Network%20Search%20via%20Group%20Decomposition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1118,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Block%20Transformer%20-%20Global-to-Local%20Language%20Modeling%20for%20Fast%20Inference/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Block%20Transformer%20-%20Global-to-Local%20Language%20Modeling%20for%20Fast%20Inference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1139,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../BoxeR%20-%20Box-Attention%20for%202D%20and%203D%20Transformers/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/BoxeR%20-%20Box-Attention%20for%202D%20and%203D%20Transformers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Building%20on%20Efficient%20Foundations%20-%20Effectively%20Training%20LLMs%20with%20Structured%20Feedforward%20Layers/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Building%20on%20Efficient%20Foundations%20-%20Effectively%20Training%20LLMs%20with%20Structured%20Feedforward%20Layers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CKConv%20-%20Continuous%20Kernel%20Convolution%20For%20Sequential%20Data/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/CKConv%20-%20Continuous%20Kernel%20Convolution%20For%20Sequential%20Data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Color%20Equivariant%20Convolutional%20Networks/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Color%20Equivariant%20Convolutional%20Networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Color%20Space%20Transformation%20Network/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Color%20Space%20Transformation%20Network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ConViT%20-%20Improving%20Vision%20Transformers%20with%20Soft%20Convolutional%20Inductive%20Biases/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/ConViT%20-%20Improving%20Vision%20Transformers%20with%20Soft%20Convolutional%20Inductive%20Biases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DETRs%20Beat%20YOLOs%20on%20Real-time%20Object%20Detection/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/DETRs%20Beat%20YOLOs%20on%20Real-time%20Object%20Detection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DINOv2%20-%20Learning%20Robust%20Visual%20Features%20without%20Supervision/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/DINOv2%20-%20Learning%20Robust%20Visual%20Features%20without%20Supervision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Deep%20Learning%20Book/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Deep%20Learning%20Book/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DenseNets%20Reloaded%20-%20Paradigm%20Shift%20Beyond%20ResNets%20and%20ViTs/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/DenseNets%20Reloaded%20-%20Paradigm%20Shift%20Beyond%20ResNets%20and%20ViTs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Discovering%20Symmetry%20Breaking%20in%20Physical%20Systems%20with%20Relaxed%20Group%20Convolution/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Discovering%20Symmetry%20Breaking%20in%20Physical%20Systems%20with%20Relaxed%20Group%20Convolution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Early%20Convolutions%20Help%20Transformers%20See%20Better/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Early%20Convolutions%20Help%20Transformers%20See%20Better/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Efficient%20Equivariant%20Transfer%20Learning%20from%20Pretrained%20Models/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Efficient%20Equivariant%20Transfer%20Learning%20from%20Pretrained%20Models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Efficient%20Modulation%20for%20Vision%20Networks/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Efficient%20Modulation%20for%20Vision%20Networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../EfficientViT-SAM%20-%20Accelerated%20Segment%20Anything%20Model%20Without%20Accuracy%20Loss/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/EfficientViT-SAM%20-%20Accelerated%20Segment%20Anything%20Model%20Without%20Accuracy%20Loss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Emergent%20Equivariance%20in%20Deep%20Ensembles/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Emergent%20Equivariance%20in%20Deep%20Ensembles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Emerging%20Properties%20in%20Self-Supervised%20Vision%20Transformers/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Emerging%20Properties%20in%20Self-Supervised%20Vision%20Transformers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1496,7 +1497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../End-to-End%20Object%20Detection%20with%20Transformers/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/End-to-End%20Object%20Detection%20with%20Transformers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Equi-Tuning%20-%20Group%20Equivariant%20Fine-Tuning%20of%20Pretrained%20Models/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Equi-Tuning%20-%20Group%20Equivariant%20Fine-Tuning%20of%20Pretrained%20Models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1538,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Equivariance%20with%20Learned%20Canonicalization%20Functions/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Equivariance%20with%20Learned%20Canonicalization%20Functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Equivariance-aware%20architectural%20optimization%20of%20neural%20networks/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Equivariance-aware%20architectural%20optimization%20of%20neural%20networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exploiting%20Redundancy%20-%20Separable%20Group%20Convolutional%20Networks%20on%20Lie%20Groups/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Exploiting%20Redundancy%20-%20Separable%20Group%20Convolutional%20Networks%20on%20Lie%20Groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exploring%20Plain%20Vision%20Transformer%20Backbones%20for%20Object%20Detection/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Exploring%20Plain%20Vision%20Transformer%20Backbones%20for%20Object%20Detection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Fast%2C%20Expressive%20SE%28n%29%20Equivariant%20Networks%20through%20Weight-Sharing%20in%20Position-Orientation%20Space/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Fast%2C%20Expressive%20SE%28n%29%20Equivariant%20Networks%20through%20Weight-Sharing%20in%20Position-Orientation%20Space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1643,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FlexiViT%20-%20One%20Model%20for%20All%20Patch%20Sizes/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/FlexiViT%20-%20One%20Model%20for%20All%20Patch%20Sizes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1664,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../G-SGD%20-%20Optimizing%20ReLU%20Neural%20Networks%20in%20its%20Positively%20Scale-Invariant%20Space/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/G-SGD%20-%20Optimizing%20ReLU%20Neural%20Networks%20in%20its%20Positively%20Scale-Invariant%20Space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1685,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Grokked%20Transformers%20are%20Implicit%20Reasoners%20-%20A%20Mechanistic%20Journey%20to%20the%20Edge%20of%20Generalization/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Grokked%20Transformers%20are%20Implicit%20Reasoners%20-%20A%20Mechanistic%20Journey%20to%20the%20Edge%20of%20Generalization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1706,7 +1707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Harmonics%20of%20Learning%20-%20Universal%20Fourier%20Features%20Emerge%20in%20Invariant%20Networks/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Harmonics%20of%20Learning%20-%20Universal%20Fourier%20Features%20Emerge%20in%20Invariant%20Networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1727,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../How%20do%20vision%20transformers%20work%3F/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/How%20do%20vision%20transformers%20work%3F/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1748,7 +1749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Improving%20Convergence%20and%20Generalization%20Using%20Parameter%20Symmetries/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Improving%20Convergence%20and%20Generalization%20Using%20Parameter%20Symmetries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1769,7 +1770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../In%20Search%20of%20Projectively%20Equivariant%20Networks/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/In%20Search%20of%20Projectively%20Equivariant%20Networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1790,7 +1791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Knowledge%20Transfer%20from%20Vision%20Foundation%20Models%20for%20Efficient%20Training%20of%20Small%20Task-specific%20Models/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Knowledge%20Transfer%20from%20Vision%20Foundation%20Models%20for%20Efficient%20Training%20of%20Small%20Task-specific%20Models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1811,7 +1812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LRP-QViT%20-%20Mixed-Precision%20Vision%20Transformer%20Quantization%20via%20Layer-wise%20Relevance%20Propagation/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/LRP-QViT%20-%20Mixed-Precision%20Vision%20Transformer%20Quantization%20via%20Layer-wise%20Relevance%20Propagation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1832,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Learned%20Gridification%20for%20Efficient%20Point%20Cloud%20Processing/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Learned%20Gridification%20for%20Efficient%20Point%20Cloud%20Processing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1853,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Learning%20Partial%20Equivariances%20from%20Data/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Learning%20Partial%20Equivariances%20from%20Data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1874,7 +1875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Learning%20both%20Weights%20and%20Connections%20for%20Efficient%20Neural%20Networks/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Learning%20both%20Weights%20and%20Connections%20for%20Efficient%20Neural%20Networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1895,7 +1896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Learning%20with%20Unmasked%20Tokens%20Drives%20Stronger%20Vision%20Learners/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Learning%20with%20Unmasked%20Tokens%20Drives%20Stronger%20Vision%20Learners/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1916,7 +1917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LoRA%20-%20Low-Rank%20Adaptation%20of%20Large%20Language%20Models/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/LoRA%20-%20Low-Rank%20Adaptation%20of%20Large%20Language%20Models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1937,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mamba%20-%20Linear-Time%20Sequence%20Modeling%20with%20Selective%20State%20Spaces/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Mamba%20-%20Linear-Time%20Sequence%20Modeling%20with%20Selective%20State%20Spaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1958,7 +1959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mixture%20of%20LoRa%20Experts/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Mixture%20of%20LoRa%20Experts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1979,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MobileCLIP%20-%20Fast%20Image-Text%20Models%20through%20Multi-Modal%20Reinforced%20Training/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/MobileCLIP%20-%20Fast%20Image-Text%20Models%20through%20Multi-Modal%20Reinforced%20Training/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2000,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MobileViT%20-%20light-weight%2C%20general-purpose%2C%20and%20mobile-friendly%20vision%20transformer/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/MobileViT%20-%20light-weight%2C%20general-purpose%2C%20and%20mobile-friendly%20vision%20transformer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2021,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Model%20Compression%20in%20Practice%20-%20Lessons%20Learned%20from%20Practitioners%20Creating%20On-device%20Machine%20Learning%20Experiences/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Model%20Compression%20in%20Practice%20-%20Lessons%20Learned%20from%20Practitioners%20Creating%20On-device%20Machine%20Learning%20Experiences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +2043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Neural%20Mechanics%20-%20Symmetry%20and%20Broken%20Conservation%20Laws%20in%20Deep%20Learning%20Dynamics/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Neural%20Mechanics%20-%20Symmetry%20and%20Broken%20Conservation%20Laws%20in%20Deep%20Learning%20Dynamics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2063,7 +2064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../On%20the%20Relationship%20between%20Self-Attention%20and%20Convolutional%20Layers/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/On%20the%20Relationship%20between%20Self-Attention%20and%20Convolutional%20Layers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2084,7 +2085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../On%20the%20Symmetries%20of%20Deep%20Learning%20Models%20and%20their%20Internal%20Representations/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/On%20the%20Symmetries%20of%20Deep%20Learning%20Models%20and%20their%20Internal%20Representations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2105,7 +2106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OpenELM%20-%20An%20Efficient%20Language%20Model%20Family%20with%20Open-source%20Training%20and%20Inference%20Framework/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/OpenELM%20-%20An%20Efficient%20Language%20Model%20Family%20with%20Open-source%20Training%20and%20Inference%20Framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2126,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Optimal%20Brain%20Damage/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Optimal%20Brain%20Damage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2147,7 +2148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Optimization%20Dynamics%20of%20Equivariant%20and%20Augmented%20Neural%20Networks/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Optimization%20Dynamics%20of%20Equivariant%20and%20Augmented%20Neural%20Networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2168,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Parameter%20Efficient%20Fine-tuning%20of%20Self-supervised%20ViTs%20without%20Catastrophic%20Forgetting/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Parameter%20Efficient%20Fine-tuning%20of%20Self-supervised%20ViTs%20without%20Catastrophic%20Forgetting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2189,7 +2190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Parameter-Efficient%20Fine-Tuning%20for%20Pre-Trained%20Vision%20Models%20-%20A%20Survey/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Parameter-Efficient%20Fine-Tuning%20for%20Pre-Trained%20Vision%20Models%20-%20A%20Survey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2210,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Progress%20measures%20for%20grokking%20via%20mechanistic%20interpretability/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Progress%20measures%20for%20grokking%20via%20mechanistic%20interpretability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2231,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Provably%20Strict%20Generalisation%20Benefit%20for%20Equivariant%20Models/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Provably%20Strict%20Generalisation%20Benefit%20for%20Equivariant%20Models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2252,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProxylessNAS%20-%20Direct%20Neural%20Architecture%20Search%20on%20Target%20Task%20and%20Hardware/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/ProxylessNAS%20-%20Direct%20Neural%20Architecture%20Search%20on%20Target%20Task%20and%20Hardware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2270,28 +2271,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    R MAE   Regions Meet Masked Autoencoders
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../100%20Reference%20notes/101%20Literature/R-MAE%20-%20Regions%20Meet%20Masked%20Autoencoders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2300,33 +2283,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#note" class="md-nav__link">
-    <span class="md-ellipsis">
-      Note
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2339,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Refusal%20in%20Language%20Models%20Is%20Mediated%20by%20a%20Single%20Direction/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Refusal%20in%20Language%20Models%20Is%20Mediated%20by%20a%20Single%20Direction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2360,7 +2316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Relaxed%20Octahedral%20Group%20Convolution%20for%20Learning%20Symmetry%20Breaking%20in%203D%20Physical%20Systems/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Relaxed%20Octahedral%20Group%20Convolution%20for%20Learning%20Symmetry%20Breaking%20in%203D%20Physical%20Systems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2381,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Relaxing%20Equivariance%20Constraints%20with%20Non-stationary%20Continuous%20Filters/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Relaxing%20Equivariance%20Constraints%20with%20Non-stationary%20Continuous%20Filters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2402,7 +2358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Retrospective%20-%20EIE%20-%20Efficient%20Inference%20Engine%20onSparse%20and%20Compressed%20Neural%20Network/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Retrospective%20-%20EIE%20-%20Efficient%20Inference%20Engine%20onSparse%20and%20Compressed%20Neural%20Network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2423,7 +2379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Rewrite%20the%20Stars/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Rewrite%20the%20Stars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2444,7 +2400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SAM-CLIP%20-%20Merging%20Vision%20Foundation%20Models%20towards%20Semantic%20and%20Spatial%20Understanding/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/SAM-CLIP%20-%20Merging%20Vision%20Foundation%20Models%20towards%20Semantic%20and%20Spatial%20Understanding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2465,7 +2421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Scaling%20%28Down%29%20CLIP%20-%20A%20Comprehensive%20Analysis%20of%20Data%2C%20Architecture%2C%20and%20Training%20Strategies/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Scaling%20%28Down%29%20CLIP%20-%20A%20Comprehensive%20Analysis%20of%20Data%2C%20Architecture%2C%20and%20Training%20Strategies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2486,7 +2442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Segment%20Anything/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Segment%20Anything/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2507,7 +2463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Self-Supervised%20Detection%20of%20Perfect%20and%20Partial%20Input-Dependent%20Symmetries/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Self-Supervised%20Detection%20of%20Perfect%20and%20Partial%20Input-Dependent%20Symmetries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2528,7 +2484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SimPLR%20-%20A%20Simple%20and%20Plain%20Transformer%20for%20Scaling-Efficient%20Object%20Detection%20and%20Segmentation/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/SimPLR%20-%20A%20Simple%20and%20Plain%20Transformer%20for%20Scaling-Efficient%20Object%20Detection%20and%20Segmentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2549,7 +2505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Simultaneous%20linear%20connectivity%20of%20neural%20networks%20modulo%20permutation/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Simultaneous%20linear%20connectivity%20of%20neural%20networks%20modulo%20permutation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2570,7 +2526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Stand-Alone%20Self-Attention%20in%20Vision%20Models/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Stand-Alone%20Self-Attention%20in%20Vision%20Models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2591,7 +2547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Surgical%20Fine-Tuning%20Improves%20Adaptation%20to%20Distribution%20Shifts/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Surgical%20Fine-Tuning%20Improves%20Adaptation%20to%20Distribution%20Shifts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2612,7 +2568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Surgical-DINO%20-%20Adapter%20Learning%20of%20Foundation%20Models%20for%20Depth%20Estimation%20in%20Endoscopic%20Surgery/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Surgical-DINO%20-%20Adapter%20Learning%20of%20Foundation%20Models%20for%20Depth%20Estimation%20in%20Endoscopic%20Surgery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2633,7 +2589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Symmetries%20in%20Overparametrized%20Neural%20Networks%20-%20A%20Mean-Field%20View/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Symmetries%20in%20Overparametrized%20Neural%20Networks%20-%20A%20Mean-Field%20View/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2654,7 +2610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Talaria%20-%20Interactively%20Optimizing%20Machine%20Learning%20Models%20for%20Efficient%20Inference/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Talaria%20-%20Interactively%20Optimizing%20Machine%20Learning%20Models%20for%20Efficient%20Inference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2675,7 +2631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../The%20Empirical%20Impact%20of%20Neural%20Parameter%20Symmetries%2C%20or%20Lack%20Thereof/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/The%20Empirical%20Impact%20of%20Neural%20Parameter%20Symmetries%2C%20or%20Lack%20Thereof/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2696,7 +2652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../The%20Lie%20derivative%20for%20measuring%20learned%20equivariance/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/The%20Lie%20derivative%20for%20measuring%20learned%20equivariance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2717,7 +2673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../The%20Unreasonable%20Ineffectiveness%20of%20the%20Deeper%20Layers/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/The%20Unreasonable%20Ineffectiveness%20of%20the%20Deeper%20Layers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2738,7 +2694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TiC-CLIP%20-%20Continual%20Training%20of%20CLIP%20models/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/TiC-CLIP%20-%20Continual%20Training%20of%20CLIP%20models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2759,7 +2715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding%20Deep%20Learning%20-%20Chapter%2010/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Understanding%20Deep%20Learning%20-%20Chapter%2010/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2780,7 +2736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding%20Deep%20Learning%20-%20Chapter%2020/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Understanding%20Deep%20Learning%20-%20Chapter%2020/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2801,7 +2757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Understanding%20symmetries%20in%20deep%20networks/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Understanding%20symmetries%20in%20deep%20networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2822,7 +2778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using%20Degeneracy%20in%20the%20Loss%20Landscape%20for%20Mechanistic%20Interpretability/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Using%20Degeneracy%20in%20the%20Loss%20Landscape%20for%20Mechanistic%20Interpretability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2843,7 +2799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Vision%20Mamba%20-%20Efficient%20Visual%20Representation%20Learning%20with%20Bidirectional%20State%20Space%20Model/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Vision%20Mamba%20-%20Efficient%20Visual%20Representation%20Learning%20with%20Bidirectional%20State%20Space%20Model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2864,7 +2820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Vision%20Transformers%20Need%20Registers/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/Vision%20Transformers%20Need%20Registers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2885,7 +2841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../What%20Do%20Self-Supervised%20Vision%20Transformers%20Learn%3F/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/101%20Literature/What%20Do%20Self-Supervised%20Vision%20Transformers%20Learn%3F/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2949,7 +2905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Alex%20Flinth/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Alex%20Flinth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2970,7 +2926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Alexander%20Kirillov/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Alexander%20Kirillov/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2991,7 +2947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Alexey%20Dosovitskiy/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Alexey%20Dosovitskiy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3012,7 +2968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Ananya%20Kumar/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Ananya%20Kumar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3033,7 +2989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Andreas%20Loukas/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Andreas%20Loukas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3054,7 +3010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Andreas%20Savakis/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Andreas%20Savakis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3075,7 +3031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Annie%20S.%20Chen/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Annie%20S.%20Chen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3096,7 +3052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Ardavan%20Pedram/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Ardavan%20Pedram/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3117,7 +3073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Armand%20Joulin/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Armand%20Joulin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3138,7 +3094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Attila%20Lengyel/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Attila%20Lengyel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3159,7 +3115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Boshi%20Wang/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Boshi%20Wang/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3180,7 +3136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Byeongho%20Heo/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Byeongho%20Heo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3201,7 +3157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Caglar%20Gulcehre/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Caglar%20Gulcehre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3222,7 +3178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Cees%20G.%20M.%20Snoek/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Cees%20G.%20M.%20Snoek/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3243,7 +3199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Chelsea%20Finn/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Chelsea%20Finn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3264,7 +3220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Daniel%20M.%20Roy/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Daniel%20M.%20Roy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3285,7 +3241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/David%20M.%20Knigge/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/David%20M.%20Knigge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3306,7 +3262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/David%20W.%20Romero/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/David%20W.%20Romero/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3327,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Donghyun%20Kim/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Donghyun%20Kim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3348,7 +3304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Dongyoon%20Han/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Dongyoon%20Han/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3369,7 +3325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Duy-Kien%20Nguyen/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Duy-Kien%20Nguyen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3390,7 +3346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Edward%20J.%20Hu/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Edward%20J.%20Hu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3411,7 +3367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Eric%20Mintun/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Eric%20Mintun/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3432,7 +3388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Erik%20J.%20Bekkers/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Erik%20J.%20Bekkers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3453,7 +3409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Fahim%20Tajwar/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Fahim%20Tajwar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3474,7 +3430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Fartash%20Faghri/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Fartash%20Faghri/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3495,7 +3451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Francisco%20Massa/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Francisco%20Massa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3516,7 +3472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Furu%20Wei/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Furu%20Wei/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3537,7 +3493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Gabriel%20Synnaeve/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Gabriel%20Synnaeve/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3558,7 +3514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Gintare%20Karolina%20Dziugaite/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Gintare%20Karolina%20Dziugaite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3579,7 +3535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Hadi%20Pouransari/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Hadi%20Pouransari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3600,7 +3556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Han%20Cai/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Han%20Cai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3621,7 +3577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Hanzi%20Mao/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Hanzi%20Mao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3642,7 +3598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Haoxiang%20Wang/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Haoxiang%20Wang/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3663,7 +3619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Herv%C3%A9%20Jegou/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Herv%C3%A9%20Jegou/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3684,7 +3640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Huaxiu%20Yao/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Huaxiu%20Yao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3705,7 +3661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Hugo%20Touvron/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Hugo%20Touvron/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3726,7 +3682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Huizi%20Mao/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Huizi%20Mao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3747,7 +3703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Ishan%20Misra/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Ishan%20Misra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3768,7 +3724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Jan%20E.%20Gerken/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Jan%20E.%20Gerken/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3789,7 +3745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Javier%20Maass%20Martinez/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Javier%20Maass%20Martinez/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3810,7 +3766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Jean-Baptiste%20Cordonnier/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Jean-Baptiste%20Cordonnier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3831,7 +3787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Jeff%20Pool/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Jeff%20Pool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3852,7 +3808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Jing%20Pu/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Jing%20Pu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3873,7 +3829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Joaquin%20Fontbona/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Joaquin%20Fontbona/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3894,7 +3850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/John%20Denker/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/John%20Denker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3915,7 +3871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/John%20Tran/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/John%20Tran/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3936,7 +3892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Julien%20Mairal/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Julien%20Mairal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3957,7 +3913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Kaiming%20He/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Kaiming%20He/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3978,7 +3934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Lawrence%20Chan/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Lawrence%20Chan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3999,7 +3955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Lucius%20Bushnaq/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Lucius%20Bushnaq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4020,7 +3976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Mahmoud%20Assran/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Mahmoud%20Assran/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4041,7 +3997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Marc%20Finzi/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Marc%20Finzi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4062,7 +4018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Mark%20A.%20Horowitz/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Mark%20A.%20Horowitz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4083,7 +4039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Martin%20Jaggi/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Martin%20Jaggi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4104,7 +4060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Martin%20R.%20Oswald/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Martin%20R.%20Oswald/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4125,7 +4081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Mathilde%20Caron/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Mathilde%20Caron/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4146,7 +4102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Maxime%20Oquab/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Maxime%20Oquab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4167,7 +4123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Mehrdad%20Farajtabar/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Mehrdad%20Farajtabar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4188,7 +4144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Mohammad%20Rastegari/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Mohammad%20Rastegari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4209,7 +4165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Namuk%20Park/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Namuk%20Park/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4230,7 +4186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Navin%20Ranjan/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Navin%20Ranjan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4251,7 +4207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Neel%20Nanda/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Neel%20Nanda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4272,7 +4228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Nicolas%20Carion/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Nicolas%20Carion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4293,7 +4249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Nicolas%20Usunier/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Nicolas%20Usunier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4314,7 +4270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Oncel%20Tuzel/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Oncel%20Tuzel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4335,7 +4291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Patrick%20Forr%C3%A9/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Patrick%20Forr%C3%A9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4356,7 +4312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Pavan%20Kumar%20Anasosalu%20Vasu/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Pavan%20Kumar%20Anasosalu%20Vasu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4377,7 +4333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Percy%20Liang/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Percy%20Liang/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4398,7 +4354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Piotr%20Bojanowski/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Piotr%20Bojanowski/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4419,7 +4375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Raviteja%20Vemulapalli/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Raviteja%20Vemulapalli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4440,7 +4396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Razvan%20Pascanu/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Razvan%20Pascanu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4461,7 +4417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Robin%20Walters/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Robin%20Walters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4482,7 +4438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Rose%20Yu/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Rose%20Yu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4503,7 +4459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Ross%20Girshick/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Ross%20Girshick/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4524,7 +4480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Rui%20Wang/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Rui%20Wang/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4545,7 +4501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Sachin%20Mehta/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Sachin%20Mehta/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4566,7 +4522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Sangdoo%20Yun/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Sangdoo%20Yun/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4587,7 +4543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Sanghyuk%20Chun/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Sanghyuk%20Chun/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4608,7 +4564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Sara%20Solla/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Sara%20Solla/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4629,7 +4585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Sergey%20Zagoruyko/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Sergey%20Zagoruyko/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4650,7 +4606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Shaohan%20Huang/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Shaohan%20Huang/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4671,7 +4627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Simon%20J.D.%20Prince/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Simon%20J.D.%20Prince/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4692,7 +4648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Skander%20Moalla/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Skander%20Moalla/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4713,7 +4669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Song%20Han/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Song%20Han/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4734,7 +4690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Songkuk%20Kim/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Songkuk%20Kim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4755,7 +4711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Sourya%20Basu/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Sourya%20Basu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4776,7 +4732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/St%C3%A9phane%20d%27Ascoli/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/St%C3%A9phane%20d%27Ascoli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4797,7 +4753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Taekyung%20Kim/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Taekyung%20Kim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4818,7 +4774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Tete%20Xiao/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Tete%20Xiao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4839,7 +4795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Tom%20Lieberum/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Tom%20Lieberum/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4860,7 +4816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Vaibhav%20Aggarwal/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Vaibhav%20Aggarwal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4881,7 +4837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/William%20J.%20Dally/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/William%20J.%20Dally/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4902,7 +4858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Wonjae%20Kim/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Wonjae%20Kim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4923,7 +4879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Xiang%20Yue/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Xiang%20Yue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4944,7 +4900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Xingyu%20Liu/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Xingyu%20Liu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4965,7 +4921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Xinlei%20Chen/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Xinlei%20Chen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4986,7 +4942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Xiuying%20Wei/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Xiuying%20Wei/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5007,7 +4963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Xu%20Ma/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Xu%20Ma/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5028,7 +4984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Xun%20Wu/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Xun%20Wu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5049,7 +5005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Yanghao%20Li/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Yanghao%20Li/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5070,7 +5026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Yann%20LeCun/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Yann%20LeCun/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5091,7 +5047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Yelong%20Shen/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Yelong%20Shen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5112,7 +5068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Yoonho%20Lee/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Yoonho%20Lee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5133,7 +5089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../102%20Authors/Zhuoyang%20Zhang/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/102%20Authors/Zhuoyang%20Zhang/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5197,7 +5153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Anthropic/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Anthropic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5218,7 +5174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Apollo%20Research/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Apollo%20Research/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5239,7 +5195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Apple/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Apple/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5260,7 +5216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/CLAIRE/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/CLAIRE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5281,7 +5237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Carnegie%20Mellon%20University/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Carnegie%20Mellon%20University/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5302,7 +5258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Chalmers%20University%20of%20Technology/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Chalmers%20University%20of%20Technology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5323,7 +5279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/EPFL/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/EPFL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5344,7 +5300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/FAIR/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/FAIR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5365,7 +5321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Google%20DeepMind/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Google%20DeepMind/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5386,7 +5342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Google/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Google/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5407,7 +5363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/IBM%20Research/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/IBM%20Research/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5428,7 +5384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/INRIA/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/INRIA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5449,7 +5405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/MIT/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/MIT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5470,7 +5426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/McGill%20University/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/McGill%20University/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5491,7 +5447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Microsoft/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Microsoft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5512,7 +5468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Mila%20Quebec%20AI%20Institute/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Mila%20Quebec%20AI%20Institute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5533,7 +5489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/NVIDIA/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/NVIDIA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5554,7 +5510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Naver%20AI%20Lab/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Naver%20AI%20Lab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5575,7 +5531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Naver%20Cloud%20AI/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Naver%20Cloud%20AI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5596,7 +5552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/New%20York%20University/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/New%20York%20University/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5617,7 +5573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Northeastern%20University/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Northeastern%20University/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5638,7 +5594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/OpenAI/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/OpenAI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5659,7 +5615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Rochester%20Institute%20of%20Technology/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Rochester%20Institute%20of%20Technology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5680,7 +5636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Stanford/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Stanford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5701,7 +5657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/TU%20Delft/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/TU%20Delft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5722,7 +5678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Tsinghua%20University/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Tsinghua%20University/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5743,7 +5699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/UC%20Berkeley/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/UC%20Berkeley/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5764,7 +5720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/UC%20San%20Diego/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/UC%20San%20Diego/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5785,7 +5741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/UC%20Santa%20Barbara/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/UC%20Santa%20Barbara/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5806,7 +5762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/University%20of%20Amsterdam/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/University%20of%20Amsterdam/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5827,7 +5783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/University%20of%20Chile/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/University%20of%20Chile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5848,7 +5804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/University%20of%20Illinois%20at%20Urbana-Champaign/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/University%20of%20Illinois%20at%20Urbana-Champaign/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5869,7 +5825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Vector%20Institute/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Vector%20Institute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5890,7 +5846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Vrije%20Universiteit%20Amsterdam/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Vrije%20Universiteit%20Amsterdam/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5911,7 +5867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../103%20Affiliations/Yonsei%20University/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Yonsei%20University/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5975,7 +5931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../104%20Other/EPFL-CS439%20-%20Optimization%20for%20Machine%20Learning/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/104%20Other/EPFL-CS439%20-%20Optimization%20for%20Machine%20Learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5996,7 +5952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../104%20Other/Introducing%20Apple%E2%80%99s%20On-Device%20and%20Server%20Foundation%20Models/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/104%20Other/Introducing%20Apple%E2%80%99s%20On-Device%20and%20Server%20Foundation%20Models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6017,7 +5973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../104%20Other/MIT-65940%20-%20TinyML%20and%20Efficient%20Deep%20Learning%20Computing/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/104%20Other/MIT-65940%20-%20TinyML%20and%20Efficient%20Deep%20Learning%20Computing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6038,7 +5994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../104%20Other/TinyML%20and%20Efficient%20Deep%20Learning%20Computing%20-%20Lecture%2012/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/104%20Other/TinyML%20and%20Efficient%20Deep%20Learning%20Computing%20-%20Lecture%2012/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6059,7 +6015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../104%20Other/TinyML%20and%20Efficient%20Deep%20Learning%20Computing%20-%20Lecture%203/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/104%20Other/TinyML%20and%20Efficient%20Deep%20Learning%20Computing%20-%20Lecture%203/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6080,7 +6036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../104%20Other/TinyML%20and%20Efficient%20Deep%20Learning%20Computing%20-%20Lecture%205/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/104%20Other/TinyML%20and%20Efficient%20Deep%20Learning%20Computing%20-%20Lecture%205/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6101,7 +6057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../104%20Other/TinyML%20and%20Efficient%20Deep%20Learning%20Computing/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/104%20Other/TinyML%20and%20Efficient%20Deep%20Learning%20Computing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6122,7 +6078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../104%20Other/Tweet%20-%20Stable%20Diffusion%20XL%20on%20iPhone%20with%20Core%20ML%21/" class="md-nav__link">
+      <a href="../../100%20Reference%20notes/104%20Other/Tweet%20-%20Stable%20Diffusion%20XL%20on%20iPhone%20with%20Core%20ML%21/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6169,23 +6125,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#note" class="md-nav__link">
-    <span class="md-ellipsis">
-      Note
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -6203,51 +6142,30 @@
     
     
     
-      <span class="md-tag">paper</span>
+      <span class="md-tag">dl_theory</span>
     
   
     
     
     
-      <span class="md-tag">foundation_models</span>
+      <span class="md-tag">transformers</span>
     
   
 </nav>
 
 
 
-  <h1>R MAE   Regions Meet Masked Autoencoders</h1>
+  <h1>Mean Attention Distance</h1>
 
-<table>
-<thead>
-<tr>
-<th><strong>Properties</strong></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>authors</td>
-<td><a href="../../102%20Authors/Duy-Kien%20Nguyen/">Duy-Kien Nguyen</a>, <a href="../../102%20Authors/Vaibhav%20Aggarwal/">Vaibhav Aggarwal</a>, <a href="../../102%20Authors/Yanghao%20Li/">Yanghao Li</a>, <a href="../../102%20Authors/Martin%20R.%20Oswald/">Martin R. Oswald</a>, <a href="../../102%20Authors/Alexander%20Kirillov/">Alexander Kirillov</a>, <a href="../../102%20Authors/Cees%20G.%20M.%20Snoek/">Cees G. M. Snoek</a>, <a href="../../102%20Authors/Xinlei%20Chen/">Xinlei Chen</a></td>
-</tr>
-<tr>
-<td>year</td>
-<td>2023</td>
-</tr>
-<tr>
-<td>url</td>
-<td><a href="https://arxiv.org/abs/2306.05411">https://arxiv.org/abs/2306.05411</a></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>In this work, we explore regions as a potential visual analogue of words for self-supervised image representation learning. Inspired by Masked Autoencoding (MAE), a generative pre-training baseline, we propose masked region autoencoding to learn from groups of pixels or regions. Specifically, we design an architecture which efficiently addresses the one-to-many mapping between images and regions, while being highly effective especially with high-quality regions. When integrated with MAE, our approach (R-MAE) demonstrates consistent improvements across various pre-training datasets and downstream detection and segmentation benchmarks, with negligible computational overheads. Beyond the quantitative evaluation, our analysis indicates the models pre-trained with masked region autoencoding unlock the potential for interactive segmentation. The code is provided at <a href="https://github.com/facebookresearch/r-mae">this https URL</a>.</p>
+<p>Introduced in <a href="../../100%20Reference%20notes/101%20Literature/An%20image%20is%20worth%2016x16%20words%20-%20Transformers%20for%20image%20recognition%20at%20scale/">An image is worth 16x16 words - Transformers for image recognition at scale</a>.</p>
+<p>From <a href="../100 Reference notes/101 Literature/What Do Self-Supervised Vision Transformers Learn?.md">What Do Self-Supervised Vision Transformers Learn?</a></p>
+<blockquote>
+<p>“Attention distance is defined as the average distance between the query tokens and key tokens considering their self-attention weights. Therefore, it conceptually corresponds to the size of the receptive fields in CNNs.” (Park et al., 2023, p. 3)</p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Key Observation</p>
+<p>Can be used to measure what is the how much local or global information is a transformer using. See <a href="../100 Reference notes/101 Literature/What Do Self-Supervised Vision Transformers Learn?.md">What Do Self-Supervised Vision Transformers Learn?</a>.</p>
 </div>
-<h2 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h2>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Note to self: Read in depth</li>
-</ul>
 
 
 
@@ -6268,7 +6186,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-01T15:29:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-03T15:22:16+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-03</span>
   </span>
 
     
@@ -6315,20 +6233,20 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
-        <script src="../../../js/timeago.min.js"></script>
+        <script src="../../js/timeago.min.js"></script>
       
-        <script src="../../../js/timeago_mkdocs_material.js"></script>
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
-        <script src="../../../javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
       
