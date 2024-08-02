@@ -2,7 +2,7 @@
 authors:
   - "[[Sourya Basu|Sourya Basu]]"
 tags:
-  - dl2
+  - paper
 year: 
 url: 
 share: true
