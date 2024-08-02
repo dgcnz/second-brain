@@ -12,6 +12,7 @@ tags:
   - foundation_models
   - computer_vision
   - dl_theory
+  - paper
 url: https://arxiv.org/abs/2201.03545
 share: true
 ---

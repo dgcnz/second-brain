@@ -8,6 +8,7 @@ tags:
   - cnn
   - dl_theory
   - optimizability
+  - paper
 url: https://arxiv.org/abs/2403.19588
 share: true
 ---

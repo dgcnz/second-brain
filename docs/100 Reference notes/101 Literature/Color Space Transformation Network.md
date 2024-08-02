@@ -4,6 +4,7 @@ authors:
 year: 2015
 tags:
   - cnn
+  - paper
 url: https://arxiv.org/abs/1511.01064
 share: true
 ---

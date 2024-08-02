@@ -9,6 +9,7 @@ tags:
   - gcn
   - graphs
   - gnn
+  - paper
 url: https://arxiv.org/abs/1911.05256
 share: true
 ---

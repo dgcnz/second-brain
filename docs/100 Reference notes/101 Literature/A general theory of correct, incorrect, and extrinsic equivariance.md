@@ -12,6 +12,7 @@ tags:
   - equivariance
   - relaxed_equivariance
   - dl_theory
+  - paper
 url: https://proceedings.neurips.cc/paper_files/paper/2023/hash/7dc7793c89b93887e126a86f22ef63c6-Abstract-Conference.html
 share: true
 ---

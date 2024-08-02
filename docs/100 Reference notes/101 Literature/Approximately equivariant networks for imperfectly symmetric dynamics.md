@@ -8,6 +8,7 @@ tags:
   - relaxed_equivariance
   - equivariance
   - dl_theory
+  - paper
 url: https://proceedings.mlr.press/v162/wang22aa.html
 share: true
 ---
