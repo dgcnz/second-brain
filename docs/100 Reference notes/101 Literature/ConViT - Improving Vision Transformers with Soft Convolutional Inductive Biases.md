@@ -12,6 +12,7 @@ tags:
   - cnn
   - transformers
   - inductive_bias
+  - paper
 year: 
 url: 
 share: true
