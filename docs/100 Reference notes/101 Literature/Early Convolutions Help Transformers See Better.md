@@ -11,6 +11,7 @@ tags:
   - transformers
   - vit
   - optimizability
+  - paper
 share: true
 ---
 
