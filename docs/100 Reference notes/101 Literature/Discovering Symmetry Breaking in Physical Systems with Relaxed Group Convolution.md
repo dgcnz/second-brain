@@ -10,6 +10,7 @@ tags:
   - equivariance
   - relaxed_equivariance
   - dl_theory
+  - paper
 url: https://arxiv.org/abs/2310.02299
 share: true
 ---
