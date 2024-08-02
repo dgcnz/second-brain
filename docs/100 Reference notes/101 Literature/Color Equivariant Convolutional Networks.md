@@ -6,7 +6,7 @@ authors:
   - "[[Alexander Gielisse|Alexander Gielisse]]"
   - "[[Jan van Gemert|Jan van Gemert]]"
 tags:
-  - dl2
+  - paper
 year: 
 url: 
 share: true
