@@ -13,6 +13,7 @@ year: 2024
 tags:
   - efficient_dl
   - transformers
+  - paper
 url: https://arxiv.org/abs/2406.02657
 share: true
 ---
