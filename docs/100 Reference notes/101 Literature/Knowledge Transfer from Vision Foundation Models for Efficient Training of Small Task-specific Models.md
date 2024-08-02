@@ -10,6 +10,8 @@ authors:
 year: 2023
 tags:
   - efficient_dl
+  - paper
+  - foundation_models
 url: https://arxiv.org/abs/2311.18237
 share: true
 ---
