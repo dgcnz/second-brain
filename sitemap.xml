@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/000%20Zettelkasten/Residual%20stream/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/101%20Literature/A%20Brief%20Review%20of%20Hypernetworks%20in%20Deep%20Learning/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -157,6 +162,11 @@
     </url>
     <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/101%20Literature/A%20Hierarchy%20of%20Graph%20Neural%20Networks%20Based%20on%20Learnable%20Local%20Features/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/101%20Literature/A%20Mathematical%20Framework%20for%20Transformer%20Circuits/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -556,6 +566,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/101%20Literature/Revealing%20the%20Utilized%20Rank%20of%20Subspaces%20of%20Learning%20in%20Neural%20Networks/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/101%20Literature/Rewrite%20the%20Stars/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -776,7 +791,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Chong%20Wang/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Christopher%20Olah/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Daniel%20M.%20Roy/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Daniel%20Ulbricht/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -822,6 +852,11 @@
     </url>
     <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Erik%20J.%20Bekkers/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Eshan%20Verma/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -971,6 +1006,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Kaushik%20Roy/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Lawrence%20Chan/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -1116,6 +1156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Ruoming%20Pang/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Sachin%20Mehta/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -1192,6 +1237,11 @@
     </url>
     <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Tete%20Xiao/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Tom%20Gunter/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1277,6 +1327,11 @@
     </url>
     <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Ziaoyi%20Zhang/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Zirui%20Wang/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1396,6 +1451,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/Princeton%20University/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/Rochester%20Institute%20of%20Technology/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -1442,6 +1502,11 @@
     </url>
     <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/University%20of%20Illinois%20at%20Urbana-Champaign/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/University%20of%20Oxford/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
