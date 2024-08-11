@@ -164,3 +164,22 @@ share: true
 ---
 > [!tldr] Abstract
 > We present foundation language models developed to power Apple Intelligence features, including a ~3 billion parameter model designed to run efficiently on devices and a large server-based language model designed for Private Cloud Compute. These models are designed to perform a wide range of tasks efficiently, accurately, and responsibly. This report describes the model architecture, the data used to train the model, the training process, how the models are optimized for inference, and the evaluation results. We highlight our focus on Responsible AI and how the principles are applied throughout the model development.
+
+## Notes
+
+> “A shared input/output embedding matrix [Press and Wolf, 2016] to reduce memory usage for parameters.” (Gunter et al., 2024, p. 2)
+
+This reminds me of the [[Residual stream|Residual stream]] interpretation of transformers.
+
+> “The model is compressed and quantized, on average under 4-bit-perweight, after the post-training stages (details of the quantization scheme will be discussed later). The quantized model often shows a moderate level of quality loss. Therefore, instead of directly passing the quantized model to application teams for feature development, we attach a set of parameter-efficient [[LoRa Adapter|LoRa Adapter]]s for quality recovery. We make sure that these LoRA adapters training recipes are consistent with pre-training and post-training processes. Then, products will fine-tune their own feature-specific LoRA adapters by initializing the adapter weights from the accuracy-recovery adapters, while keeping the quantized base model frozen.” (Gunter et al., 2024, p. 16)
+
+So the recipe is:
+- Pre-training/Post-training
+- Compression? and Quantization (leads to accuracy loss)
+- LoRa fine-tuning to recover accuracy, call it LoRa Recovery, I'll assume this 
+- For a specific task, initialize LoRa adapter to the LoRa Recovery
+Some details:
+- Rank 16 LoRa
+- Does each LoRa adapter also share the same precision as the underlying weight block/matrix? I suppose so
+
+“Specifically, our AFM-on-device model running on Apple Neural Engine (ANE) uses [[Bit Palettization|Bit Palettization]]: for projection weights, every 16 columns/rows share the same quantization constants (i.e., lookup tables) and are quantized using K-means with 16 unique values (4-bit).” (Gunter et al., 2024, p. 17)
