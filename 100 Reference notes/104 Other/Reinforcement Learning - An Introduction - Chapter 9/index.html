@@ -7073,6 +7073,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#94-linear-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 Linear Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-feature-construction-for-linear-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 Feature Construction for Linear Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#96-selecting-step-size-parameters-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6 Selecting Step-Size Parameters Manually
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7297,6 +7324,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#94-linear-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 Linear Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-feature-construction-for-linear-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 Feature Construction for Linear Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#96-selecting-step-size-parameters-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6 Selecting Step-Size Parameters Manually
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7376,7 +7430,7 @@
 <p class="admonition-title">Equation 9.1</p>
 <div class="arithmatex">\[
 \begin{align}
-\overline{VE}(\mathbf{w}) &amp;\doteq \sum_{s \in \mathcal{S}}  \mu(s) \left[v_{\pi}(s) - \hat{v}(s, \mathbf{w})\right]^2 &amp;&amp; (9.1)
+\overline{VE}(\mathbf{w}) &amp;\doteq \sum_{s \in \mathcal{S}}  \mu(s) \left[v_{\pi}(s) - \hat{v}(s, \mathbf{w})\right]^2 &amp;&amp; \tag{9.1}
 \end{align}
 \]</div>
 </div>
@@ -7387,12 +7441,12 @@
 <p class="admonition-title">Equations 9.2 and 9.3</p>
 <div class="arithmatex">\[
 \begin{align}
-\eta(s) = h(s) + \sum_{\bar{s}} \eta(\bar{s}) \sum_a \pi(a \mid \bar{s})p(s \mid \bar{s}, a), &amp;&amp; \text{for all } s \in S  &amp;&amp; (9.2)
+\eta(s) = h(s) + \sum_{\bar{s}} \eta(\bar{s}) \sum_a \pi(a \mid \bar{s})p(s \mid \bar{s}, a), &amp;&amp; \text{for all } s \in S  &amp;&amp; \tag{9.2}
 \end{align}
 \]</div>
 <div class="arithmatex">\[
 \begin{align}
-\mu(s) = \frac{\eta(s)}{\sum_{s'}\eta(s')} &amp;&amp; (9.3)
+\mu(s) = \frac{\eta(s)}{\sum_{s'}\eta(s')} &amp;&amp; \tag{9.3}
 \end{align}
 \]</div>
 </div>
@@ -7404,6 +7458,93 @@
 <li><span class="arithmatex">\(\overline{VE}\)</span> only guaranties local optimality.</li>
 </ul>
 <h2 id="93-stochastic-gradient-and-semi-gradient-methods">9.3 Stochastic-gradient and Semi-gradient Methods<a class="headerlink" href="#93-stochastic-gradient-and-semi-gradient-methods" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Equations 9.4 and 9.5</p>
+<div class="arithmatex">\[
+\begin{align}
+    \mathbf{w}_{t+1} &amp;= \mathbf{w}_t - \frac{1}{2} \alpha \nabla \left[v_{\pi}(S_t) - \hat{v}(S_t, \mathbf{w}_t) \right] &amp;&amp; \tag{9.4} \\
+     &amp;= \mathbf{w}_t + \alpha \left[v_{\pi}(S_t) - \hat{v}(S_t, \mathbf{w}_t) \right] \nabla \hat{v}(S_t, \mathbf{w}_t) &amp;&amp; \tag{9.5}
+\end{align}
+\]</div>
+</div>
+<p>However, since we don't know the true  <span class="arithmatex">\(v_\pi(s)\)</span>, we can replace it with the <em>target output</em> <span class="arithmatex">\(U_t\)</span>: </p>
+<div class="admonition note">
+<p class="admonition-title">Equation 9.7</p>
+<div class="arithmatex">\[
+\begin{align}
+    \mathbf{w}_{t+1} &amp;= \mathbf{w}_t + \alpha \left[U_t - \hat{v}(S_t, \mathbf{w}_t) \right] \nabla \hat{v}(S_t, \mathbf{w}_t) &amp;&amp; \tag{9.7}
+\end{align}
+\]</div>
+</div>
+<p>Where:<br />
+- <span class="arithmatex">\(U_t\)</span> <em>should</em> be an unbiased estimate of <span class="arithmatex">\(v_\pi(s)\)</span>, that is:<br />
+    - <span class="arithmatex">\(\mathbb{E}[U_t \mid S_t=s] = v_\pi(s)\)</span><br />
+    - With local optimum convergence guarantees.</p>
+<p><img alt="Pasted image 20240923171752.png" src="../../../images/Pasted%20image%2020240923171752.png" /></p>
+<p>Examples of <span class="arithmatex">\(U_t\)</span>:<br />
+- Monte Carlo target: <span class="arithmatex">\(U_t = G_t\)</span>  (that is, the reward achieved until the end of the episode), unbiased.<br />
+-  Bootstrapping targets are biased because they depend on <span class="arithmatex">\(\mathbf{w}\)</span> through <span class="arithmatex">\(\hat{v}(S_t, \mathbf{w})\)</span> .<br />
+    - To make them unbiased, you can treat the dependent expressions as constants (stop the gradient flow). This yields <em>semi-gradient methods</em>.</p>
+<p><em>Semi-gradient methods</em>:<br />
+- Do not converge as robustly as gradient methods, aside from the linear case.<br />
+- Faster, enable online/continual learning.</p>
+<p><img alt="Pasted image 20240923172823.png" src="../../../images/Pasted%20image%2020240923172823.png" /></p>
+<h2 id="94-linear-methods">9.4 Linear Methods<a class="headerlink" href="#94-linear-methods" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Equation 9.8</p>
+<div class="arithmatex">\[
+\begin{align}
+    \hat{v}(s, \mathbf{w}) \doteq \mathbf{w}^\intercal \mathbf{x}(s) = \sum_{i=1}^d w_i x_i(s) &amp;&amp; \tag{9.8}
+\end{align}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{x}(s) = \left(x_1(s), \dots, x_d(s)\right)^\intercal\)</span></li>
+</ul>
+</div>
+<ul>
+<li>Chapter also explores the convergence of TD(0) with SGD and linear approximation and finds it converges to the <em>TD fixed point</em> (Eqs. 9.11, 9.12), <span class="arithmatex">\(\mathbf{w}_{TD}\)</span>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Equation 9.14</p>
+<p>Interpretation: The asymptotic error of the TD method is no more than <span class="arithmatex">\(\frac{1}{1-\gamma}\)</span> times the <em>smallest possible error</em>.</p>
+<div class="arithmatex">\[
+\begin{align}
+    \overline{VE}(\mathbf{w}_{TD}) &amp; \leq \frac{1}{1-\gamma} \min_{\mathbf{w}} \overline{VE}(\mathbf{w}) \tag{9.14}
+\end{align}
+\]</div>
+</div>
+<p><img alt="Pasted image 20240923173826.png" src="../../../images/Pasted%20image%2020240923173826.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Equation 9.15</p>
+<div class="arithmatex">\[
+\mathbf{w}_{t+n} \doteq \mathbf{w}_{t+n-1} + \alpha \left[ G_{t:t+n} - \hat{v}(S_t, \mathbf{w}_{t+n-1}) \right] \nabla \hat{v}(S_t, \mathbf{w}_{t+n-1}), \quad 0 \leq t &lt; T, \tag{9.15}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Equation 9.16</p>
+<div class="arithmatex">\[
+G_{t:t+n} \doteq R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1} R_{t+n} + \gamma^n \hat{v}(S_{t+n}, \mathbf{w}_{t+n-1}), \quad 0 \leq t \leq T - n. \tag{9.16}
+\]</div>
+</div>
+<h2 id="95-feature-construction-for-linear-methods">9.5 Feature Construction for Linear Methods<a class="headerlink" href="#95-feature-construction-for-linear-methods" title="Permanent link">&para;</a></h2>
+<ul>
+<li>9.5.1 Polynomials</li>
+<li>9.5.2 Fourier Basis</li>
+<li>9.5.3 Coarse coding</li>
+<li>9.5.4 Tile Coding</li>
+<li>9.5.5 Radial Basis Functions</li>
+</ul>
+<h2 id="96-selecting-step-size-parameters-manually">9.6 Selecting Step-Size Parameters Manually<a class="headerlink" href="#96-selecting-step-size-parameters-manually" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Equation 9.19</p>
+<p>A good rule of thumb for setting the step-size parameter of <em>linear SGD methods</em> is:</p>
+<div class="arithmatex">\[
+\begin{align}
+    \alpha \doteq \left(\tau \mathbb{E}\left[\mathbf{x}^\intercal\mathbf{x}\right]\right)^{-1} \tag{9.19}
+\end{align}
+\]</div>
+</div>
 
 
 
@@ -7424,7 +7565,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-09-23T10:10:20+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-09-23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-09-23T15:50:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-09-23</span>
   </span>
 
     
