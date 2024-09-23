@@ -26,9 +26,10 @@ share: true
 > $$
 > \begin{align}
 > v_{k+1}(s) &\doteq \mathbb{E}_{\pi} [ R_{t+1} + \gamma v_k(S_{t+1}) \mid S_t = s ] \\
-& = \sum_a \pi(a \mid s) \sum_{s', r} p(s', r \mid s, a) \left[ r + \gamma v_k(s') \right] && (4.5),
+> & = \sum_a \pi(a \mid s) \sum_{s', r} p(s', r \mid s, a) \left[ r + \gamma v_k(s') \right] && (4.5),
 > \end{align}
 > $$
+
 
 ![[Pasted image 20240917104341.png|600]]
 ## 4.2 Policy Improvement
