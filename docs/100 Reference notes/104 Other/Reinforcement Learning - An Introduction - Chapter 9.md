@@ -70,7 +70,7 @@ Where:
 	- Interpretation of 2 terms: Time is spent in a $s$ if an episode starts in $s$ or if another state transitions into $s$.
 
 
-- $\overline{VE}$ only guaranties local optimality.
+- $\overline{VE}$ only guarantees local optimality.
 
 
 ## 9.3 Stochastic-gradient and Semi-gradient Methods
@@ -125,7 +125,8 @@ Examples of $U_t$:
 > Where:
 > - $\mathbf{x}(s) = \left(x_1(s), \dots, x_d(s)\right)^\intercal$
 
-- Chapter also explores the convergence of TD(0) with SGD and linear approximation and finds it converges to the *TD fixed point* (Eqs. 9.11, 9.12), $\mathbf{w}_{TD}$.
+- The gradient Monte Carlo algorithm converges to the global optimum of the VE under linear function approximation if $\alpha$ is reduced over time according to the usual conditions.
+- Chapter also explores the convergence of TD(0) with SGD and linear approximation and finds it converges to the *TD fixed point* (Eqs. 9.11, 9.12), $\mathbf{w}_{TD}$. This is not the global optimum, but a point near the local optimum.
 
 
 > [!NOTE] Equation 9.14
