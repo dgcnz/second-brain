@@ -167,7 +167,7 @@ Examples of $U_t$:
 
 
 > [!NOTE] Equation 9.19
->  A good rule of thumb for setting the step-size parameter of *linear SGD methods* is:
+>  Suppose you wanted to learn in about $\tau$ experiences with substantially the same feature vector. A good rule of thumb for setting the step-size parameter of *linear SGD methods* is:
 >  
 > $$
 > \begin{align}
