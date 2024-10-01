@@ -8,6 +8,43 @@ tags:
 url: 
 share: true
 ---
+## 11.1 Semi-gradient Methods
+
+> [!NOTE] Equation 11.1: Per-step importance sampling ratio
+> 
+> $$
+> \rho_t \doteq \rho_{t:T-1} = \frac{\pi(A_t \mid S_t)}{b(A_t \mid S_t)}
+> $$
+
+
+#todo
+
+## 11.4 Linear Value-function Geometry
+
+TODO:
+- [x] 11.11 mu norm equation ✅ 2024-10-01
+- [x] 11.17 and 11.18 bellman error ✅ 2024-10-01
+- [ ] 11.19 mean square bellman error
+
+> [!NOTE] Equation 11.11: $\mu$-norm
+> 
+> $$
+> ||\mathbf{v}||^2_\mu \doteq \sum_{s \in \mathcal{S}} \mu(s) v(s)^2
+> $$
+
+> [!NOTE] Equation 11.17 and 11.18: Bellman error
+> 
+> $$
+> \begin{align}
+> \bar{\delta}_{\mathbf{w}}(s) &\doteq \left( \sum_a \pi(a \mid s) \sum_{s', r} p(s', r \mid s, a)[r + \gamma v_{\mathbf{w}}(s')] \right) - v_{\mathbf{w}}(s) \tag{11.17} \\
+> &= \mathbb{E}_\pi[R_{t+1} - \gamma v_{\mathbf{w}}(S_{t+1}) - v_{\mathbf{w}}(S_{t}) \mid S_t = s, A_t \sim \pi]
+> \end{align}
+> $$
+
+
+
+
+
 ## 11.5 Gradient Descent in the Bellman Error
 
 > [!NOTE] Mean-squared temporal difference error
