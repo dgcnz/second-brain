@@ -8,7 +8,9 @@ tags:
 url: 
 share: true
 ---
-
+- [[Reinforcement Learning - An Introduction - Chapter 3|Reinforcement Learning - An Introduction - Chapter 3]]
 - [[Reinforcement Learning - An Introduction - Chapter 4|Reinforcement Learning - An Introduction - Chapter 4]]
 - [[Reinforcement Learning - An Introduction - Chapter 6|Reinforcement Learning - An Introduction - Chapter 6]]
+- [[Reinforcement Learning - An Introduction - Chapter 9|Reinforcement Learning - An Introduction - Chapter 9]]
+
 
