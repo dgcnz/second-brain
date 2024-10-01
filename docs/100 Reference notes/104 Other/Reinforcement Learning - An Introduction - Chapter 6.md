@@ -8,6 +8,45 @@ tags:
 url: 
 share: true
 ---
+## 6.1 TD Prediction
+
+> [!NOTE] Equation 6.2: TD(0) update
+> 
+> $$
+> \begin{align}
+> V(S_t) &\leftarrow V(S_t) + \alpha \left[ R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right]  \tag{6.2}  \\
+> \end{align}
+> $$
+
+> [!NOTE] Equations 6.3 and 6.4: Relationship between TD(0), MC and DP
+> 
+> $$
+> \begin{align}
+> v_\pi(s) &\doteq \mathbb{E}_\pi[G_t \mid S_t = s] \tag{6.3} \\
+> &= \mathbb{E}_\pi[R_{t+1} + \gamma G_{t+1} \mid S_t = s]  \tag{from (3.9)} \\
+> &= \mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1}) \mid S_t = s] \tag{6.4} \\
+> \end{align}
+> $$
+
+> [!faq]- Why is (6.3) called the Monte Carlo *estimate*?
+> Because the expected value is not known, and sampled returns are used in its place.
+
+> [!faq]- Why is (6.4) called the Dynamic Programming *estimate*?
+> Although the expectation is known, the value function is not, as we use the estimate $V(S_t)$.
+
+> [!faq]- By looking at the previous two answers, what does TD(0) estimate and how does that differ from the previous methods?
+> TD(0) maintains both an estimate of the value function and uses a sample reward as the estimate to the expectation.
+
+
+
+> [!NOTE] Equation 6.5: TD error
+> 
+> $$
+> \begin{align}
+> \delta_t &\doteq R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \tag{6.5} 
+> \end{align}
+> $$
+
 ## 6.4 Sarsa: On-policy TD Control
 
 > [!NOTE] Equation 6.7
