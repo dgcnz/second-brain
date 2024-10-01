@@ -4480,6 +4480,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../100%20Reference%20notes/102%20Authors/Jesse%20Cai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jesse Cai
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../100%20Reference%20notes/102%20Authors/Jing%20Pu/" class="md-nav__link">
         
   
@@ -6371,6 +6392,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/Meta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meta
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../100%20Reference%20notes/103%20Affiliations/Microsoft/" class="md-nav__link">
         
   
@@ -6581,6 +6623,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../100%20Reference%20notes/103%20Affiliations/Rochester%20Institute%20of%20Technology/" class="md-nav__link">
         
   
@@ -6712,6 +6775,27 @@
   
   <span class="md-ellipsis">
     UC Santa Barbara
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../100%20Reference%20notes/103%20Affiliations/UCLA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCLA
   </span>
   
 
@@ -7233,6 +7317,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../100%20Reference%20notes/104%20Other/PyTorch%20Conference%202024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch Conference 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../100%20Reference%20notes/104%20Other/PyTorch%20Eager%20Mode%20Quantization%20TensorRT%20Acceleration/" class="md-nav__link">
         
   
@@ -7649,10 +7754,20 @@
   <h1>PyTorch Quantization for TensorRT</h1>
 
 <p>There seems to be quite a few possible ways to do this:<br />
-- <a href="../../100%20Reference%20notes/104%20Other/PyTorch%20Eager%20Mode%20Quantization%20TensorRT%20Acceleration/">PyTorch Eager Mode Quantization TensorRT Acceleration</a> <br />
-    - 1. torchao quantization 2. ONNX conversion 3. Graph Surgery (changing some ops in the onnx graph) 4.. tensorrt conversion<br />
-    - Seems very cumbersome<br />
-- </p>
+- <a href="../../100%20Reference%20notes/104%20Other/PyTorch%20Eager%20Mode%20Quantization%20TensorRT%20Acceleration/">PyTorch Eager Mode Quantization TensorRT Acceleration</a> , seems a bit cumbersome:<br />
+    1. torchao quantization <br />
+    2. ONNX conversion<br />
+    3. Graph Surgery (changing some ops in the onnx graph)<br />
+    4. tensorrt conversion<br />
+- Not sure if it works, but would be ideal<br />
+    1. torch.export<br />
+    2. torchao quantization<br />
+    3. tensorrt conversion<br />
+- Less ideal would be:<br />
+    1. torchao quantization<br />
+    2. torch.export<br />
+    3. tensorrt conversion<br />
+    - I've already sort of tried this using the <a href="https://github.com/pytorch/TensorRT/blob/main/examples/dynamo/vgg16_ptq.py">vgg ptq example from tensorrt</a>, but torch.export complained that it couldn't translate the quantized operations</p>
 
 
 
@@ -7673,7 +7788,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-09-28T10:31:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-09-28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-01T08:46:14+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-01</span>
   </span>
 
     

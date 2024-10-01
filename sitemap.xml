@@ -981,6 +981,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Jesse%20Cai/</loc>
+         <lastmod>2024-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/102%20Authors/Jing%20Pu/</loc>
          <lastmod>2024-10-01</lastmod>
          <changefreq>daily</changefreq>
@@ -1421,6 +1426,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/Meta/</loc>
+         <lastmod>2024-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/Microsoft/</loc>
          <lastmod>2024-10-01</lastmod>
          <changefreq>daily</changefreq>
@@ -1471,6 +1481,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/PyTorch/</loc>
+         <lastmod>2024-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/Rochester%20Institute%20of%20Technology/</loc>
          <lastmod>2024-10-01</lastmod>
          <changefreq>daily</changefreq>
@@ -1502,6 +1517,11 @@
     </url>
     <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/UC%20Santa%20Barbara/</loc>
+         <lastmod>2024-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/103%20Affiliations/UCLA/</loc>
          <lastmod>2024-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1612,6 +1632,11 @@
     </url>
     <url>
          <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/104%20Other/PyTorch%20Conference%202024%20-%20What%E2%80%99s%20new%20in%20torch.export%3F/</loc>
+         <lastmod>2024-10-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dgcnz.github.io/second-brain/100%20Reference%20notes/104%20Other/PyTorch%20Conference%202024/</loc>
          <lastmod>2024-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
