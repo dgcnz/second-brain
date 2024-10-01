@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#115-gradient-descent-in-the-bellman-error" class="md-skip">
+        <a href="#111-semi-gradient-methods" class="md-skip">
           Skip to content
         </a>
       
@@ -7022,6 +7022,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../GPU%20mode%20-%20Sparsity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU mode   Sparsity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Introducing%20Apple%E2%80%99s%20On-Device%20and%20Server%20Foundation%20Models/" class="md-nav__link">
         
   
@@ -7442,11 +7463,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#111-semi-gradient-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Semi-gradient Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      todo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="todo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#114-linear-value-function-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4 Linear Value-function Geometry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#115-gradient-descent-in-the-bellman-error" class="md-nav__link">
     <span class="md-ellipsis">
       11.5 Gradient Descent in the Bellman Error
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7772,11 +7826,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#111-semi-gradient-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Semi-gradient Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      todo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="todo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#114-linear-value-function-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4 Linear Value-function Geometry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#115-gradient-descent-in-the-bellman-error" class="md-nav__link">
     <span class="md-ellipsis">
       11.5 Gradient Descent in the Bellman Error
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7806,8 +7893,6 @@
 
 
 
-  <h1>Reinforcement Learning   An Introduction   Chapter 11</h1>
-
 <table>
 <thead>
 <tr>
@@ -7826,6 +7911,34 @@
 </tr>
 </tbody>
 </table>
+<h2 id="111-semi-gradient-methods">11.1 Semi-gradient Methods<a class="headerlink" href="#111-semi-gradient-methods" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.1: Per-step importance sampling ratio</p>
+<div class="arithmatex">\[
+\rho_t \doteq \rho_{t:T-1} = \frac{\pi(A_t \mid S_t)}{b(A_t \mid S_t)}
+\]</div>
+</div>
+<h1 id="todo">todo<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
+<h2 id="114-linear-value-function-geometry">11.4 Linear Value-function Geometry<a class="headerlink" href="#114-linear-value-function-geometry" title="Permanent link">&para;</a></h2>
+<p>TODO:<br />
+- [x] 11.11 mu norm equation ✅ 2024-10-01<br />
+- [x] 11.17 and 11.18 bellman error ✅ 2024-10-01<br />
+- [ ] 11.19 mean square bellman error</p>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.11: <span class="arithmatex">\(\mu\)</span>-norm</p>
+<div class="arithmatex">\[
+||\mathbf{v}||^2_\mu \doteq \sum_{s \in \mathcal{S}} \mu(s) v(s)^2
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.17 and 11.18: Bellman error</p>
+<div class="arithmatex">\[
+\begin{align}
+\bar{\delta}_{\mathbf{w}}(s) &amp;\doteq \left( \sum_a \pi(a \mid s) \sum_{s', r} p(s', r \mid s, a)[r + \gamma v_{\mathbf{w}}(s')] \right) - v_{\mathbf{w}}(s) \tag{11.17} \\
+&amp;= \mathbb{E}_\pi[R_{t+1} - \gamma v_{\mathbf{w}}(S_{t+1}) - v_{\mathbf{w}}(S_{t}) \mid S_t = s, A_t \sim \pi]
+\end{align}
+\]</div>
+</div>
 <h2 id="115-gradient-descent-in-the-bellman-error">11.5 Gradient Descent in the Bellman Error<a class="headerlink" href="#115-gradient-descent-in-the-bellman-error" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Mean-squared temporal difference error</p>
@@ -7867,7 +7980,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-01T08:28:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-01T09:24:24+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-01</span>
   </span>
 
     
