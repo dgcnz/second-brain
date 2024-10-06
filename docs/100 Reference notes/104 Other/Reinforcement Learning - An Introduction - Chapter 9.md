@@ -165,6 +165,8 @@ Examples of $U_t$:
 
 ## 9.6 Selecting Step-Size Parameters Manually
 
+“The classical choice t =1/t, which produces sample averages in tabular MC methods, is not appropriate for TD methods, for nonstationary problems, or for any method using function approximation.” (Sutton and Barto, 2020, p. 244)
+
 
 > [!NOTE] Equation 9.19
 >  Suppose you wanted to learn in about $\tau$ experiences with substantially the same feature vector. A good rule of thumb for setting the step-size parameter of *linear SGD methods* is:
