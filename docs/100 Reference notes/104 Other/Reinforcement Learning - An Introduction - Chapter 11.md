@@ -24,7 +24,7 @@ share: true
 TODO:
 - [x] 11.11 mu norm equation ✅ 2024-10-01
 - [x] 11.17 and 11.18 bellman error ✅ 2024-10-01
-- [ ] 11.19 mean square bellman error
+- [x] 11.19 mean square bellman error ✅ 2024-10-01
 
 > [!NOTE] Equation 11.11: $\mu$-norm
 > 
@@ -41,9 +41,11 @@ TODO:
 > \end{align}
 > $$
 
-
-
-
+> [!NOTE] Equation 11.19: Mean-square Bellman error
+> 
+> $$
+> \overline{BE}({\mathbf{w}}) \doteq || \bar{\delta} ||^2_\mu
+> $$
 
 ## 11.5 Gradient Descent in the Bellman Error
 
@@ -66,6 +68,4 @@ TODO:
 >  &= \mathbf{w}_t - \alpha \rho_t \delta_t (\nabla \hat{v}(S_t, \mathbf{w}_t) - \gamma \nabla \hat{v}(S_{t+1}, \mathbf{w}_t)) \tag{11.23} \\
 > \end{align}
 > $$
-
-
 
