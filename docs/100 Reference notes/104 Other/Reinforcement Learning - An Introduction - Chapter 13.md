@@ -5,6 +5,7 @@ authors:
 year: 2018
 tags:
   - textbook
+  - rl1
 url: 
 share: true
 ---
@@ -26,7 +27,6 @@ Notation:
 > $$
 > \boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t + \alpha \widehat{\nabla J(\boldsymbol{\theta})} \tag{13.1}
 > $$
-
 
 ## 13.1 Policy Approximation and its Advantages
 
@@ -87,12 +87,92 @@ Notation:
 > $$
 > \begin{align}
 >   \nabla J(\boldsymbol{\theta}) &\propto \sum_s \mu(s) \sum_a q_{\pi}(s, a) \nabla \pi(a \mid s, \boldsymbol{\theta}) \\
->   &= \mathbb{E}_{\pi} \left[ \sum_a q_{\pi}(S_t, a) \nabla \pi(a \mid S_t, \boldsymbol{\theta}) \right] \\
+>   &= \mathbb{E}_{\pi} \left[ \sum_a q_{\pi}(S_t, a) \nabla \pi(a \mid S_t, \boldsymbol{\theta}) \right] \tag{13.6} \\
 > \end{align}
 > $$
+> 
+> Personal note about notation:
+> - $\mathbb{E}_{\pi}$ is a bit misleading because it can have two interpretations:
+>   1. $\mathbb{E}_{A_t \sim \pi \mid S_t = s}$: Expectation over actions given a state.
+>   2. $\mathbb{E}_{S_t \sim \mu}$: Expectation over the states given the on-policy distribution $\mu$. Since this distribution depends on the policy and the purpose of this expectation is to be sampled through experience for SGD, the abuse of notation is understandable.
+>      - To further this point, $\mathbb{E}_{\pi}[f]$ effectively means: The experience gathered from the policy $\pi$ to update the parameters through SGD will correctly weigh $f$ eventually.
+
+
+> [!NOTE] Equation 13.7: *All-actions* policy gradient update rule
+>  
+>  $$
+>  \boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t + \alpha \sum_a \hat{q}(S_t, a, \mathbf{w}) \nabla \pi(a \mid S_t, \boldsymbol{\theta}) \tag{13.7}
+>  $$
+
+Derivation of the REINFORCE gradient:
+$$
+\begin{align*}
+\nabla J(\boldsymbol{\theta}) &\propto \mathbb{E}_{\pi} \left[ \sum_a \pi(a | S_t, \boldsymbol{\theta}) q_{\pi}(S_t, a) \frac{\nabla \pi(a | S_t, \boldsymbol{\theta})}{\pi(a | S_t, \boldsymbol{\theta})} \right] \\
+&= \mathbb{E}_{\pi} \left[ q_{\pi}(S_t, A_t) \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \right] \quad \text{(replacing } a \text{ by the sample } A_t \sim \pi) \\
+&= \mathbb{E}_{\pi} \left[ G_t \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \right], \quad \text{(because } \mathbb{E}_{\pi}[G_t | S_t, A_t] = q_{\pi}(S_t, A_t))
+\end{align*}
+$$
+
+
+> [!NOTE] Equation 13.8: REINFORCE update rule
+> 
+> $$
+> \boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t + \alpha G_t \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \tag{13.8}
+> $$
+> 
+
+This choice of performance measure $G_t \frac{ \nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})}$ is intuitive:
+
+- $\nabla \pi(A_t | S_t, \boldsymbol{\theta})$: Is the direction that maximizes the probability of selecting $A_t$ in state $S_t$.
+- This gradient is proportional to $G_t$, which means that the larger the return, the larger the update.
+- This gradient is inversely proportional to $\pi(A_t | S_t, \boldsymbol{\theta})$, which means that the larger the probability of selecting $A_t$, the smaller the update. 
+	- This is importance because it prevents frequency bias: *actions should be chosen not because they are frequent, but because they have high return*.
+
+
+This vector is called the *eligibility vector*. 
+- [ ] #todo: Check if $G_t$ is part of this vector or not. 
+
+![[Pasted image 20241007105059.png|Pasted image 20241007105059.png]]
+Note:
+- For simplicity, $\frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})}$ is written as $\nabla \ln \pi(A_t | S_t, \boldsymbol{\theta})$.
+- REINFORCE has good theoretical convergence properties.
+
+> [!FAQ]- Why does REINFORCE yield slow learning?
+> Because as a Monte Carlo method, it has high variance.
+
 ## 13.4 REINFORCE with Baseline
 
-#todo 
+The policy gradient can be generalized to include any baseline function $b(s)$, as long as it is independent of the action. 
+
+> [!NOTE] Equation 13.10: Baseline policy gradient
+> 
+> $$
+> \nabla J(\boldsymbol{\theta}) \propto \sum_s \mu(s) \sum_a \left( q_{\pi}(s, a) - b(s) \right) \nabla \pi(a \mid s, \boldsymbol{\theta}) \tag{13.10}
+> $$
+
+> [!FAQ]- Why is $b(s)$'s independence to $a$ a requirement for this generalization to be valid?
+> 
+> If $b(s)$ is independent of $a$, then the term involving $b(s)$ will zero-out:
+> 
+> $$
+> \sum_a b(s) \nabla \pi(a \mid s, \boldsymbol{\theta}) = b(s) \nabla \sum_a \pi(a \mid s, \boldsymbol{\theta}) = 0
+> $$
+
+> [!NOTE] Equation 13.11: Baseline policy gradient update rule
+> 
+> $$
+> \boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t + \alpha \left( G_t - b(S_t) \right) \nabla \pi(A_t \mid S_t, \boldsymbol{\theta}) \tag{13.11}
+> $$
+
+- In general, the baseline leaves the expected value of the update unchanged, but **affects the variance**.
+	- Think about as a normalization, the baseline can act as a way to zero-mean the value distribution per each state, thus helping the learning algorithm to differentiate better between bad and good actions **relative to each state's particular action-value distribution**.
+- Natural choice: $b(s) = \hat{v}(S_t, \mathbf{w})$.
+
+![[Pasted image 20241007211203.png|Pasted image 20241007211203.png]]
+- Setting the learning rate for $\mathbf{w}$ is as normal, but for $\boldsymbol{\theta}$, it is not obvious.
+
+## 13.5 Actor-Critic Methods
+
 
 ## 13.6 Policy Gradient for Continuing Problems
 
@@ -109,4 +189,9 @@ Notation:
 > Where:
 > - $\mu(s) \doteq \lim_{t\to \infty} \mathbb{P} \left[S_t = s \mid A_{0:t} \sim \pi \right]$ is the steady-state distribution of states under $\pi$, which is assumed to exist and to be independent of $S_0$ (an ergodicity assumption).
 
+#note: not part of the course readings, missing remaining notes for this subsection.
 
+
+## 13.7 Policy Parameterization for Continuous Actions
+
+#todo: add notes
