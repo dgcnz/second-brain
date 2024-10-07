@@ -7523,6 +7523,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#135-actor-critic-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.5 Actor-Critic Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#136-policy-gradient-for-continuing-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.6 Policy Gradient for Continuing Problems
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7882,6 +7900,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#135-actor-critic-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.5 Actor-Critic Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#136-policy-gradient-for-continuing-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.6 Policy Gradient for Continuing Problems
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7902,6 +7938,12 @@
     
     
       <span class="md-tag">textbook</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">rl1</span>
     
   
 </nav>
@@ -8010,12 +8052,89 @@ J(\boldsymbol{\theta}) \doteq v_{\pi_{\boldsymbol{\theta}}}(s_0) \tag{13.4}
 <div class="arithmatex">\[
 \begin{align}
  \nabla J(\boldsymbol{\theta}) &amp;\propto \sum_s \mu(s) \sum_a q_{\pi}(s, a) \nabla \pi(a \mid s, \boldsymbol{\theta}) \\
- &amp;= \mathbb{E}_{\pi} \left[ \sum_a q_{\pi}(S_t, a) \nabla \pi(a \mid S_t, \boldsymbol{\theta}) \right] \\
+ &amp;= \mathbb{E}_{\pi} \left[ \sum_a q_{\pi}(S_t, a) \nabla \pi(a \mid S_t, \boldsymbol{\theta}) \right] \tag{13.6} \\
 \end{align}
 \]</div>
+<p>Personal note about notation:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbb{E}_{\pi}\)</span> is a bit misleading because it can have two interpretations:</li>
+<li><span class="arithmatex">\(\mathbb{E}_{A_t \sim \pi \mid S_t = s}\)</span>: Expectation over actions given a state.</li>
+<li><span class="arithmatex">\(\mathbb{E}_{S_t \sim \mu}\)</span>: Expectation over the states given the on-policy distribution <span class="arithmatex">\(\mu\)</span>. Since this distribution depends on the policy and the purpose of this expectation is to be sampled through experience for SGD, the abuse of notation is understandable.<ul>
+<li>To further this point, <span class="arithmatex">\(\mathbb{E}_{\pi}[f]\)</span> effectively means: The experience gathered from the policy <span class="arithmatex">\(\pi\)</span> to update the parameters through SGD will correctly weigh <span class="arithmatex">\(f\)</span> eventually.</li>
+</ul>
+</li>
+</ul>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Equation 13.7: <em>All-actions</em> policy gradient update rule</p>
+<div class="arithmatex">\[
+\boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t + \alpha \sum_a \hat{q}(S_t, a, \mathbf{w}) \nabla \pi(a \mid S_t, \boldsymbol{\theta}) \tag{13.7}
+\]</div>
+</div>
+<p>Derivation of the REINFORCE gradient:<br />
+$$<br />
+\begin{align<em>}<br />
+\nabla J(\boldsymbol{\theta}) &amp;\propto \mathbb{E}<em>{\pi} \left[ \sum_a \pi(a | S_t, \boldsymbol{\theta}) q</em>{\pi}(S_t, a) \frac{\nabla \pi(a | S_t, \boldsymbol{\theta})}{\pi(a | S_t, \boldsymbol{\theta})} \right] \<br />
+&amp;= \mathbb{E}<em>{\pi} \left[ q</em>{\pi}(S_t, A_t) \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \right] \quad \text{(replacing } a \text{ by the sample } A_t \sim \pi) \<br />
+&amp;= \mathbb{E}<em>{\pi} \left[ G_t \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \right], \quad \text{(because } \mathbb{E}</em>{\pi}[G_t | S_t, A_t] = q_{\pi}(S_t, A_t))<br />
+\end{align</em>}<br />
+$$</p>
+<div class="admonition note">
+<p class="admonition-title">Equation 13.8: REINFORCE update rule</p>
+<div class="arithmatex">\[
+\boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t + \alpha G_t \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \tag{13.8}
+\]</div>
+</div>
+<p>This choice of performance measure <span class="arithmatex">\(G_t \frac{ \nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})}\)</span> is intuitive:</p>
+<ul>
+<li><span class="arithmatex">\(\nabla \pi(A_t | S_t, \boldsymbol{\theta})\)</span>: Is the direction that maximizes the probability of selecting <span class="arithmatex">\(A_t\)</span> in state <span class="arithmatex">\(S_t\)</span>.</li>
+<li>This gradient is proportional to <span class="arithmatex">\(G_t\)</span>, which means that the larger the return, the larger the update.</li>
+<li>This gradient is inversely proportional to <span class="arithmatex">\(\pi(A_t | S_t, \boldsymbol{\theta})\)</span>, which means that the larger the probability of selecting <span class="arithmatex">\(A_t\)</span>, the smaller the update. <ul>
+<li>This is importance because it prevents frequency bias: <em>actions should be chosen not because they are frequent, but because they have high return</em>.</li>
+</ul>
+</li>
+</ul>
+<p>This vector is called the <em>eligibility vector</em>. <br />
+- [ ] #todo: Check if <span class="arithmatex">\(G_t\)</span> is part of this vector or not. </p>
+<p><img alt="Pasted image 20241007105059.png" src="../../../images/Pasted%20image%2020241007105059.png" /><br />
+Note:<br />
+- For simplicity, <span class="arithmatex">\(\frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})}\)</span> is written as <span class="arithmatex">\(\nabla \ln \pi(A_t | S_t, \boldsymbol{\theta})\)</span>.<br />
+- REINFORCE has good theoretical convergence properties.</p>
+<details class="question">
+<summary>Why does REINFORCE yield slow learning?</summary>
+<p>Because as a Monte Carlo method, it has high variance.</p>
+</details>
 <h2 id="134-reinforce-with-baseline">13.4 REINFORCE with Baseline<a class="headerlink" href="#134-reinforce-with-baseline" title="Permanent link">&para;</a></h2>
-<h1 id="todo">todo<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
+<p>The policy gradient can be generalized to include any baseline function <span class="arithmatex">\(b(s)\)</span>, as long as it is independent of the action. </p>
+<div class="admonition note">
+<p class="admonition-title">Equation 13.10: Baseline policy gradient</p>
+<div class="arithmatex">\[
+\nabla J(\boldsymbol{\theta}) \propto \sum_s \mu(s) \sum_a \left( q_{\pi}(s, a) - b(s) \right) \nabla \pi(a \mid s, \boldsymbol{\theta}) \tag{13.10}
+\]</div>
+</div>
+<details class="question">
+<summary>Why is <span class="arithmatex">\(b(s)\)</span>'s independence to <span class="arithmatex">\(a\)</span> a requirement for this generalization to be valid?</summary>
+<p>If <span class="arithmatex">\(b(s)\)</span> is independent of <span class="arithmatex">\(a\)</span>, then the term involving <span class="arithmatex">\(b(s)\)</span> will zero-out:</p>
+<div class="arithmatex">\[
+\sum_a b(s) \nabla \pi(a \mid s, \boldsymbol{\theta}) = b(s) \nabla \sum_a \pi(a \mid s, \boldsymbol{\theta}) = 0
+\]</div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Equation 13.11: Baseline policy gradient update rule</p>
+<div class="arithmatex">\[
+\boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t + \alpha \left( G_t - b(S_t) \right) \nabla \pi(A_t \mid S_t, \boldsymbol{\theta}) \tag{13.11}
+\]</div>
+</div>
+<ul>
+<li>In general, the baseline leaves the expected value of the update unchanged, but <strong>affects the variance</strong>.<ul>
+<li>Think about as a normalization, the baseline can act as a way to zero-mean the value distribution per each state, thus helping the learning algorithm to differentiate better between bad and good actions <strong>relative to each state's particular action-value distribution</strong>.</li>
+</ul>
+</li>
+<li>Natural choice: <span class="arithmatex">\(b(s) = \hat{v}(S_t, \mathbf{w})\)</span>.</li>
+</ul>
+<p><img alt="Pasted image 20241007211203.png" src="../../../images/Pasted%20image%2020241007211203.png" /><br />
+- Setting the learning rate for <span class="arithmatex">\(\mathbf{w}\)</span> is as normal, but for <span class="arithmatex">\(\boldsymbol{\theta}\)</span>, it is not obvious.</p>
+<h2 id="135-actor-critic-methods">13.5 Actor-Critic Methods<a class="headerlink" href="#135-actor-critic-methods" title="Permanent link">&para;</a></h2>
 <h2 id="136-policy-gradient-for-continuing-problems">13.6 Policy Gradient for Continuing Problems<a class="headerlink" href="#136-policy-gradient-for-continuing-problems" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Equation 13.15: Average rate of reward per time step</p>
@@ -8031,6 +8150,9 @@ J(\boldsymbol{\theta}) \doteq v_{\pi_{\boldsymbol{\theta}}}(s_0) \tag{13.4}
 <li><span class="arithmatex">\(\mu(s) \doteq \lim_{t\to \infty} \mathbb{P} \left[S_t = s \mid A_{0:t} \sim \pi \right]\)</span> is the steady-state distribution of states under <span class="arithmatex">\(\pi\)</span>, which is assumed to exist and to be independent of <span class="arithmatex">\(S_0\)</span> (an ergodicity assumption).</li>
 </ul>
 </div>
+<h1 id="note-not-part-of-the-course-readings-missing-remaining-notes-for-this-subsection">note: not part of the course readings, missing remaining notes for this subsection.<a class="headerlink" href="#note-not-part-of-the-course-readings-missing-remaining-notes-for-this-subsection" title="Permanent link">&para;</a></h1>
+<h2 id="137-policy-parameterization-for-continuous-actions">13.7 Policy Parameterization for Continuous Actions<a class="headerlink" href="#137-policy-parameterization-for-continuous-actions" title="Permanent link">&para;</a></h2>
+<h1 id="todo-add-notes">todo: add notes<a class="headerlink" href="#todo-add-notes" title="Permanent link">&para;</a></h1>
 
 
 
@@ -8051,7 +8173,7 @@ J(\boldsymbol{\theta}) \doteq v_{\pi_{\boldsymbol{\theta}}}(s_0) \tag{13.4}
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-06T19:34:31+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-06</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-07T19:23:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-07</span>
   </span>
 
     
