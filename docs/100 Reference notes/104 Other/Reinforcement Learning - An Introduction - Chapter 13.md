@@ -54,8 +54,11 @@ Notation:
 > 1. Enables policies to approach a deterministic policy. $\epsilon$-greedy policies always maintain a minimum non-greedy probability $\epsilon$.
 > 2. It enables truly stochastic policies. $\epsilon$-greedy policies force the policy to be almost greedy, but sometimes the best policy is to do $x$ with probability $p$ and $y$ with probability $1-p$ (e.g. poker bluffing). 
   
-> [!FAQ]- What is the most important reason for using policy gradient methods instead of value-based methods?
-> They allow you to inject prior knowledge about the desired form of the policy.
+> [!FAQ]- What is the most important reasons for using policy gradient methods instead of value-based methods?
+> 1. They allow you to inject prior knowledge about the desired form of the policy. (ref:book)
+> 2. Ensures smooth updates of the policy. (ref:book/slides)
+> 3. Allows continuous action spaces. (ref:slides)
+> 4. Allows for stochastic policies. (ref:slides)
 
 ## 13.2 The Policy Gradient Theorem
 
@@ -105,6 +108,7 @@ Notation:
 >  $$
 
 Derivation of the REINFORCE gradient:
+
 $$
 \begin{align*}
 \nabla J(\boldsymbol{\theta}) &\propto \mathbb{E}_{\pi} \left[ \sum_a \pi(a | S_t, \boldsymbol{\theta}) q_{\pi}(S_t, a) \frac{\nabla \pi(a | S_t, \boldsymbol{\theta})}{\pi(a | S_t, \boldsymbol{\theta})} \right] \\
@@ -173,7 +177,9 @@ The policy gradient can be generalized to include any baseline function $b(s)$, 
 
 ## 13.5 Actor-Critic Methods
 
+TLDR: Expand usage of the baseline/value function with multi-step returns, lambda TD, etc. Helps with variance.
 
+todo: add notes
 ## 13.6 Policy Gradient for Continuing Problems
 
 > [!NOTE] Equation 13.15: Average rate of reward per time step
@@ -189,9 +195,12 @@ The policy gradient can be generalized to include any baseline function $b(s)$, 
 > Where:
 > - $\mu(s) \doteq \lim_{t\to \infty} \mathbb{P} \left[S_t = s \mid A_{0:t} \sim \pi \right]$ is the steady-state distribution of states under $\pi$, which is assumed to exist and to be independent of $S_0$ (an ergodicity assumption).
 
-#note: not part of the course readings, missing remaining notes for this subsection.
+Note: not part of the course readings, missing remaining notes for this subsection.
 
 
 ## 13.7 Policy Parameterization for Continuous Actions
 
-#todo: add notes
+
+> TLDR: parametrize policy by a distribution statistics, for example, mean and variance of gaussian.
+
+*todo: add notes*
