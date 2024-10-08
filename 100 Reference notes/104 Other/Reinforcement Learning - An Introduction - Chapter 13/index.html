@@ -7541,6 +7541,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#137-policy-parameterization-for-continuous-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7 Policy Parameterization for Continuous Actions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7918,6 +7927,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#137-policy-parameterization-for-continuous-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7 Policy Parameterization for Continuous Actions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8020,8 +8038,13 @@ h(s, a, \boldsymbol{\theta}) \doteq \boldsymbol{\theta}^\intercal \mathbf{x}(s, 
 </ol>
 </details>
 <details class="question">
-<summary>What is the most important reason for using policy gradient methods instead of value-based methods?</summary>
-<p>They allow you to inject prior knowledge about the desired form of the policy.</p>
+<summary>What is the most important reasons for using policy gradient methods instead of value-based methods?</summary>
+<ol>
+<li>They allow you to inject prior knowledge about the desired form of the policy. (ref:book)</li>
+<li>Ensures smooth updates of the policy. (ref:book/slides)</li>
+<li>Allows continuous action spaces. (ref:slides)</li>
+<li>Allows for stochastic policies. (ref:slides)</li>
+</ol>
 </details>
 <h2 id="132-the-policy-gradient-theorem">13.2 The Policy Gradient Theorem<a class="headerlink" href="#132-the-policy-gradient-theorem" title="Permanent link">&para;</a></h2>
 <details class="question">
@@ -8071,14 +8094,14 @@ J(\boldsymbol{\theta}) \doteq v_{\pi_{\boldsymbol{\theta}}}(s_0) \tag{13.4}
 \boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t + \alpha \sum_a \hat{q}(S_t, a, \mathbf{w}) \nabla \pi(a \mid S_t, \boldsymbol{\theta}) \tag{13.7}
 \]</div>
 </div>
-<p>Derivation of the REINFORCE gradient:<br />
-$$<br />
-\begin{align<em>}<br />
-\nabla J(\boldsymbol{\theta}) &amp;\propto \mathbb{E}<em>{\pi} \left[ \sum_a \pi(a | S_t, \boldsymbol{\theta}) q</em>{\pi}(S_t, a) \frac{\nabla \pi(a | S_t, \boldsymbol{\theta})}{\pi(a | S_t, \boldsymbol{\theta})} \right] \<br />
-&amp;= \mathbb{E}<em>{\pi} \left[ q</em>{\pi}(S_t, A_t) \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \right] \quad \text{(replacing } a \text{ by the sample } A_t \sim \pi) \<br />
-&amp;= \mathbb{E}<em>{\pi} \left[ G_t \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \right], \quad \text{(because } \mathbb{E}</em>{\pi}[G_t | S_t, A_t] = q_{\pi}(S_t, A_t))<br />
-\end{align</em>}<br />
-$$</p>
+<p>Derivation of the REINFORCE gradient:</p>
+<div class="arithmatex">\[
+\begin{align*}
+\nabla J(\boldsymbol{\theta}) &amp;\propto \mathbb{E}_{\pi} \left[ \sum_a \pi(a | S_t, \boldsymbol{\theta}) q_{\pi}(S_t, a) \frac{\nabla \pi(a | S_t, \boldsymbol{\theta})}{\pi(a | S_t, \boldsymbol{\theta})} \right] \\
+&amp;= \mathbb{E}_{\pi} \left[ q_{\pi}(S_t, A_t) \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \right] \quad \text{(replacing } a \text{ by the sample } A_t \sim \pi) \\
+&amp;= \mathbb{E}_{\pi} \left[ G_t \frac{\nabla \pi(A_t | S_t, \boldsymbol{\theta})}{\pi(A_t | S_t, \boldsymbol{\theta})} \right], \quad \text{(because } \mathbb{E}_{\pi}[G_t | S_t, A_t] = q_{\pi}(S_t, A_t))
+\end{align*}
+\]</div>
 <div class="admonition note">
 <p class="admonition-title">Equation 13.8: REINFORCE update rule</p>
 <div class="arithmatex">\[
@@ -8135,6 +8158,8 @@ Note:<br />
 <p><img alt="Pasted image 20241007211203.png" src="../../../images/Pasted%20image%2020241007211203.png" /><br />
 - Setting the learning rate for <span class="arithmatex">\(\mathbf{w}\)</span> is as normal, but for <span class="arithmatex">\(\boldsymbol{\theta}\)</span>, it is not obvious.</p>
 <h2 id="135-actor-critic-methods">13.5 Actor-Critic Methods<a class="headerlink" href="#135-actor-critic-methods" title="Permanent link">&para;</a></h2>
+<p>TLDR: Expand usage of the baseline/value function with multi-step returns, lambda TD, etc. Helps with variance.</p>
+<p>todo: add notes</p>
 <h2 id="136-policy-gradient-for-continuing-problems">13.6 Policy Gradient for Continuing Problems<a class="headerlink" href="#136-policy-gradient-for-continuing-problems" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Equation 13.15: Average rate of reward per time step</p>
@@ -8150,9 +8175,12 @@ Note:<br />
 <li><span class="arithmatex">\(\mu(s) \doteq \lim_{t\to \infty} \mathbb{P} \left[S_t = s \mid A_{0:t} \sim \pi \right]\)</span> is the steady-state distribution of states under <span class="arithmatex">\(\pi\)</span>, which is assumed to exist and to be independent of <span class="arithmatex">\(S_0\)</span> (an ergodicity assumption).</li>
 </ul>
 </div>
-<h1 id="note-not-part-of-the-course-readings-missing-remaining-notes-for-this-subsection">note: not part of the course readings, missing remaining notes for this subsection.<a class="headerlink" href="#note-not-part-of-the-course-readings-missing-remaining-notes-for-this-subsection" title="Permanent link">&para;</a></h1>
+<p>Note: not part of the course readings, missing remaining notes for this subsection.</p>
 <h2 id="137-policy-parameterization-for-continuous-actions">13.7 Policy Parameterization for Continuous Actions<a class="headerlink" href="#137-policy-parameterization-for-continuous-actions" title="Permanent link">&para;</a></h2>
-<h1 id="todo-add-notes">todo: add notes<a class="headerlink" href="#todo-add-notes" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>TLDR: parametrize policy by a distribution statistics, for example, mean and variance of gaussian.</p>
+</blockquote>
+<p><em>todo: add notes</em></p>
 
 
 
@@ -8173,7 +8201,7 @@ Note:<br />
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-07T19:23:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-08T08:18:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-08</span>
   </span>
 
     
