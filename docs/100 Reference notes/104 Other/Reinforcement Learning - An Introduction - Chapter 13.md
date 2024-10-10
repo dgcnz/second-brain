@@ -22,6 +22,12 @@ Notation:
 - $\boldsymbol{\theta}$: policy parameters
 - $\mathbf{w}$ : value function parameters
 
+> [!FAQ]- How do we learn parametrized policies?
+> - 0-order: random search, grid search, heuristics
+> - 1-order: use first-order derivative (gradient)
+> - 2-order: user second-order statistics (hessian, etc) 
+> [ref:slides]
+
 > [!NOTE] Equation 13.1: Gradient ascent update of policy parameters
 > 
 > $$
@@ -60,6 +66,9 @@ Notation:
 > 3. Allows continuous action spaces. (ref:slides)
 > 4. Allows for stochastic policies. (ref:slides)
 
+> [!FAQ]- How do we inject inductive biases into the policy parametrization?
+>  - Policy form (e.g, gaussian, etc)
+>  - Initialization
 ## 13.2 The Policy Gradient Theorem
 
 > [!FAQ]- How does continuous policy parametrization help convergence? Compare it to VBMs.
@@ -69,7 +78,7 @@ Notation:
 > [!NOTE] Equation 13.4: Performance $J(\boldsymbol{\theta})$ for the episodic case
 > 
 > $$
->  J(\boldsymbol{\theta}) \doteq v_{\pi_{\boldsymbol{\theta}}}(s_0) \tag{13.4}
+>  J(\boldsymbol{\theta}) \doteq v_{\pi_{\boldsymbol{\theta}}}(s_0) \tag{13.4} = \mathbb{E}_{\pi_{\boldsymbol{\theta}}}[G_0]
 > $$
 
 > [!FAQ]- What problem/question does the Policy Gradient Theorem answer?
@@ -204,3 +213,5 @@ Note: not part of the course readings, missing remaining notes for this subsecti
 > TLDR: parametrize policy by a distribution statistics, for example, mean and variance of gaussian.
 
 *todo: add notes*
+
+$d \tau$
