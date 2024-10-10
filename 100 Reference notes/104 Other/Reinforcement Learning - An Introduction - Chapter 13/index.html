@@ -2040,6 +2040,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../101%20Literature/Hyperspherical%20Variational%20Auto-Encoders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hyperspherical Variational Auto Encoders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../101%20Literature/Improving%20Convergence%20and%20Generalization%20Using%20Parameter%20Symmetries/" class="md-nav__link">
         
   
@@ -3272,6 +3293,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../101%20Literature/nGPT%20-%20Normalized%20Transformer%20with%20Representation%20Learning%20on%20the%20Hypersphere/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nGPT   Normalized Transformer with Representation Learning on the Hypersphere
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3595,6 +3637,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../102%20Authors/Boris%20Ginsburg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boris Ginsburg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../102%20Authors/Boshi%20Wang/" class="md-nav__link">
         
   
@@ -3705,6 +3768,27 @@
   
   <span class="md-ellipsis">
     Chelsea Finn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102%20Authors/Cheng-Ping%20Hsieh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheng Ping Hsieh
   </span>
   
 
@@ -4335,6 +4419,27 @@
   
   <span class="md-ellipsis">
     Huizi Mao
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102%20Authors/Ilya%20Loshchilov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ilya Loshchilov
   </span>
   
 
@@ -5443,6 +5548,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../102%20Authors/Simeng%20Sun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simeng Sun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../102%20Authors/Simon%20J.D.%20Prince/" class="md-nav__link">
         
   
@@ -5637,6 +5763,48 @@
   
   <span class="md-ellipsis">
     Tete Xiao
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102%20Authors/Thomas%20Kipf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thomas Kipf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../102%20Authors/Tim%20R.%20Davidson/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tim R. Davidson
   </span>
   
 
@@ -8002,6 +8170,15 @@
 <p>Notation:<br />
 - <span class="arithmatex">\(\boldsymbol{\theta}\)</span>: policy parameters<br />
 - <span class="arithmatex">\(\mathbf{w}\)</span> : value function parameters</p>
+<details class="question">
+<summary>How do we learn parametrized policies?</summary>
+<ul>
+<li>0-order: random search, grid search, heuristics</li>
+<li>1-order: use first-order derivative (gradient)</li>
+<li>2-order: user second-order statistics (hessian, etc) <br />
+[ref:slides]</li>
+</ul>
+</details>
 <div class="admonition note">
 <p class="admonition-title">Equation 13.1: Gradient ascent update of policy parameters</p>
 <div class="arithmatex">\[
@@ -8046,6 +8223,13 @@ h(s, a, \boldsymbol{\theta}) \doteq \boldsymbol{\theta}^\intercal \mathbf{x}(s, 
 <li>Allows for stochastic policies. (ref:slides)</li>
 </ol>
 </details>
+<details class="question">
+<summary>How do we inject inductive biases into the policy parametrization?</summary>
+<ul>
+<li>Policy form (e.g, gaussian, etc)</li>
+<li>Initialization</li>
+</ul>
+</details>
 <h2 id="132-the-policy-gradient-theorem">13.2 The Policy Gradient Theorem<a class="headerlink" href="#132-the-policy-gradient-theorem" title="Permanent link">&para;</a></h2>
 <details class="question">
 <summary>How does continuous policy parametrization help convergence? Compare it to VBMs.</summary>
@@ -8055,7 +8239,7 @@ With PGMs, a small change in policy parameters will only change the policy sligh
 <div class="admonition note">
 <p class="admonition-title">Equation 13.4: Performance <span class="arithmatex">\(J(\boldsymbol{\theta})\)</span> for the episodic case</p>
 <div class="arithmatex">\[
-J(\boldsymbol{\theta}) \doteq v_{\pi_{\boldsymbol{\theta}}}(s_0) \tag{13.4}
+J(\boldsymbol{\theta}) \doteq v_{\pi_{\boldsymbol{\theta}}}(s_0) \tag{13.4} = \mathbb{E}_{\pi_{\boldsymbol{\theta}}}[G_0]
 \]</div>
 </div>
 <details class="question">
@@ -8181,6 +8365,7 @@ Note:<br />
 <p>TLDR: parametrize policy by a distribution statistics, for example, mean and variance of gaussian.</p>
 </blockquote>
 <p><em>todo: add notes</em></p>
+<p><span class="arithmatex">\(d \tau\)</span></p>
 
 
 
@@ -8201,7 +8386,7 @@ Note:<br />
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-08T08:18:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-08</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-10T10:09:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-10</span>
   </span>
 
     
