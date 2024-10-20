@@ -7589,6 +7589,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reinforcement Learning   An Introduction   Chapter 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%2011/" class="md-nav__link">
         
   
@@ -7830,6 +7851,24 @@
   <a href="#96-selecting-step-size-parameters-manually" class="md-nav__link">
     <span class="md-ellipsis">
       9.6 Selecting Step-Size Parameters Manually
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#97-nonlinear-function-approximation-artificial-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.7 Nonlinear Function Approximation: Artificial Neural Networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#98-least-squares-td" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.8 Least-Squares TD
     </span>
   </a>
   
@@ -8086,6 +8125,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#97-nonlinear-function-approximation-artificial-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.7 Nonlinear Function Approximation: Artificial Neural Networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#98-least-squares-td" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.8 Least-Squares TD
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8168,7 +8225,7 @@
 <p>Without these two, we must say which states are most important to us.</p>
 </details>
 <div class="admonition note">
-<p class="admonition-title">Equation 9.1</p>
+<p class="admonition-title">Equation 9.1: Value Error</p>
 <div class="arithmatex">\[
 \begin{align}
 \overline{VE}(\mathbf{w}) &amp;\doteq \sum_{s \in \mathcal{S}}  \mu(s) \left[v_{\pi}(s) - \hat{v}(s, \mathbf{w})\right]^2 &amp;&amp; \tag{9.1}
@@ -8221,7 +8278,7 @@
 - <span class="arithmatex">\(U_t\)</span> <em>should</em> be an unbiased estimate of <span class="arithmatex">\(v_\pi(s)\)</span>, that is:<br />
     - <span class="arithmatex">\(\mathbb{E}[U_t \mid S_t=s] = v_\pi(s)\)</span><br />
     - With local optimum convergence guarantees.</p>
-<p><img alt="Pasted image 20240923171752.png" src="../../../images/Pasted%20image%2020240923171752.png" /></p>
+<p><img alt="Pasted image 20240923171752.png" src="../../../images/Pasted%20image%2020240923171752.png" />{ width="800" }</p>
 <p>Examples of <span class="arithmatex">\(U_t\)</span>:<br />
 - Monte Carlo target: <span class="arithmatex">\(U_t = G_t\)</span>  (that is, the reward achieved until the end of the episode), unbiased.<br />
 -  Bootstrapping targets are biased because they depend on <span class="arithmatex">\(\mathbf{w}\)</span> through <span class="arithmatex">\(\hat{v}(S_t, \mathbf{w})\)</span> .<br />
@@ -8229,7 +8286,7 @@
 <p><em>Semi-gradient methods</em>:<br />
 - Do not converge as robustly as gradient methods, aside from the linear case.<br />
 - Faster, enable online/continual learning.</p>
-<p><img alt="Pasted image 20240923172823.png" src="../../../images/Pasted%20image%2020240923172823.png" /></p>
+<p><img alt="Pasted image 20240923172823.png" src="../../../images/Pasted%20image%2020240923172823.png" />{ width="800" }</p>
 <h2 id="94-linear-methods">9.4 Linear Methods<a class="headerlink" href="#94-linear-methods" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Equation 9.8</p>
@@ -8245,8 +8302,32 @@
 </div>
 <ul>
 <li>The gradient Monte Carlo algorithm converges to the global optimum of the VE under linear function approximation if <span class="arithmatex">\(\alpha\)</span> is reduced over time according to the usual conditions.</li>
-<li>Chapter also explores the convergence of TD(0) with SGD and linear approximation and finds it converges to the <em>TD fixed point</em> (Eqs. 9.11, 9.12), <span class="arithmatex">\(\mathbf{w}_{TD}\)</span>. This is not the global optimum, but a point near the local optimum.</li>
+<li>Chapter also explores the convergence of TD(0) with SGD and linear approximation and finds it converges to the <em>TD fixed point</em> (Eqs. 9.11, 9.12), <span class="arithmatex">\(\mathbf{w}_{TD}\)</span>. This is not the global optimum, but a point near the local optimum. </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Equation 9.11 and 9.12: TD fixed point</p>
+<p>Semi-gradient TD(0) under linear approximation converges to the <em>TD fixed point</em>:</p>
+<div class="arithmatex">\[
+\mathbf{w}_{TD} = \mathbf{A}^{-1}\mathbf{b} \tag{9.12}
+\]</div>
+<p>Where:<br />
+$$<br />
+\mathbf{b} \doteq \mathbb{E} \left[ R_{t+1} \mathbf{x}<em>t \right] \in \mathbb{R}^d \quad \text{and} \quad \mathbf{A} \doteq \mathbb{E} \left[ \mathbf{x}_t (\mathbf{x}_t - \gamma \mathbf{x}</em>{t+1})^\intercal \right] \in \mathbb{R}^{d \times d} \tag{9.11}<br />
+$$</p>
+</div>
+<details class="question">
+<summary>Is <span class="arithmatex">\(\mathbf{w}_{TD}\)</span> the minimiser of <span class="arithmatex">\(\overline{VE}\)</span>?</summary>
+<p>No, but it is a point near a local optimum w.r.t <span class="arithmatex">\(\overline{VE}\)</span>.</p>
+</details>
+<details class="question">
+<summary>What are the convergence guarantees of semi-gradient TD(0) with non-linear features?</summary>
+<p>No guarantees.</p>
+</details>
+<details class="question">
+<summary>When should you choose Semi-gradient TD(0) over Gradient Monte Carlo?</summary>
+<p>Since Semi-gradient TD(0) learns faster, it is better when there is a fixed computational budget.<br />
+However, if you can train for longer, Gradient Monte Carlo is better.</p>
+</details>
 <div class="admonition note">
 <p class="admonition-title">Equation 9.14</p>
 <p>Interpretation: The asymptotic error of the TD method is no more than <span class="arithmatex">\(\frac{1}{1-\gamma}\)</span> times the <em>smallest possible error</em>.</p>
@@ -8256,7 +8337,7 @@
 \end{align}
 \]</div>
 </div>
-<p><img alt="Pasted image 20240923173826.png" src="../../../images/Pasted%20image%2020240923173826.png" /></p>
+<p><img alt="Pasted image 20240923173826.png" src="../../../images/Pasted%20image%2020240923173826.png" />{ width="800" }</p>
 <div class="admonition note">
 <p class="admonition-title">Equation 9.15</p>
 <div class="arithmatex">\[
@@ -8288,6 +8369,50 @@ G_{t:t+n} \doteq R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1} R_{t+n} + \gam
 \end{align}
 \]</div>
 </div>
+<h2 id="97-nonlinear-function-approximation-artificial-neural-networks">9.7 Nonlinear Function Approximation: Artificial Neural Networks<a class="headerlink" href="#97-nonlinear-function-approximation-artificial-neural-networks" title="Permanent link">&para;</a></h2>
+<p>TLDR: Using neural networks for function approximation. Discusses common techniques: architecture, dropout, batchnorm,  etc.</p>
+<h2 id="98-least-squares-td">9.8 Least-Squares TD<a class="headerlink" href="#98-least-squares-td" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Equation 9.20 and 9.21: LSTD update</p>
+<div class="arithmatex">\[
+\mathbf{w}_t \doteq \widehat{\mathbf{A}}_t^{-1}\widehat{\mathbf{b}}_t \tag{9.21}
+\]</div>
+<p>Where:</p>
+<div class="arithmatex">\[
+\widehat{\mathbf{A}}_t \doteq \sum_{k=0}^{t-1} \mathbf{x}_k(\mathbf{x}_k - \gamma \mathbf{x}_{k+1})^\intercal + \epsilon \mathbf{I} \quad \text{and} \quad  \widehat{\mathbf{b}}_t \doteq \sum_{k=0}^{t-1} \mathbf{x}_k R_{k+1} \tag{9.20}
+\]</div>
+</div>
+<details class="question">
+<summary>Shouldn't both sums be divided by <span class="arithmatex">\(t\)</span> like normal sample averages?</summary>
+<p>No, the <span class="arithmatex">\(t\)</span> term cancels out in the update.</p>
+</details>
+<details class="question">
+<summary>Why id there a <span class="arithmatex">\(\epsilon \mathbf{I}\)</span> term in the LSTD update?</summary>
+<p>This is a regularization term to ensure the matrix is invertible.</p>
+</details>
+<details class="question">
+<summary>What is the computational complexity of LSTD?</summary>
+<p>By naively computing the inverse, it is <span class="arithmatex">\(O(d^3)\)</span>, but there are more efficient methods.</p>
+</details>
+<details class="question">
+<summary>How can we improve the computational complexity of LSTD?</summary>
+<p>By using the Sherman-Morrison formula, we can reduce the complexity to <span class="arithmatex">\(O(d^2)\)</span>. This method allows us to iteratively compute <span class="arithmatex">\(\widehat{\mathbf{A}}_t^{-1}\)</span>. from <span class="arithmatex">\(\widehat{\mathbf{A}}_{t-1}^{-1}\)</span> in <span class="arithmatex">\(O(d^2)\)</span> time.</p>
+</details>
+<details class="question">
+<summary>Does LSTD require specifying any hyperparameters (e.g. step size)?</summary>
+<p>Yes, but not step size. The only hyperparameter is <span class="arithmatex">\(\epsilon\)</span>. It has a similar effect to step size: If <span class="arithmatex">\(\epsilon\)</span> is too small, the inverses will vary a lot and if <span class="arithmatex">\(\epsilon\)</span> is  is too large, learning will be slow.</p>
+</details>
+<details class="question">
+<summary>How does LSTD compare to Semi-Gradient TD? Name 4 differences.</summary>
+<ol>
+<li>More sample efficient.</li>
+<li>Requires more computation: <span class="arithmatex">\(O(d^2)\)</span> vs <span class="arithmatex">\(O(d)\)</span>.</li>
+<li>Does not require a step-size parameter, only <span class="arithmatex">\(\epsilon\)</span>.</li>
+<li>LSTD never forgets. </li>
+</ol>
+</details>
+<p><img alt="Pasted image 20241020160432.png" src="../../../images/Pasted%20image%2020241020160432.png" />{ width="800" }<br />
+- Note: Details not on exam</p>
 
 
 
@@ -8308,7 +8433,7 @@ G_{t:t+n} \doteq R_{t+1} + \gamma R_{t+2} + \cdots + \gamma^{n-1} R_{t+n} + \gam
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-07T19:23:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-20T18:23:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-20</span>
   </span>
 
     

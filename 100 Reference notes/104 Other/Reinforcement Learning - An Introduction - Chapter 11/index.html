@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://dgcnz.github.io/second-brain/100%20Reference%20notes/104%20Other/Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%2011/">
       
       
-        <link rel="prev" href="../Quantized%20Transfer%20Learning%20for%20Computer%20Vision%20Tutorial/">
+        <link rel="prev" href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%2010/">
       
       
         <link rel="next" href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%2013/">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#111-semi-gradient-methods" class="md-skip">
+        <a href="#11-off-policy-methods-with-approximation" class="md-skip">
           Skip to content
         </a>
       
@@ -7586,6 +7586,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reinforcement Learning   An Introduction   Chapter 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -7594,6 +7615,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -7623,6 +7646,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7640,16 +7665,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#todo" class="md-nav__link">
+  <a href="#112-examples-of-off-policy-divergence" class="md-nav__link">
     <span class="md-ellipsis">
-      todo
+      11.2 Examples of Off-policy Divergence
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="todo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-the-deadly-triad" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 The Deadly Triad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#114-linear-value-function-geometry" class="md-nav__link">
     <span class="md-ellipsis">
       11.4 Linear Value-function Geometry
@@ -7657,8 +7690,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#115-gradient-descent-in-the-bellman-error" class="md-nav__link">
     <span class="md-ellipsis">
       11.5 Gradient Descent in the Bellman Error
@@ -7666,9 +7699,22 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#116-the-bellman-error-is-not-learnable" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.6 The Bellman Error is Not Learnable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-gradient-td-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.7 Gradient-TD Methods
+    </span>
+  </a>
   
 </li>
       
@@ -8007,6 +8053,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8024,16 +8072,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#todo" class="md-nav__link">
+  <a href="#112-examples-of-off-policy-divergence" class="md-nav__link">
     <span class="md-ellipsis">
-      todo
+      11.2 Examples of Off-policy Divergence
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="todo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-the-deadly-triad" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 The Deadly Triad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#114-linear-value-function-geometry" class="md-nav__link">
     <span class="md-ellipsis">
       11.4 Linear Value-function Geometry
@@ -8041,8 +8097,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#115-gradient-descent-in-the-bellman-error" class="md-nav__link">
     <span class="md-ellipsis">
       11.5 Gradient Descent in the Bellman Error
@@ -8050,9 +8106,22 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#116-the-bellman-error-is-not-learnable" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.6 The Bellman Error is Not Learnable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-gradient-td-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.7 Gradient-TD Methods
+    </span>
+  </a>
   
 </li>
       
@@ -8106,6 +8175,12 @@
 </tr>
 </tbody>
 </table>
+<h1 id="11-off-policy-methods-with-approximation">11 Off-policy Methods with Approximation<a class="headerlink" href="#11-off-policy-methods-with-approximation" title="Permanent link">&para;</a></h1>
+<p>Off-policy case is a bit tricky, previously <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%205/">Reinforcement Learning - An Introduction - Chapter 5</a> we adjusted our target <span class="arithmatex">\(G_t\)</span> with the importance sampling ratio so that its expectation was <span class="arithmatex">\(v_{\pi}\)</span> and not <span class="arithmatex">\(v_b\)</span>. </p>
+<p>However, for semi-gradient methods with function approximation, another factor comes in: By following the behavior policy, the <strong>distribution of updates</strong> is also biased! </p>
+<p>There are 2 solutions:<br />
+1. <strong>Importance sampling</strong> - Corrects the distribution of updates<br />
+2. <strong>True gradient methods</strong> - To avoid relying on the distribution for stability</p>
 <h2 id="111-semi-gradient-methods">11.1 Semi-gradient Methods<a class="headerlink" href="#111-semi-gradient-methods" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Equation 11.1: Per-step importance sampling ratio</p>
@@ -8113,12 +8188,52 @@
 \rho_t \doteq \rho_{t:T-1} = \frac{\pi(A_t \mid S_t)}{b(A_t \mid S_t)}
 \]</div>
 </div>
-<h1 id="todo">todo<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
+<details class="question">
+<summary>What does a high/low importance sampling ratio imply about the action taken?</summary>
+<ul>
+<li>High: The action was taken rarely under the behavior policy</li>
+<li>Low: The action was taken often under the behavior policy</li>
+</ul>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.2: Update rule for semi-gradient off-policy TD(0)</p>
+<div class="arithmatex">\[
+\mathbf{w}_{t+1} = \mathbf{w}_t + \alpha \rho_t \delta_t \nabla \hat{v}(S_t, \mathbf{w}_t) \tag{11.2}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.3: Definition of <span class="arithmatex">\(\delta_t\)</span> for semi-gradient off-policy TD(0)</p>
+<div class="arithmatex">\[
+\delta_t \doteq R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t) - \hat{v}(S_t, \mathbf{w}_t) \tag{11.3}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.5: Update rule for semi-gradient off-policy SARSA</p>
+<div class="arithmatex">\[
+\mathbf{w}_{t+1} = \mathbf{w}_t + \alpha \rho_t \delta_t \nabla \hat{q}(S_t, A_t, \mathbf{w}_t) \tag{11.5}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.6: Definition of <span class="arithmatex">\(\delta_t\)</span> for semi-gradient off-policy SARSA</p>
+<div class="arithmatex">\[
+\delta_t \doteq R_{t+1} + \gamma \sum_a \pi(a \mid S_{t+1}) \hat{q}(S_{t+1}, a, \mathbf{w}_t) - \hat{q}(S_t, A_t, \mathbf{w}_t) \tag{11.6}
+\]</div>
+</div>
+<p>Also:<br />
+- eq 11.6: n-step version of semi-gradient Sarsa<br />
+- eq 11.7: semi-gradient version of n-step tree-backup algorithm</p>
+<h2 id="112-examples-of-off-policy-divergence">11.2 Examples of Off-policy Divergence<a class="headerlink" href="#112-examples-of-off-policy-divergence" title="Permanent link">&para;</a></h2>
+<p>Baird's counterexample: Shows that even the simplest  bootstrapping (DP, TD) with function approximation can diverge if updates aren't done under on-policy distribution.</p>
+<blockquote>
+<p>Another way to try to prevent instability is to use special methods for function approximation. In particular, stability is guaranteed for function approximation methods that do not extrapolate from the observed targets. These methods, called averagers, include nearest neighbor methods and locally weighted regression, but not popular methods such as tile coding and artificial neural networks (ANNs).</p>
+</blockquote>
+<h2 id="113-the-deadly-triad">11.3 The Deadly Triad<a class="headerlink" href="#113-the-deadly-triad" title="Permanent link">&para;</a></h2>
+<p>Instability arises when we combine the following 3 elements:<br />
+1. Function approximation<br />
+2. Bootstrapping<br />
+3. Off-policy training</p>
 <h2 id="114-linear-value-function-geometry">11.4 Linear Value-function Geometry<a class="headerlink" href="#114-linear-value-function-geometry" title="Permanent link">&para;</a></h2>
-<p>TODO:<br />
-- [x] 11.11 mu norm equation ✅ 2024-10-01<br />
-- [x] 11.17 and 11.18 bellman error ✅ 2024-10-01<br />
-- [x] 11.19 mean square bellman error ✅ 2024-10-01</p>
+<p>TLDR: Using the geometry of the value function, we find that <span class="arithmatex">\(\overline{BE}\)</span> measures how far off <span class="arithmatex">\(\mathbf{w}\)</span> is from <span class="arithmatex">\(v_\pi\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Equation 11.11: <span class="arithmatex">\(\mu\)</span>-norm</p>
 <div class="arithmatex">\[
@@ -8141,6 +8256,8 @@
 \]</div>
 </div>
 <h2 id="115-gradient-descent-in-the-bellman-error">11.5 Gradient Descent in the Bellman Error<a class="headerlink" href="#115-gradient-descent-in-the-bellman-error" title="Permanent link">&para;</a></h2>
+<p>TLDR: Semi-gradient SGD might diverge, but true SGD doesn't! Sadly, both TDE and BE yield bad minima.</p>
+<p>Let's first take an easier case, minimizing <span class="arithmatex">\(\overline{TDE}\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Mean-squared temporal difference error</p>
 <div class="arithmatex">\[
@@ -8151,8 +8268,9 @@
 \end{align}
 \]</div>
 </div>
+<p>This yields the following.</p>
 <div class="admonition note">
-<p class="admonition-title">Equation 11.23: Weight update of naive residual-gradient algoritm</p>
+<p class="admonition-title">Equation 11.23: Weight update of naive residual-gradient algorithm</p>
 <div class="arithmatex">\[
 \begin{align}
 \mathbf{w}_{t+1} &amp;= \mathbf{w}_t - \frac{1}{2} \alpha \nabla(\rho_t \delta_t^2) \\
@@ -8161,6 +8279,77 @@
 \end{align}
 \]</div>
 </div>
+<p>Conclusion: </p>
+<blockquote>
+<p>Minimizing the TDE is naive; by penalizing all TD errors it achieves something more like temporal smoothing than accurate prediction.<br />
+Although the naive residual-gradient algorithm converges robustly, it does not necessarily converge to a desirable place.</p>
+</blockquote>
+<p>Doing the same for <span class="arithmatex">\(\overline{BE}\)</span> yields the residual-gradient algorithm. But it's not a good choice either.</p>
+<h2 id="116-the-bellman-error-is-not-learnable">11.6 The Bellman Error is Not Learnable<a class="headerlink" href="#116-the-bellman-error-is-not-learnable" title="Permanent link">&para;</a></h2>
+<p>TLDR: <span class="arithmatex">\(\overline{BE}\)</span> is not learnable but <span class="arithmatex">\(\overline{TDE}\)</span>  and <span class="arithmatex">\(\overline{PBE}\)</span> are. Since minimizing <span class="arithmatex">\(\overline{TDE}\)</span> is naive, next section: minimize <span class="arithmatex">\(\overline{PBE}\)</span>.</p>
+<blockquote>
+<p>Here we use the term in a more basic way, to mean learnable at all, with any amount of experience. It turns out many quantities of apparent interest in reinforcement learning cannot be learned even from an infinite amount of experiential data. These quantities are well defined and can be computed given knowledge of the internal structure of the environment, but cannot be computed or estimated from the observed sequence of feature vectors, actions, and rewards</p>
+</blockquote>
+<h2 id="117-gradient-td-methods">11.7 Gradient-TD Methods<a class="headerlink" href="#117-gradient-td-methods" title="Permanent link">&para;</a></h2>
+<p>TLDR: To minimize <span class="arithmatex">\(\overline{PBE}\)</span> using SGD efficiently we use two separate estimates for dependent expectations. This yields two algorithms: GTD2 and TDC.</p>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.27: Gradient of <span class="arithmatex">\(\overline{PBE}\)</span></p>
+<div class="arithmatex">\[
+\nabla \overline{PBE}(\mathbf{w}) = 2 \mathbb{E} \left[ \rho_t (\gamma_{t+1} - \mathbf{x}_t) \mathbf{x}_t^\top \right] \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right]^{-1} \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right]
+\]</div>
+</div>
+<p>First and last term are not independent, thus we must have separate estimates.  </p>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.28: Definition of <span class="arithmatex">\(\mathbf{v}\)</span></p>
+<p>Grouping the last two terms of the gradient of <span class="arithmatex">\(\overline{PBE}\)</span>, we get a new vector <span class="arithmatex">\(\mathbf{v}\in \mathbb{R}^d\)</span> which we can estimate and store efficiently:</p>
+<div class="arithmatex">\[
+\mathbf{v} \approx \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right]^{-1} \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right]
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Update rule for <span class="arithmatex">\(\mathbf{v}\)</span></p>
+<div class="arithmatex">\[
+\mathbf{v}_{t+1} = \mathbf{v}_t + \beta \rho_t (\delta_t - \mathbf{v}_t^\top \mathbf{x}_t) \mathbf{x}_t
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(\beta\)</span> is a learning rate</li>
+</ul>
+</div>
+<p>Using <span class="arithmatex">\(\mathbf{v}\)</span>, we can now update <span class="arithmatex">\(\mathbf{w}\)</span>, which yields the GTD2 algorithm:</p>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.29: Update rule for GTD2</p>
+<div class="arithmatex">\[
+\begin{align}
+   \mathbf{w}_{t+1} &amp;= \mathbf{w}_t - \frac{1}{2}\alpha \nabla \text{PBE}(\mathbf{w}_t) \quad \tag{the general SGD rule} \\
+   &amp;= \mathbf{w}_t - \frac{1}{2}\alpha 2 \mathbb{E} \left[ \rho_t (\gamma_{t+1} - \mathbf{x}_t) \mathbf{x}_t^\top \right] \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right]^{-1} \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right] \quad 
+\tag{from (11.27)} \\
+   &amp;= \mathbf{w}_t + \alpha \mathbb{E} \left[ \rho_t (\mathbf{x}_t - \gamma \mathbf{x}_{t+1}) \mathbf{x}_t^\top \right] \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right]^{-1} \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right] \quad \tag{11.29} \\
+   &amp;\approx \mathbf{w}_t + \alpha \mathbb{E} \left[ \rho_t (\mathbf{x}_t - \gamma \mathbf{x}_{t+1}) \mathbf{x}_t^\top \right] \mathbf{v}_t \quad \tag{based on (11.28)} \\
+   &amp;\approx \mathbf{w}_t + \alpha \rho_t (\mathbf{x}_t - \gamma \mathbf{x}_{t+1}) \mathbf{x}_t^\top \mathbf{v}_t \quad \tag{sampling}
+\end{align}
+\]</div>
+</div>
+<details class="question">
+<summary>What is the complexity of GTD2?</summary>
+<p><span class="arithmatex">\(O(d)\)</span> per step if <span class="arithmatex">\(x_t^T v_t\)</span> computed first</p>
+</details>
+<p>We can do a bit more algebra to get to a better algorithm: TDC (TD(0) with Gradient Correction) or also known as GTD(0).</p>
+<div class="admonition note">
+<p class="admonition-title">Equation: Update rule for TDC</p>
+<div class="arithmatex">\[
+\begin{align}
+   \mathbf{w}_{t+1} &amp;= \mathbf{w}_t + \alpha \mathbb{E} \left[ \rho_t (\mathbf{x}_t - \gamma \mathbf{x}_{t+1}) \mathbf{x}_t^\top \right] \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right]^{-1} \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right] \\
+   &amp;= \mathbf{w}_t + \alpha \left( \mathbb{E} \left[ \rho_t \mathbf{x}_t \mathbf{x}_t^\top \right] - \gamma \mathbb{E} \left[ \rho_t \mathbf{x}_{t+1} \mathbf{x}_t^\top \right] \right) \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right]^{-1} \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right] \\
+   &amp;= \mathbf{w}_t + \alpha \left( \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right] - \gamma \mathbb{E} \left[ \rho_t \mathbf{x}_{t+1} \mathbf{x}_t^\top \right] \right) \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right]^{-1} \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right] \\
+   &amp;= \mathbf{w}_t + \alpha \left( \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right] - \gamma \mathbb{E} \left[ \rho_t \mathbf{x}_{t+1} \mathbf{x}_t^\top \right] \mathbb{E} \left[ \mathbf{x}_t \mathbf{x}_t^\top \right]^{-1} \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right] \right) \\
+   &amp;\approx \mathbf{w}_t + \alpha \left( \mathbb{E} \left[ \rho_t \delta_t \mathbf{x}_t \right] - \gamma \mathbb{E} \left[ \rho_t \mathbf{x}_{t+1} \mathbf{x}_t^\top \right] \mathbf{v}_t \right) \quad &amp;\text{(based on (11.28))} \\
+   &amp;\approx \mathbf{w}_t + \alpha \rho_t \left( \delta_t \mathbf{x}_t - \gamma \mathbf{x}_{t+1} \mathbf{x}_t^\top \mathbf{v}_t \right), \quad &amp;\text{(sampling)}
+\end{align}
+\]</div>
+</div>
+<p>Summary from the lectures</p>
+<p><img alt="Pasted image 20241020202242.png" src="../../../images/Pasted%20image%2020241020202242.png" />{ width="700" }</p>
 
 
 
@@ -8181,7 +8370,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-07T19:23:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-20T18:23:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-20</span>
   </span>
 
     
