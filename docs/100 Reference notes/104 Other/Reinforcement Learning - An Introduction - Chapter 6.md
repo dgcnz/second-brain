@@ -9,6 +9,8 @@ tags:
 url: 
 share: true
 ---
+# 6 Temporal-Difference Learning
+
 ## 6.1 TD Prediction
 
 > [!NOTE] Equation 6.2: TD(0) update
@@ -84,6 +86,10 @@ share: true
 
 It's more computationally demanding but it's more stable and fares better than q learning and sarsa.
 
+Can also be used as is for off-policy case.
+
+> [!FAQ]- Why doesn't Expected SARSA off-policy need importance sampling?
+> I wasn't convinced by the slides explanation, so I'll have to check a proper explanation later.
 ## 6.7 Maximization Bias and Double Learning
 
 
