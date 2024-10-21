@@ -9,6 +9,7 @@ tags:
 url: 
 share: true
 ---
+# 4 Dynamic Programming
 ## 4.1 Policy evaluation
 
 > [!NOTE] Equations 4.3 and 4.4
