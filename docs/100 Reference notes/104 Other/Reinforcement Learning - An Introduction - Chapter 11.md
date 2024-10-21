@@ -97,6 +97,29 @@ TLDR: Using the geometry of the value function, we find that $\overline{BE}$ mea
 > \overline{BE}({\mathbf{w}}) \doteq || \bar{\delta} ||^2_\mu
 > $$
 
+> With linear function approximation there always exists an approximate value function (within the subspace) with zero PBE; this is the TD fixed point, wTD
+
+
+> [!NOTE] Equation 11.13: Projection matrix for linear function approximation
+> 
+> $$
+> \Pi \doteq \mathbf{X} (\mathbf{X}^\top \mathbf{D} \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{D}
+> $$
+> 
+> Where:
+> - $\mathbf{X} \in \mathbb{R}^{|\mathcal{S}| \times d}$ is the matrix of feature vectors
+> - $\mathbf{D} \in \mathbb{R}^{|\mathcal{S}| \times |\mathcal{S}|}$ is a diagonal matrix with $\mu(s)$ on the diagonal
+
+> [!NOTE] Equation 11.22: Mean square Projected Bellman error
+> 
+> $$
+> \overline{PBE} = || \Pi \bar{\delta}_{\mathbf{w}} ||^2_\mu
+> $$
+> 
+> Where:
+> - $\Pi$ is the projection matrix
+> - $\bar{\delta}_{\mathbf{w}}$ is the Bellman error
+
 ## 11.5 Gradient Descent in the Bellman Error
 
 TLDR: Semi-gradient SGD might diverge, but true SGD doesn't! Sadly, both TDE and BE yield bad minima.
@@ -138,7 +161,9 @@ TLDR: $\overline{BE}$ is not learnable but $\overline{TDE}$  and $\overline{PBE}
 
 ## 11.7 Gradient-TD Methods
 
-TLDR: To minimize $\overline{PBE}$ using SGD efficiently we use two separate estimates for dependent expectations. This yields two algorithms: GTD2 and TDC.
+TLDR: To minimize $\overline{PBE}$ using SGD efficiently we use two separate estimates for dependent expectations. This yields two algorithms: GTD2 and TDC. 
+
+**DISCLAIMER: These methods only work with linear function approximation.**
 
 > [!NOTE] Equation 11.27: Gradient of $\overline{PBE}$
 > 
