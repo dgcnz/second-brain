@@ -73,18 +73,27 @@ You can obtain the expected reward also.
 
 A policy $\pi(a \mid s)$ is a probability distribution over actions given states.
 
+
 > [!NOTE] Equation 3.12: State-value function
 > 
 > $$
 > v_{\pi}(s) \doteq \mathbb{E}_{\pi}[G_t \mid S_t = s] \;\; \forall s \in \mathcal{S} \tag{3.12}
-> 
 > $$
+
 
 > [!NOTE] Equation 3.13: Action-value function
 > 
 > $$
 > q_{\pi}(s, a) \doteq \mathbb{E}_{\pi}[G_t \mid S_t = s, A_t = a] \;\; \forall s \in \mathcal{S}, a \in \mathcal{A} \tag{3.13}
 > $$
+
+
+> [!NOTE] Writing $v_{\pi}$ in terms of $q_{\pi}$
+> 
+> $$
+> v_{\pi}(s) = \sum_{a} \pi(a \mid s) q_{\pi}(s, a)
+> $$
+
 
 > [!NOTE] Equation 3.14: Bellman equation for $v_{\pi}$
 > 
@@ -98,6 +107,12 @@ A policy $\pi(a \mid s)$ is a probability distribution over actions given states
 > $$
 
 ## 3.6 Optimal Policies and Optimal Value Functions
+
+A policy $\pi^*$ is the optimal policy if:
+
+$$
+v_{\pi^*} (s) \geq v_{\pi'}(s) \quad \forall s, \pi' \in \mathcal{S} \times \mathcal{\Pi}
+$$
 
 > [!NOTE] Equation 3.15: Optimal state-value function
 > 
