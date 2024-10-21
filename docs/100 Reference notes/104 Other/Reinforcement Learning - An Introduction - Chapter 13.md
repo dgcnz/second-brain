@@ -153,6 +153,7 @@ Note:
 > [!FAQ]- Why does REINFORCE yield slow learning?
 > Because as a Monte Carlo method, it has high variance.
 
+**DISCLAIMER: For uva-rl1, this method is called REINFORCE v2. REINFORCE v1 uses the full return at each step**
 ## 13.4 REINFORCE with Baseline
 
 The policy gradient can be generalized to include any baseline function $b(s)$, as long as it is independent of the action. 
@@ -186,9 +187,23 @@ The policy gradient can be generalized to include any baseline function $b(s)$, 
 
 ## 13.5 Actor-Critic Methods
 
-TLDR: Expand usage of the baseline/value function with multi-step returns, lambda TD, etc. Helps with variance.
+TLDR: Expand usage of the baseline/value function with multi-step returns, lambda TD, etc. Helps with variance. Adds bias but can be controlled with lambda TD, etc.
 
-todo: add notes
+Example: 
+- Use value function as baseline
+- Use one-step returns with value bootstrap as target
+
+> [!NOTE] Equation 13.12, 13.13 and 13.14: One-step Actor-critic update rule
+> 
+> $$
+> \begin{align}
+>     \theta_{t+1} &\doteq \theta_t + \alpha \left( G_{t:t+1} - \hat{v}(S_t, \mathbf{w}) \right) \frac{\nabla \pi(A_t | S_t, \theta_t)}{\pi(A_t | S_t, \theta_t)} \quad \tag{13.12} \\
+>     &= \theta_t + \alpha \left( R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}) - \hat{v}(S_t, \mathbf{w}) \right) \frac{\nabla \pi(A_t | S_t, \theta_t)}{\pi(A_t | S_t, \theta_t)} \quad \tag{13.13} \\
+>     &= \theta_t + \alpha \delta_t \frac{\nabla \pi(A_t | S_t, \theta_t)}{\pi(A_t | S_t, \theta_t)} \quad \tag{13.14}
+> \end{align}
+> $$
+
+![[Pasted image 20241020212513.png|800]]
 ## 13.6 Policy Gradient for Continuing Problems
 
 > [!NOTE] Equation 13.15: Average rate of reward per time step
@@ -215,3 +230,28 @@ Note: not part of the course readings, missing remaining notes for this subsecti
 *todo: add notes*
 
 $d \tau$
+
+## Extra: Deterministic Policy Gradients
+
+- Use deterministic policy as target policy
+- Use stochastic policy as behavior policy (example: target + noise)
+
+
+![[Pasted image 20241020213317.png|500]]
+
+![[Pasted image 20241020213339.png|500]]
+
+DPG with q-learning update
+![[Pasted image 20241020213450.png|500]]
+
+Only works with continous actions
+Discrete actions will cause gradient inconsistencies
+
+![[Pasted image 20241020213623.png|500]]
+
+
+Deep DPG = DPG + modification to use neural nets to generalise
+- Use experience replay
+- "double-q learning"
+
+
