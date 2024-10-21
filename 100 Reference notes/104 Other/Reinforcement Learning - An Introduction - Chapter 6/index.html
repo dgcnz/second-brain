@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#61-td-prediction" class="md-skip">
+        <a href="#6-temporal-difference-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -7652,6 +7652,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%2016/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reinforcement Learning   An Introduction   Chapter 16
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reinforcement Learning   An Introduction   Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%203/" class="md-nav__link">
         
   
@@ -7721,6 +7763,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -7748,6 +7792,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -8031,6 +8077,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8115,8 +8163,6 @@
 
 
 
-  <h1>Reinforcement Learning   An Introduction   Chapter 6</h1>
-
 <table>
 <thead>
 <tr>
@@ -8135,6 +8181,7 @@
 </tr>
 </tbody>
 </table>
+<h1 id="6-temporal-difference-learning">6 Temporal-Difference Learning<a class="headerlink" href="#6-temporal-difference-learning" title="Permanent link">&para;</a></h1>
 <h2 id="61-td-prediction">6.1 TD Prediction<a class="headerlink" href="#61-td-prediction" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Equation 6.2: TD(0) update</p>
@@ -8205,6 +8252,11 @@ Q(S_t, A_t) &amp;\leftarrow Q(S_t, A_t) + \alpha \left[ R_{t+1} + \gamma \mathbb
 \]</div>
 </div>
 <p>It's more computationally demanding but it's more stable and fares better than q learning and sarsa.</p>
+<p>Can also be used as is for off-policy case.</p>
+<details class="question">
+<summary>Why doesn't Expected SARSA off-policy need importance sampling?</summary>
+<p>I wasn't convinced by the slides explanation, so I'll have to check a proper explanation later.</p>
+</details>
 <h2 id="67-maximization-bias-and-double-learning">6.7 Maximization Bias and Double Learning<a class="headerlink" href="#67-maximization-bias-and-double-learning" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>"All the control algorithms that we have discussed so far involve maximization in the construction of their target policies"</p>
@@ -8241,7 +8293,7 @@ Q_2(A^*) &amp;= Q_2(\text{argmax}_a Q_1(a))
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-07T19:23:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-21T15:41:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-21</span>
   </span>
 
     

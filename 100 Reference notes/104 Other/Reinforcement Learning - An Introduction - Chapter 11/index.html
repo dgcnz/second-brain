@@ -7755,6 +7755,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%2016/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reinforcement Learning   An Introduction   Chapter 16
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reinforcement Learning   An Introduction   Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Reinforcement%20Learning%20-%20An%20Introduction%20-%20Chapter%203/" class="md-nav__link">
         
   
@@ -8255,6 +8297,31 @@
 \overline{BE}({\mathbf{w}}) \doteq || \bar{\delta} ||^2_\mu
 \]</div>
 </div>
+<blockquote>
+<p>With linear function approximation there always exists an approximate value function (within the subspace) with zero PBE; this is the TD fixed point, wTD</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.13: Projection matrix for linear function approximation</p>
+<div class="arithmatex">\[
+\Pi \doteq \mathbf{X} (\mathbf{X}^\top \mathbf{D} \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{D}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{X} \in \mathbb{R}^{|\mathcal{S}| \times d}\)</span> is the matrix of feature vectors</li>
+<li><span class="arithmatex">\(\mathbf{D} \in \mathbb{R}^{|\mathcal{S}| \times |\mathcal{S}|}\)</span> is a diagonal matrix with <span class="arithmatex">\(\mu(s)\)</span> on the diagonal</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Equation 11.22: Mean square Projected Bellman error</p>
+<div class="arithmatex">\[
+\overline{PBE} = || \Pi \bar{\delta}_{\mathbf{w}} ||^2_\mu
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(\Pi\)</span> is the projection matrix</li>
+<li><span class="arithmatex">\(\bar{\delta}_{\mathbf{w}}\)</span> is the Bellman error</li>
+</ul>
+</div>
 <h2 id="115-gradient-descent-in-the-bellman-error">11.5 Gradient Descent in the Bellman Error<a class="headerlink" href="#115-gradient-descent-in-the-bellman-error" title="Permanent link">&para;</a></h2>
 <p>TLDR: Semi-gradient SGD might diverge, but true SGD doesn't! Sadly, both TDE and BE yield bad minima.</p>
 <p>Let's first take an easier case, minimizing <span class="arithmatex">\(\overline{TDE}\)</span>.</p>
@@ -8291,7 +8358,8 @@ Although the naive residual-gradient algorithm converges robustly, it does not n
 <p>Here we use the term in a more basic way, to mean learnable at all, with any amount of experience. It turns out many quantities of apparent interest in reinforcement learning cannot be learned even from an infinite amount of experiential data. These quantities are well defined and can be computed given knowledge of the internal structure of the environment, but cannot be computed or estimated from the observed sequence of feature vectors, actions, and rewards</p>
 </blockquote>
 <h2 id="117-gradient-td-methods">11.7 Gradient-TD Methods<a class="headerlink" href="#117-gradient-td-methods" title="Permanent link">&para;</a></h2>
-<p>TLDR: To minimize <span class="arithmatex">\(\overline{PBE}\)</span> using SGD efficiently we use two separate estimates for dependent expectations. This yields two algorithms: GTD2 and TDC.</p>
+<p>TLDR: To minimize <span class="arithmatex">\(\overline{PBE}\)</span> using SGD efficiently we use two separate estimates for dependent expectations. This yields two algorithms: GTD2 and TDC. </p>
+<p><strong>DISCLAIMER: These methods only work with linear function approximation.</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Equation 11.27: Gradient of <span class="arithmatex">\(\overline{PBE}\)</span></p>
 <div class="arithmatex">\[
@@ -8370,7 +8438,7 @@ Although the naive residual-gradient algorithm converges robustly, it does not n
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-20T18:23:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-21T15:41:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-21</span>
   </span>
 
     
