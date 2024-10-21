@@ -16,6 +16,10 @@ first-visit mc
 every-visit mc
 
 - [ ] TODO: finish notes
+
+## 5.3 Monte Carlo Control
+
+![[Pasted image 20241021121638.png|600]]
 ## 5.4 Monte Carlo Control without Exploring Starts
 
 - $\epsilon-$greedy policy
@@ -23,7 +27,7 @@ every-visit mc
 	- Greedy action has probability $(1 - \epsilon) + \frac{\epsilon}{|\mathcal{A}|}$
 
 - [ ] TODO: finish notes
-
+![[Pasted image 20241021121518.png|600]]
 ## 5.5 Off-policy Prediction via Importance Sampling
 
 Given a starting state $S_t$, the probability of the subsequent state-action trajectory, $A_t, S_{t+1}, A_{t+1}, \dots, S_T$, under the policy $\pi$ is given by:
@@ -63,7 +67,7 @@ $$
 > V(s) \doteq \frac{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1} G_t}{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1}} \tag{5.6}
 > $$
 
-![[Pasted image 20240929183258.png|Pasted image 20240929183258.png]]
+![[Pasted image 20240929183258.png|600]]
 
 In practice, weighted importance sampling has much lower error at the beginning.
 
