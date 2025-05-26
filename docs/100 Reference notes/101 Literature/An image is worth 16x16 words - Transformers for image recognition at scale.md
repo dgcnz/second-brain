@@ -33,4 +33,7 @@ year: 2020
 Interesting insight about Hybrid ViTs (40 conv layers + transformer blocks): 
 - It is better on small data regimes but shows no improvement on large data regimes.
 ![[vit_vs_resnet_accuracy.png|vit_vs_resnet_accuracy.png]]
+## Regarding cls vs pooling
 
+
+![[Pasted image 20250208145420.png|Pasted image 20250208145420.png]]

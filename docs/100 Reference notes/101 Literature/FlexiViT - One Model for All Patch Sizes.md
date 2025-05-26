@@ -16,6 +16,7 @@ tags:
   - foundation_models
   - computer_vision
   - transformers
+  - thesis
 url: https://arxiv.org/abs/2212.08013
 share: true
 ---
@@ -25,5 +26,7 @@ share: true
 
 ## Notes
 
-- [ ] Read in depth, seems very promising
+![[Pasted image 20250113145835.png|Pasted image 20250113145835.png]]
+
+
 - Google already filed a patent for this: https://patents.google.com/patent/US20240169715A1/en

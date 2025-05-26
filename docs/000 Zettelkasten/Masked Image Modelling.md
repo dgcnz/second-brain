@@ -4,6 +4,8 @@ tags:
   - computer_vision
 share: true
 ---
+
+
 It seems like MIM objectives are becoming a strong learning objective for vision foundation models. Right now it seems to be the closest answer to: [[Do Vision Foundation models exist?|Do Vision Foundation models exist?]]
 
 However, intuitively it seems a bit like a weak signal, as it focuses on individual patches/pixels, without much consideration to semantic information. This is echoed on [[Learning with Unmasked Tokens Drives Stronger Vision Learners|Learning with Unmasked Tokens Drives Stronger Vision Learners]]:
@@ -12,9 +14,13 @@ However, intuitively it seems a bit like a weak signal, as it focuses on individ
 
 
 
-
 Related papers:
 - [[Learning with Unmasked Tokens Drives Stronger Vision Learners|Learning with Unmasked Tokens Drives Stronger Vision Learners]]
 - [[DINOv2 - Learning Robust Visual Features without Supervision|DINOv2 - Learning Robust Visual Features without Supervision]]
 - [[Learning with Unmasked Tokens Drives Stronger Vision Learners|Learning with Unmasked Tokens Drives Stronger Vision Learners]]
 - [[What Do Self-Supervised Vision Transformers Learn?|What Do Self-Supervised Vision Transformers Learn?]] 🚨
+
+
+## Register tokens?
+
+[[Vision Transformers Need Registers|Vision Transformers Need Registers]] observe that there are no high-norm artifacts that would justify adding registers and claims this is because the model only ises local information.
