@@ -226,3 +226,4 @@ We can do a bit more algebra to get to a better algorithm: TDC (TD(0) with Gradi
 Summary from the lectures
 
 ![[Pasted image 20241020202242.png|700]]
+
