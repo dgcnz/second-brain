@@ -19,6 +19,8 @@ share: true
 
 ## Notes
 
+![[Pasted image 20250219142245.png|Pasted image 20250219142245.png]]
+
  Some notes regarding MIM as a good objective are on [[Masked Image Modelling|Masked Image Modelling]].
 
 > However, MIM strategies often encounter challenges, such as local dependency on attention to understand entire context of an image. For example, liu _et al_. [[36](https://arxiv.org/html/2310.13593v2#bib.bib36)] revealed that MAE [[22](https://arxiv.org/html/2310.13593v2#bib.bib22)], a state-of-the-art MIM method, exhibits shorter average attention distances. Furthermore, we observe that attention map patterns by MAE substantiate extremely local behavior (See Fig. [1](https://arxiv.org/html/2310.13593v2#S2.F1 "Figure 1 ‣ 2.1.2 MIM formulation itself falls short in learning broader contexts. ‣ 2.1 MIM and Beyond ‣ 2 Preliminary ‣ Learning with Unmasked Tokens Drives Stronger Vision Learners")) indeed. In other words, the MAE-trained attention mechanism less integrates information across the entire image pixels and tends to focus on specific input regions. This is presumably attributed to MIM-pretraining, primarily dedicated to predicting low-level pixel details (_e.g_., color or texture) without a comprehensive understanding of less-regional information (_e.g_., the input structure or shape).
