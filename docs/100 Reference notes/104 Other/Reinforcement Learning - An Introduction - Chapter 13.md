@@ -143,7 +143,6 @@ This choice of performance measure $G_t \frac{ \nabla \pi(A_t | S_t, \boldsymbol
 
 
 This vector is called the *eligibility vector*. 
-- [ ] #todo: Check if $G_t$ is part of this vector or not. 
 
 ![[Pasted image 20241007105059.png|Pasted image 20241007105059.png]]
 Note:
@@ -189,7 +188,7 @@ The policy gradient can be generalized to include any baseline function $b(s)$, 
 
 TLDR: Expand usage of the baseline/value function with multi-step returns, lambda TD, etc. Helps with variance. Adds bias but can be controlled with lambda TD, etc.
 
-Example: 
+2 changes from REINFORCE: 
 - Use value function as baseline
 - Use one-step returns with value bootstrap as target
 
