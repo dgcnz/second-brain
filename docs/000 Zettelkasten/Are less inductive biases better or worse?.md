@@ -22,6 +22,12 @@ They show that Vision Transformers scale better than ConvNets and Mixed Architec
 
 [[Learning with Unmasked Tokens Drives Stronger Vision Learners|Learning with Unmasked Tokens Drives Stronger Vision Learners]] implicitly counter-argues [[How do vision transformers work?|How do vision transformers work?]] by noticing that MIM-trained ViTs exhibit localized attention maps and "fixing" it. Their approach outperforms other MIM-trained ViTs, so locality as good inductive bias is not definitely answered.
 
+[[Deep Learning is Not So Mysterious or Different|Deep Learning is Not So Mysterious or Different]] argues for soft inductive bias instead of hard inductive biases (like conv2d's translation equivariance or equivariant models in general).
+
+[[Searching for Efficient Linear Layers over a Continuous Space of Structured Matrices|Searching for Efficient Linear Layers over a Continuous Space of Structured Matrices]] shows scaling laws that indicate that increasing parameter sharing leads to worse scaling.
+
+[[Yi Ma|Yi Ma]] often argues that low dimensionality should be the only inductive bias we need ([ref](https://people.eecs.berkeley.edu/~yima/slides/Keynote-Ma.pdf)).
+
 ## ViTs vs Dense prediction tasks
 
 [[A ConvNet for the 2020s|A ConvNet for the 2020s]] mentions that ViTs struggle on dense prediction tasks and they require hierarchical architectural choices (Swin Transformer) to do well. These choices re-introduce inductive biases.
