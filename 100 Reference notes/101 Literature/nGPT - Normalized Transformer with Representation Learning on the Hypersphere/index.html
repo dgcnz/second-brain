@@ -4925,8 +4925,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    nGPT   Normalized Transformer with Representation Learning on the Hypersphere
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -4937,6 +4946,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -10543,8 +10578,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -10569,7 +10619,13 @@
     
     
     
-      <span class="md-tag">efficient_dl</span>
+      <span class="md-tag">dl_theory</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">non_euclidean</span>
     
   
     
@@ -10581,6 +10637,8 @@
 </nav>
 
 
+
+  <h1>nGPT   Normalized Transformer with Representation Learning on the Hypersphere</h1>
 
 <table>
 <thead>
@@ -10596,23 +10654,20 @@
 </tr>
 <tr>
 <td>year</td>
-<td>2024</td>
+<td>2025</td>
 </tr>
 <tr>
 <td>url</td>
-<td><a href="https://arxiv.org/abs/2410.01131">https://arxiv.org/abs/2410.01131</a></td>
+<td><a href="http://arxiv.org/abs/2410.01131">http://arxiv.org/abs/2410.01131</a></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>We propose a novel neural network architecture, the normalized Transformer (nGPT) with representation learning on the hypersphere. In nGPT, all vectors forming the embeddings, MLP, attention matrices and hidden states are unit norm normalized. The input stream of tokens travels on the surface of a hypersphere, with each layer contributing a displacement towards the target output predictions. These displacements are defined by the MLP and attention blocks, whose vector components also reside on the same hypersphere. Experiments show that nGPT learns much faster, reducing the number of training steps required to achieve the same accuracy by a factor of 4 to 20, depending on the sequence length.</p>
+<p>We propose a novel neural network architecture, the normalized Transformer (nGPT) with representation learning on the hypersphere. In nGPT, all vectors forming the embeddings, MLP, attention matrices and hidden states are unit norm normalized. The input stream of tokens travels on the surface of a hypersphere, with each layer contributing a displacement towards the target output predictions. These displacements are deﬁned by the MLP and attention blocks, whose vector components also reside on the same hypersphere. Experiments show that nGPT learns much faster, reducing the number of training steps required to achieve the same accuracy by a factor of 4 to 20, depending on the sequence length.</p>
 </div>
-<p><img alt="Pasted image 20241010085554.png" src="../../../images/Pasted%20image%2020241010085554.png" /></p>
-<h1 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h1>
-<ul>
-<li>Interesting, since <a href="../Hyperspherical%20Variational%20Auto-Encoders/">Hyperspherical Variational Auto-Encoders</a> claims that high-dimensional hyperspheres are not well suited for embeddings due to the vanishing surface problem. However, the nGPT paper claims that hypersphere embeddings are beneficial for training transformers. There's some discussion at <a href="https://x.com/maksym_andr/status/1843923528502129122">Twitter</a>.</li>
-</ul>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<p><a href="zotero://select/library/items/I9ZMU3VR">Zotero Link</a></p>
 
 
 
@@ -10633,7 +10688,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-10T10:09:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-10</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-08-04T08:00:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-08-04</span>
   </span>
 
     
