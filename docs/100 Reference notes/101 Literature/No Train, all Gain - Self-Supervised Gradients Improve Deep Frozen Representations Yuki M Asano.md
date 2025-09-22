@@ -1,0 +1,24 @@
+---
+authors:
+  - "[[Walter Simoncini|Walter Simoncini]]"
+  - "[[Spyros Gidaris|Spyros Gidaris]]"
+  - "[[Andrei Bursuc|Andrei Bursuc]]"
+  - "[[Yuki M. Asano|Yuki M. Asano]]"
+year: 2024
+tags:
+  - paper
+url: https://arxiv.org/abs/2407.10964
+share: true
+---
+
+
+> [!tldr] Abstract
+> This paper introduces FUNGI, Features from UNsupervised GradIents, a method to enhance the features of transformer encoders by leveraging self-supervised gradients. Our method is simple: given any pretrained model, we first compute gradients from various self-supervised objectives for each input. These gradients are projected to a lower dimension and then concatenated with the model’s output embedding. The resulting features are evaluated on k-nearest neighbor classification over 11 datasets from vision, 5 from natural language processing, and 2 from audio. Across backbones spanning various sizes and pretraining strategies, FUNGI features provide consistent performance improvements over the embeddings. We also show that using FUNGI features can benefit linear classification, clustering and image retrieval, and that they significantly improve the retrieval-based in-context scene understanding abilities of pretrained models, for example improving upon DINO by +17% for semantic segmentation – without any training. Code is available at https://github.com/WalterSimoncini/fungivision.
+
+
+
+## Notes
+
+[Zotero Link](zotero://select/library/items/UT7FP6B8)
+
+
