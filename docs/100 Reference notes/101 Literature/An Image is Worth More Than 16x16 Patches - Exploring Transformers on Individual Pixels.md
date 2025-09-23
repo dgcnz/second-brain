@@ -11,6 +11,7 @@ tags:
   - paper
   - dl_theory
   - vit
+  - computer_vision
 url: https://arxiv.org/abs/2406.09415v1
 share: true
 ---
