@@ -2,7 +2,7 @@
 authors:
   - "[[Valentinos Pariza|Valentinos Pariza]]"
   - "[[Mohammadreza Salehi|Mohammadreza Salehi]]"
-  - "[[Gertjan Burghouts|Gertjan Burghouts]]"
+  - "[[Gertjan J. Burghouts|Gertjan J. Burghouts]]"
   - "[[Francesco Locatello|Francesco Locatello]]"
   - "[[Yuki M. Asano|Yuki M. Asano]]"
 year: 2025
@@ -13,6 +13,7 @@ tags:
   - ssl
   - dense
   - patch_level
+  - computer_vision
 url: http://arxiv.org/abs/2408.11054
 share: true
 ---
