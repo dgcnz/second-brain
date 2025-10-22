@@ -8,6 +8,8 @@ tags:
   - paper
   - dl_theory
   - hyperbolic
+  - representation_analysis
+  - geometry
 url: http://arxiv.org/abs/2311.05784
 share: true
 ---
