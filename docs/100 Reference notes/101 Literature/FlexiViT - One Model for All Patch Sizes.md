@@ -16,7 +16,6 @@ tags:
   - foundation_models
   - computer_vision
   - transformers
-  - thesis
 url: https://arxiv.org/abs/2212.08013
 share: true
 ---
