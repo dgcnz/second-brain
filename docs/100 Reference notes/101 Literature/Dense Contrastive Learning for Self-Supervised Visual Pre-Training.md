@@ -11,7 +11,6 @@ tags:
   - ssl
   - vit
   - contrastive_learning
-  - thesis
 url: http://arxiv.org/abs/2011.09157
 share: true
 ---
