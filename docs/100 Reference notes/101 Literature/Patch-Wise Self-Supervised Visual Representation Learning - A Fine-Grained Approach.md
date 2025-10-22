@@ -8,7 +8,6 @@ tags:
   - paper
   - vit
   - ssl
-  - thesis
   - self-distillation
 url: https://www.researchsquare.com/article/rs-4662935/v1
 share: true
