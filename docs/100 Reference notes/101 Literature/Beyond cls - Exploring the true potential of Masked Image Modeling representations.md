@@ -11,7 +11,6 @@ tags:
   - dl_theory
   - vit
   - transformers
-  - thesis
 url: https://arxiv.org/abs/2412.03215
 share: true
 ---

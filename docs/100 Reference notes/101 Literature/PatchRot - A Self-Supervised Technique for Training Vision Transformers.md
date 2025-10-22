@@ -8,7 +8,6 @@ year: 2022
 tags:
   - paper
   - vit
-  - thesis
   - ssl
 url: http://arxiv.org/abs/2210.15722
 share: true

@@ -8,9 +8,9 @@ authors:
 year: 2024
 tags:
   - paper
-  - time-ssl
   - ssl
   - temporal
+  - video
 url: http://arxiv.org/abs/2310.08584
 share: true
 ---
