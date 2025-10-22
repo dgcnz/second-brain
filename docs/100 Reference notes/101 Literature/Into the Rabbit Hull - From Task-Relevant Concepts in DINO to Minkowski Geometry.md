@@ -16,6 +16,7 @@ tags:
   - paper
   - dl_theory
   - ssl
+  - geometry
 url: http://arxiv.org/abs/2510.08638
 share: true
 ---
