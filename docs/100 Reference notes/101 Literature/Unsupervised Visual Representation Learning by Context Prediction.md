@@ -6,7 +6,6 @@ authors:
 year: 2016
 tags:
   - paper
-  - thesis
   - ssl
 url: https://arxiv.org/abs/1505.05192
 share: true
