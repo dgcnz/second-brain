@@ -9,7 +9,6 @@ tags:
   - paper
   - vit
   - ssl
-  - thesis
 url: http://arxiv.org/abs/2306.06203
 share: true
 ---
