@@ -1,0 +1,5 @@
+---
+affiliation:
+  - "[[Stanford]]"
+share: true
+---

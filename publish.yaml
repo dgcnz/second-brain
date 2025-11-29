@@ -1,0 +1,9 @@
+vault_root: "/Users/dgcnz/Documents/Obsidian Vault"
+quartz_root: . # optional, defaults to current repo
+roots:
+  - "000 Zettelkasten/*"
+  - "100 Reference notes/101 Literature/*"
+  - "100 Reference notes/102 Authors/*"
+  - "100 Reference notes/103 Affiliations/*"
+ignore:
+  - "100 Reference notes/104 Other"

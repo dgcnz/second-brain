@@ -1,5 +1,12 @@
-.vscode/settings.json
-.obsidian/*
-.venv
-.vscode
 .DS_Store
+.gitignore
+node_modules
+public
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.quartz-cache
+private/
+.replit
+replit.nix
+AGENTS.md

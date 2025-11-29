@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DRY_RUN=0
+case "${1-}" in
+  -n|--dry-run) DRY_RUN=1; shift;;
+esac
+
+CONFIG_PATH="${1:-publish.yaml}"
+
+command -v yq >/dev/null || { echo "yq not found" >&2; exit 1; }
+command -v wlls >/dev/null || { echo "wlls not found" >&2; exit 1; }
+command -v rsync >/dev/null || { echo "rsync not found" >&2; exit 1; }
+
+[[ -f "$CONFIG_PATH" ]] || { echo "Missing config: $CONFIG_PATH" >&2; exit 1; }
+
+vault_root=$(yq -r '.vault_root' "$CONFIG_PATH")
+quartz_root=$(yq -r '.quartz_root // "."' "$CONFIG_PATH")
+content_root="$quartz_root/content"
+
+[[ -n "$vault_root" && "$vault_root" != "null" ]] || { echo "vault_root missing in config" >&2; exit 1; }
+[[ -d "$vault_root" ]] || { echo "vault_root not found: $vault_root" >&2; exit 1; }
+[[ -d "$quartz_root" ]] || { echo "quartz_root not found: $quartz_root" >&2; exit 1; }
+
+tmp_list=$(mktemp)
+tmp_ignore=$(mktemp)
+tmp_rel=$(mktemp)
+trap 'rm -f "$tmp_list" "$tmp_ignore" "$tmp_rel" "$tmp_list.filtered"' EXIT
+
+# Build wlls args
+wlls_args=()
+while IFS= read -r root; do
+  [[ -n "$root" ]] || continue
+  if [[ "$root" == *[\*\?\[]* ]]; then
+    pattern="$root" prefix=""
+    if [[ "$root" != /* ]]; then
+      pattern="$vault_root/$root"
+      prefix="${vault_root%/}/"
+    fi
+    matches=()
+    while IFS= read -r m; do matches+=("$m"); done < <(compgen -G "$pattern")
+    [[ ${#matches[@]} -gt 0 ]] || { echo "glob matched nothing: $root" >&2; exit 1; }
+    for m in "${matches[@]}"; do
+      [[ -n "$prefix" ]] && m="${m#"$prefix"}"
+      wlls_args+=("$m")
+    done
+  else
+    wlls_args+=("$root")
+  fi
+done < <(yq -r '.roots[]' "$CONFIG_PATH")
+
+[[ ${#wlls_args[@]} -gt 0 ]] || { echo "no roots provided" >&2; exit 1; }
+
+# Generate reachable set
+wlls --skip-missing-refs -R "$vault_root" "${wlls_args[@]}" >"$tmp_list"
+
+# Convert to vault-root-relative paths for rsync
+sed "s|^${vault_root%/}/||" "$tmp_list" >"$tmp_rel"
+
+# Build ignore pattern file (vault-root-relative to absolute); safe even if empty
+while IFS= read -r pattern; do
+  [[ -n "$pattern" ]] || continue
+  echo "$pattern" >>"$tmp_ignore"
+done < <(yq -r '.ignore[]? // ""' "$CONFIG_PATH")
+
+grep -F -v -f "$tmp_ignore" "$tmp_rel" >"$tmp_rel.filtered" || true
+mv "$tmp_rel.filtered" "$tmp_rel"
+
+if [[ $DRY_RUN -eq 1 ]]; then
+  cat "$tmp_rel"
+  exit 0
+fi
+
+rsync -a --delete --files-from="$tmp_rel" "$vault_root/" "$content_root/"
+echo "Synced reachable set to $content_root"

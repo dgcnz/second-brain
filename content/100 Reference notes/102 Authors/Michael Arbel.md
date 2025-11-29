@@ -1,0 +1,5 @@
+---
+affiliation:
+  - "[[INRIA]]"
+share: true
+---
