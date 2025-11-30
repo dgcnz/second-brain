@@ -40,6 +40,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
   ],
   left: [
+    Component.Image("static/icon.png", { alt: "Icon", class: "sidebar-icon", width: 224, height: 224 }),
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({

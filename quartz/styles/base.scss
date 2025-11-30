@@ -218,6 +218,11 @@ a {
       display: flex;
       height: 100vh;
       position: sticky;
+
+      .sidebar-icon {
+        display: block;
+        margin: 0 auto;
+      }
     }
 
     & .sidebar.left {
