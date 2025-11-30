@@ -5,8 +5,8 @@
     </p>
 
 <p align="center">
-    <a href="brain.dgcnz.com">
-  <img src="https://img.shields.io/badge/website-github.io-g" alt="License"/> </a>
+    <a href="https://brain.dgcnz.com">
+  <img src="https://img.shields.io/badge/website-url-g" alt="License"/> </a>
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="License"/>
 </p>
 
