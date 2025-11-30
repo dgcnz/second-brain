@@ -5,7 +5,7 @@
     </p>
 
 <p align="center">
-    <a href="https://dgcnz.github.io/second-brain/">
+    <a href="brain.dgcnz.com">
   <img src="https://img.shields.io/badge/website-github.io-g" alt="License"/> </a>
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="License"/>
 </p>
