@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[Meta]]"
-share: true
+- '[[FAIR]]'
+- '[[Meta]]'
 ---

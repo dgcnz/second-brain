@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Apple]]"
-  - "[[University of Oxford]]"
-share: true
+- '[[Apple]]'
+- '[[University of Oxford]]'
 ---

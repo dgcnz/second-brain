@@ -2,9 +2,8 @@
 tags:
   - foundation_models
   - computer_vision
-share: true
+date: 2024-01-01
 ---
-
 
 It seems like MIM objectives are becoming a strong learning objective for vision foundation models. Right now it seems to be the closest answer to: [[Do Vision Foundation models exist?]]
 

@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[University of Amsterdam]]"
-  - "[[Google DeepMind]]"
-share: true
+- '[[University of Amsterdam]]'
+- '[[Google DeepMind]]'
 ---

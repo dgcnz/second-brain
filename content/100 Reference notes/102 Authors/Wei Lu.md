@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Xiaomi AI Lab]]"
-share: true
+- '[[Xiaomi AI Lab]]'
 ---

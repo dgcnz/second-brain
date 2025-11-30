@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Anthropic]]"
-share: true
+- '[[Anthropic]]'
 ---

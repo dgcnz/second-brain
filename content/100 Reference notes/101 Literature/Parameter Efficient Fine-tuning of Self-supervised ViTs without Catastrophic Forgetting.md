@@ -1,15 +1,16 @@
 ---
 authors:
-  - "[[Reza Akbarian Bafghi]]"
-  - "[[Nidhin Harilal]]"
-  - "[[Claire Monteleoni]]"
-  - "[[Maziar Raissi]]"
+- '[[Reza Akbarian Bafghi]]'
+- '[[Nidhin Harilal]]'
+- '[[Claire Monteleoni]]'
+- '[[Maziar Raissi]]'
 year: 2024
 tags:
-  - paper
+- paper
 url: https://arxiv.org/abs/2404.17245
-share: true
+date: '2024-04-26'
 ---
+
 > [!info] Abstract
 > Artificial neural networks often suffer from catastrophic forgetting, where learning new concepts leads to a complete loss of previously acquired knowledge. We observe that this issue is particularly magnified in vision transformers (ViTs), where post-pre-training and fine-tuning on new tasks can significantly degrade the model's original general abilities. For instance, a DINO ViT-Base/16 pre-trained on ImageNet-1k loses over 70% accuracy on ImageNet-1k after just 10 iterations of fine-tuning on CIFAR-100. Overcoming this stability-plasticity dilemma is crucial for enabling ViTs to continuously learn and adapt to new domains while preserving their initial knowledge. In this work, we study two new parameter-efficient fine-tuning strategies: (1)~Block Expansion, and (2) Low-rank adaptation (LoRA). Our experiments reveal that using either Block Expansion or LoRA on self-supervised pre-trained ViTs surpass fully fine-tuned ViTs in new domains while offering significantly greater parameter efficiency. Notably, we find that Block Expansion experiences only a minimal performance drop in the pre-training domain, thereby effectively mitigating catastrophic forgetting in pre-trained ViTs.
   

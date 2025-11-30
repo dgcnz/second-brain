@@ -1,6 +1,7 @@
 ---
-share: false
+draft: true
 ---
+
 aka: equivalecnce of group representations
 
 

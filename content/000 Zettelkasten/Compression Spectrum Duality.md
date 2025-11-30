@@ -1,7 +1,8 @@
 ---
-tags: 
-share: false
+tags: null
+draft: true
 ---
+
 ## 1 What do we mean by “spectral flatness”?
 
 ### 1.1 Classical definition (signal processing)

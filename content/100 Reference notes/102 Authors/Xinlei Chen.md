@@ -1,8 +1,7 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[Zhejiang University]]"
-  - "[[Carnegie Mellon University]]"
-  - Zhejiang University
-share: true
+- '[[FAIR]]'
+- '[[Zhejiang University]]'
+- '[[Carnegie Mellon University]]'
+- Zhejiang University
 ---

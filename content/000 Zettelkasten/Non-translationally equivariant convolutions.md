@@ -4,7 +4,7 @@ tags:
   - convolutions
   - equivariance
   - partial_equivariance
-share: true
+draft: true
 ---
 
 I'm not sure if this makes sense at all, just tracking paper ideas lmao

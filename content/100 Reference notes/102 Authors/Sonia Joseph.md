@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Meta]]"
-share: true
+- '[[Meta]]'
 ---

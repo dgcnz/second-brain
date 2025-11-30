@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Anthropic]]"
-  - "[[Google]]"
-share: true
+- '[[Anthropic]]'
+- '[[Google]]'
 ---

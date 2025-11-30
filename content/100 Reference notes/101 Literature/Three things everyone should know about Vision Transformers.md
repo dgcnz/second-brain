@@ -1,18 +1,19 @@
 ---
 authors:
-  - "[[Hugo Touvron]]"
-  - "[[Matthieu Cord]]"
-  - "[[Alaaeldin El-Nouby]]"
-  - "[[Jakob Verbeek]]"
-  - "[[Hervé Jegou]]"
+- '[[Hugo Touvron]]'
+- '[[Matthieu Cord]]'
+- '[[Alaaeldin El-Nouby]]'
+- '[[Jakob Verbeek]]'
+- "[[Herv\xE9 Jegou]]"
 year: 2022
 tags:
-  - paper
-  - computer_vision
-  - vit
+- paper
+- computer_vision
+- vit
 url: https://arxiv.org/abs/2203.09795
-share: true
+date: '2022-03-18'
 ---
+
 > [!tldr] Abstract
 > After their initial success in natural language processing, transformer architectures have rapidly gained traction in computer vision, providing state-of-the-art results for tasks such as image classification, detection, segmentation, and video analysis. We offer three insights based on simple and easy to implement variants of vision transformers. (1) The residual layers of vision transformers, which are usually processed sequentially, can to some extent be processed efficiently in parallel without noticeably affecting the accuracy. (2) Fine-tuning the weights of the attention layers is sufficient to adapt vision transformers to a higher resolution and to other classification tasks. This saves compute, reduces the peak memory consumption at fine-tuning time, and allows sharing the majority of weights across tasks. (3) Adding MLP-based patch pre-processing layers improves Bert-like self-supervised training based on patch masking. We evaluate the impact of these design choices using the ImageNet-1k dataset, and confirm our findings on the ImageNet-v2 test set. Transfer performance is measured across six smaller datasets.
 

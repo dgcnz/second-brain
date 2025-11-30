@@ -1,15 +1,16 @@
 ---
 authors:
-  - "[[Alex Flinth]]"
-  - "[[Fredrik Ohlsson]]"
+- '[[Alex Flinth]]'
+- '[[Fredrik Ohlsson]]'
 year: 2023
 tags:
-  - dl_theory
-  - equivariance
-  - optimization
+- dl_theory
+- equivariance
+- optimization
 url: https://arxiv.org/abs/2303.13458
-share: true
+date: '2023-03-23'
 ---
+
 > [!info] Abstract
 > We investigate the optimization of multilayer perceptrons on symmetric data. We compare the strategy of constraining the architecture to be equivariant to that of using augmentation. We show that, under natural assumptions on the loss and non-linearities, the sets of equivariant stationary points are identical for the two strategies, and that the set of equivariant layers is invariant under the gradient flow for augmented models. Finally, we show that stationary points may be unstable for augmented training although they are stable for the equivariant models.
 

@@ -1,18 +1,17 @@
 ---
 authors:
-  - "[[Janek Haberer]]"
-  - "[[Ali Hojjat]]"
-  - "[[Olaf Landsiedel]]"
+- '[[Janek Haberer]]'
+- '[[Ali Hojjat]]'
+- '[[Olaf Landsiedel]]'
 year: 2024
 tags:
-  - paper
-  - flexible_vit
-  - vit
-  - efficient_vision
-url:
-share: true
+- paper
+- flexible_vit
+- vit
+- efficient_vision
+url: https://arxiv.org/abs/2409.17978
+date: '2024-09-26'
 ---
-
 
 > [!tldr] Abstract
 > The architecture of Vision Transformers (ViTs), particularly the Multi-head Attention (MHA) mechanism, imposes substantial hardware demands. Deploying ViTs on devices with varying constraints, such as mobile phones, requires multiple models of different sizes. However, this approach has limitations, such as training and storing each required model separately. This paper introduces HydraViT, a novel approach that addresses these limitations by stacking attention heads to achieve a scalable ViT. By repeatedly changing the size of the embedded dimensions throughout each layer and their corresponding number of attention heads in MHA during training, HydraViT induces multiple subnetworks. Thereby, HydraViT achieves adaptability across a wide spectrum of hardware environments while maintaining performance. Our experimental results demonstrate the efficacy of HydraViT in achieving a scalable ViT with up to 10 subnetworks, covering a wide range of resource constraints. HydraViT achieves up to 5 p.p. more accuracy with the same GMACs and up to 7 p.p. more accuracy with the same throughput on ImageNet-1K compared to the baselines, making it an effective solution for scenarios where hardware availability is diverse or varies over time. The source code is available at https://github.com/ds-kiel/HydraViT.

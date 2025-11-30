@@ -1,15 +1,17 @@
 ---
 authors:
-  - "[[Simran Kaur]]"
-  - "[[Jeremy Cohen]]"
-  - "[[Zachary C. Lipton]]"
+- '[[Simran Kaur]]'
+- '[[Jeremy Cohen]]'
+- '[[Zachary C. Lipton]]'
 year: 2022
 tags:
-  - dl2
-  - optimizability
+- dl2
+- optimizability
 url: https://arxiv.org/abs/2206.10654
-share:
+share: null
+date: '2022-06-21'
 ---
+
 > [!info] Abstract
 > The mechanisms by which certain training interventions, such as increasing learning rates and applying batch normalization, improve the generalization of deep networks remains a mystery. Prior works have speculated that “flatter” solutions generalize better than “sharper” solutions to unseen data, motivating several metrics for measuring flatness (particularly λmax, the largest eigenvalue of the Hessian of the loss); and algorithms, such as Sharpness-Aware Minimization (SAM) [1], that directly optimize for flatness. Other works question the link between λmax and generalization. 
 > 

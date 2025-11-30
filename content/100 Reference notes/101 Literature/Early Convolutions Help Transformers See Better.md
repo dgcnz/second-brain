@@ -12,10 +12,9 @@ tags:
   - vit
   - optimizability
   - paper
-share: true
+url: https://arxiv.org/abs/2106.14881
+date: 2021-06-28
 ---
-
-
 
 > [!faq] Hypothesis
 > ViT's patchify convolution is contrary to standard early layers in CNNs. Maybe that's the cause?

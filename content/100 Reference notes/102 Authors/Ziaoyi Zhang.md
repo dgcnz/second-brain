@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Apple]]"
-share: true
+- '[[Apple]]'
 ---

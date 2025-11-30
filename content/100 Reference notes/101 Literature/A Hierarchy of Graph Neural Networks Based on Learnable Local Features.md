@@ -1,18 +1,19 @@
 ---
 authors:
-  - "[[Michael Linghzhi Li]]"
-  - "[[Meng Dong]]"
-  - "[[Jiawei Zhou]]"
-  - "[[Alexander M. Rush]]"
+- '[[Michael Linghzhi Li]]'
+- '[[Meng Dong]]'
+- '[[Jiawei Zhou]]'
+- '[[Alexander M. Rush]]'
 year: 2019
 tags:
-  - gcn
-  - graphs
-  - gnn
-  - paper
+- gcn
+- graphs
+- gnn
+- paper
 url: https://arxiv.org/abs/1911.05256
-share: true
+date: '2019-11-13'
 ---
+
 > [!info] Abstract
 > Graph neural networks (GNNs) are a powerful tool to learn representations on graphs by iteratively aggregating features from node neighbourhoods. Many variant models have been proposed, but there is limited understanding on both how to compare different architectures and how to construct GNNs systematically. Here, we propose a hierarchy of GNNs based on their aggregation regions. We derive theoretical results about the discriminative power and feature representation capabilities of each class. Then, we show how this framework can be utilized to systematically construct arbitrarily powerful GNNs. As an example, we construct a simple architecture that exceeds the expressiveness of the Weisfeiler-Lehman graph isomorphism test. We empirically validate our theory on both synthetic and real-world benchmarks, and demonstrate our example's theoretical power translates to strong results on node classification, graph classification, and graph regression tasks.
 

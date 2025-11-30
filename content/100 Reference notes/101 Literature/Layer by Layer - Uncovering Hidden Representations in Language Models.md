@@ -1,20 +1,19 @@
 ---
 authors:
-  - "[[Oscar Skean]]"
-  - "[[Md Rifat Arefin]]"
-  - "[[Dan Zhao]]"
-  - "[[Niket Patel]]"
-  - "[[Jalal Naghiyev]]"
-  - "[[Yann LeCun]]"
-  - "[[Ravid Shwartz-Ziv]]"
+- '[[Oscar Skean]]'
+- '[[Md Rifat Arefin]]'
+- '[[Dan Zhao]]'
+- '[[Niket Patel]]'
+- '[[Jalal Naghiyev]]'
+- '[[Yann LeCun]]'
+- '[[Ravid Shwartz-Ziv]]'
 year: 2025
 tags:
-  - paper
-  - interpretability
+- paper
+- interpretability
 url: http://arxiv.org/abs/2502.02013
-share: true
+date: '2025-02-04'
 ---
-
 
 > [!tldr] Abstract
 > From extracting features to generating text, the outputs of large language models (LLMs) typically rely on the final layers, following the conventional wisdom that earlier layers capture only low-level cues. However, our analysis shows that intermediate layers can encode even richer representations, often improving performance on a range of downstream tasks. To explain and quantify these hidden-layer properties, we propose a unified framework of representation quality metrics based on information theory, geometry, and invariance to input perturbations. Our framework highlights how each layer balances information compression and signal preservation, revealing why mid-depth embeddings can exceed the last layer’s performance. Through extensive experiments on 32 text-embedding tasks across various architectures (transformers, state-space models) and domains (language, vision), we demonstrate that intermediate layers consistently provide stronger features, challenging the standard view on final-layer embeddings and opening new directions on using mid-layer representations for more robust and accurate representations.

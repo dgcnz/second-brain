@@ -1,8 +1,8 @@
 ---
-share: true
 tags:
   - optimizability
   - dl_theory
+date: 2024-01-01
 ---
 
 We expect loss functions for deep networks to have a **large family of equivalent global minima**.

@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[NVIDIA]]"
-  - "[[Tsinghua University]]"
-share: true
+- '[[NVIDIA]]'
+- '[[Tsinghua University]]'
 ---

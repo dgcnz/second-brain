@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[IDEAS NCBR]]"
-share: true
+- '[[IDEAS NCBR]]'
 ---

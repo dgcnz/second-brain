@@ -31,8 +31,9 @@ tags:
   - mechinterp
   - transformers
 url: https://transformer-circuits.pub/2021/framework/index.html
-share: true
+date: 2021-12-22
 ---
+
 > [!tldr] Abstract
 > Transformer [1] language models are an emerging technology that is gaining increasingly broad real-world use, for example in systems like GPT-3 [2], LaMDA [3], Codex [4], Meena [5], Gopher [6], and similar models.  However, as these models scale, their open-endedness and high capacity creates an increasing scope for unexpected and sometimes harmful behaviors.  Even years after a large model is trained, both creators and users routinely discover model capabilities – including problematic behaviors – they were previously unaware of.
 > 

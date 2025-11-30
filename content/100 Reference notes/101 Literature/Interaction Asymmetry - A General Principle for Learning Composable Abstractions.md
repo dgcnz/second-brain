@@ -1,19 +1,18 @@
 ---
 authors:
-  - "[[Jack Brady]]"
-  - "[[Julius von Kügelgen]]"
-  - "[[Sébastien Lachapelle]]"
-  - "[[Simon Buchholz]]"
-  - "[[Thomas Kipf]]"
-  - "[[Wieland Brendel]]"
+- '[[Jack Brady]]'
+- "[[Julius von K\xFCgelgen]]"
+- "[[S\xE9bastien Lachapelle]]"
+- '[[Simon Buchholz]]'
+- '[[Thomas Kipf]]'
+- '[[Wieland Brendel]]'
 year: 2024
 tags:
-  - paper
-  - dl_theory
+- paper
+- dl_theory
 url: http://arxiv.org/abs/2411.07784
-share: true
+date: '2024-11-12'
 ---
-
 
 > [!tldr] Abstract
 > Learning disentangled representations of concepts and re-composing them in unseen ways is crucial for generalizing to out-of-domain situations. However, the underlying properties of concepts that enable such disentanglement and compositional generalization remain poorly understood. In this work, we propose the principle of interaction asymmetry which states: "Parts of the same concept have more complex interactions than parts of different concepts". We formalize this via block diagonality conditions on the $(n+1)$th order derivatives of the generator mapping concepts to observed data, where different orders of "complexity" correspond to different $n$. Using this formalism, we prove that interaction asymmetry enables both disentanglement and compositional generalization. Our results unify recent theoretical results for learning concepts of objects, which we show are recovered as special cases with $n\!=\!0$ or $1$. We provide results for up to $n\!=\!2$, thus extending these prior works to more flexible generator functions, and conjecture that the same proof strategies generalize to larger $n$. Practically, our theory suggests that, to disentangle concepts, an autoencoder should penalize its latent capacity and the interactions between concepts during decoding. We propose an implementation of these criteria using a flexible Transformer-based VAE, with a novel regularizer on the attention weights of the decoder. On synthetic image datasets consisting of objects, we provide evidence that this model can achieve comparable object disentanglement to existing models that use more explicit object-centric priors.

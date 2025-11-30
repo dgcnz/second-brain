@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Google DeepMind]]"
-  - "[[University of Maryland]]"
-share: true
+- '[[Google DeepMind]]'
+- '[[University of Maryland]]'
 ---

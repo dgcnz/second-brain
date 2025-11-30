@@ -1,16 +1,17 @@
 ---
 tags:
-  - vit
-  - computer_vision
-  - cnn
-  - optimizability
+- vit
+- computer_vision
+- cnn
+- optimizability
 authors:
-  - "[[Namuk Park]]"
-  - "[[Songkuk Kim]]"
+- '[[Namuk Park]]'
+- '[[Songkuk Kim]]'
 year: 2022
 url: https://arxiv.org/abs/2202.06709
-share: true
+date: '2022-02-14'
 ---
+
 > [!info] Abstract
 > The success of multi-head self-attentions (MSAs) for computer vision is now indisputable. However, little is known about how MSAs work. We present fundamental explanations to help better understand the nature of MSAs. In particular, we demonstrate the following properties of MSAs and Vision Transformers (ViTs): (1) MSAs improve not only accuracy but also generalization by flattening the loss landscapes. Such improvement is primarily attributable to their data specificity, not long-range dependency. On the other hand, ViTs suffer from non-convex losses. Large datasets and loss landscape smoothing methods alleviate this problem; (2) MSAs and Convs exhibit opposite behaviors. For example, MSAs are low-pass filters, but Convs are high-pass filters. Therefore, MSAs and Convs are complementary; (3) Multi-stage neural networks behave like a series connection of small individual models. In addition, MSAs at the end of a stage play a key role in prediction. Based on these insights, we propose AlterNet, a model in which Conv blocks at the end of a stage are replaced with MSA blocks. AlterNet outperforms CNNs not only in large data regimes but also in small data regimes. The code is available at [this https URL](https://github.com/xxxnell/how-do-vits-work).
 

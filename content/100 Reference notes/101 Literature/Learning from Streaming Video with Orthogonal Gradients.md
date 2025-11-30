@@ -1,24 +1,23 @@
 ---
 authors:
-  - "[[Tengda Han]]"
-  - "[[Dilara Gokay]]"
-  - "[[Joseph Heyward]]"
-  - "[[Chuhan Zhang]]"
-  - "[[Daniel Zoran]]"
-  - "[[Viorica Pătrăucean]]"
-  - "[[João Carreira]]"
-  - "[[Dima Damen]]"
-  - "[[Andrew Zisserman]]"
+- '[[Tengda Han]]'
+- '[[Dilara Gokay]]'
+- '[[Joseph Heyward]]'
+- '[[Chuhan Zhang]]'
+- '[[Daniel Zoran]]'
+- "[[Viorica P\u0103tr\u0103ucean]]"
+- "[[Jo\xE3o Carreira]]"
+- '[[Dima Damen]]'
+- '[[Andrew Zisserman]]'
 year: 2025
 tags:
-  - paper
-  - dl_theory
-  - ssl
-  - video
+- paper
+- dl_theory
+- ssl
+- video
 url: http://arxiv.org/abs/2504.01961
-share: true
+date: '2025-04-02'
 ---
-
 
 > [!tldr] Abstract
 > We address the challenge of representation learning from a continuous stream of video as input, in a self-supervised manner. This differs from the standard approaches to video learning where videos are chopped and shuffled during training in order to create a non-redundant batch that satisfies the independently and identically distributed (IID) sample assumption expected by conventional training paradigms. When videos are only available as a continuous stream of input, the IID assumption is evidently broken, leading to poor performance. We demonstrate the drop in performance when moving from shuffled to sequential learning on three tasks: the one-video representation learning method DoRA, standard VideoMAE on multi-video datasets, and the task of future video prediction.

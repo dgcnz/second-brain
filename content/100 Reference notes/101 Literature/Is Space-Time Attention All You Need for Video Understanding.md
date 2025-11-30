@@ -1,18 +1,17 @@
 ---
 authors:
-  - "[[Gedas Bertasius]]"
-  - "[[Heng Wang]]"
-  - "[[Lorenzo Torresani]]"
+- '[[Gedas Bertasius]]'
+- '[[Heng Wang]]'
+- '[[Lorenzo Torresani]]'
 year: 2021
 date: 2021-06-09
 tags:
-  - paper
-  - video
-  - ssl
-  - computer_vision
-  - vit
+- paper
+- video
+- ssl
+- computer_vision
+- vit
 url: http://arxiv.org/abs/2102.05095
-share: true
 ---
 
 > [!tldr] Abstract

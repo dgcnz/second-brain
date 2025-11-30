@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[NVIDIA]]"
-  - "[[Purdue University]]"
-share: true
+- '[[NVIDIA]]'
+- '[[Purdue University]]'
 ---

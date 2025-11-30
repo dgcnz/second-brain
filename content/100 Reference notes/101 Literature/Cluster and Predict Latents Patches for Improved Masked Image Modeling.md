@@ -1,22 +1,20 @@
 ---
 authors:
-  - "[[Timothée Darcet]]"
-  - "[[Federico Baldassarre]]"
-  - "[[Maxime Oquab]]"
-  - "[[Julien Mairal]]"
-  - "[[Piotr Bojanowski]]"
+- "[[Timoth\xE9e Darcet]]"
+- '[[Federico Baldassarre]]'
+- '[[Maxime Oquab]]'
+- '[[Julien Mairal]]'
+- '[[Piotr Bojanowski]]'
 year: 2025
 date: 2025-02-12
 tags:
-  - paper
-  - clustering
-  - ssl
-  - vit
-  - computer_vision
+- paper
+- clustering
+- ssl
+- vit
+- computer_vision
 url: http://arxiv.org/abs/2502.08769
-share: true
 ---
-
 
 > [!tldr] Abstract
 > Masked Image Modeling (MIM) offers a promising approach to self-supervised representation learning, however existing MIM models still lag behind the state-of-the-art. In this paper, we systematically analyze target representations, loss functions, and architectures, to introduce CAPI – a novel pure-MIM framework that relies on the prediction of latent clusterings. Our approach leverages a clustering-based loss, which is stable to train, and exhibits promising scaling properties. Our ViT-L backbone, CAPI, achieves 83.8% accuracy on ImageNet and 32.1% mIoU on ADE20K with simple linear probes, substantially outperforming previous MIM methods and approaching the performance of the current state-of-the-art, DINOv2. We release all our code and models.

@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Chalmers University of Technology]]"
-share: true
+- '[[Chalmers University of Technology]]'
 ---

@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[FunAI Lab]]"
-share: true
+- '[[FunAI Lab]]'
 ---

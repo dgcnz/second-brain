@@ -1,25 +1,23 @@
 ---
 authors:
-  - "[[Federico Baldassarre]]"
-  - "[[Marc Szafraniec]]"
-  - "[[Basile Terver]]"
-  - "[[Vasil Khalidov]]"
-  - "[[Francisco Massa]]"
-  - "[[Yann LeCun]]"
-  - "[[Patrick Labatut]]"
-  - "[[Maximilian Seitzer]]"
-  - "[[Piotr Bojanowski]]"
+- '[[Federico Baldassarre]]'
+- '[[Marc Szafraniec]]'
+- '[[Basile Terver]]'
+- '[[Vasil Khalidov]]'
+- '[[Francisco Massa]]'
+- '[[Yann LeCun]]'
+- '[[Patrick Labatut]]'
+- '[[Maximilian Seitzer]]'
+- '[[Piotr Bojanowski]]'
 year: 2025
 date: 2025-07-25
 tags:
-  - paper
-  - ssl
-  - video
-  - world-models
+- paper
+- ssl
+- video
+- world-models
 url: http://arxiv.org/abs/2507.19468
-share: true
 ---
-
 
 > [!tldr] Abstract
 > We present DINO-world, a powerful generalist video world model trained to predict future frames in the latent space of DINOv2. By leveraging a pre-trained image encoder and training a future predictor on a large-scale uncurated video dataset, DINO-world learns the temporal dynamics of diverse scenes, from driving and indoor scenes to simulated environments. We show that DINO-world outperforms previous models on a variety of video prediction benchmarks, e.g. segmentation and depth forecasting, and demonstrates strong understanding of intuitive physics. Furthermore, we show that it is possible to fine-tune the predictor on observationaction trajectories. The resulting action-conditioned world model can be used for planning by simulating candidate trajectories in latent space.

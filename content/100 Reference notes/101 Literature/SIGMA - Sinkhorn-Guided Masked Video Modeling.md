@@ -1,19 +1,18 @@
 ---
-authors: 
-- "[[Mohammadreza Salehi]]"
-- "[[Michael Dorkenwald]]"
-- "[[Fida Mohammad Thoker]]"
-- "[[Efstratios Gavves]]"
-- "[[Cees G. M. Snoek]]"
-- "[[Yuki M. Asano]]"
-
-year:  2024
+authors:
+- '[[Mohammadreza Salehi]]'
+- '[[Michael Dorkenwald]]'
+- '[[Fida Mohammad Thoker]]'
+- '[[Efstratios Gavves]]'
+- '[[Cees G. M. Snoek]]'
+- '[[Yuki M. Asano]]'
+year: 2024
 tags:
-  - paper
+- paper
 url: http://arxiv.org/abs/2407.15447
-share: false
+date: '2024-07-22'
+draft: true
 ---
-
 
 > [!tldr] Abstract
 > Video-based pretraining offers immense potential for learning strong visual representations on an unprecedented scale. Recently, masked video modeling methods have shown promising scalability, yet fall short in capturing higherlevel semantics due to reconstructing predefined low-level targets such as pixels. To tackle this, we present Sinkhorn-guided Masked Video Modelling (SIGMA), a novel video pretraining method that jointly learns the video model in addition to a target feature space using a projection network. However, this simple modification means that the regular L2 reconstruction loss will lead to trivial solutions as both networks are jointly optimized. As a solution, we distribute features of space-time tubes evenly across a limited number of learnable clusters. By posing this as an optimal transport problem, we enforce high entropy in the generated features across the batch, infusing semantic and temporal meaning into the feature space. The resulting cluster assignments are used as targets for a symmetric prediction task where the video model predicts cluster assignment of the projection network and vice versa. Experimental results on ten datasets across three benchmarks validate the effectiveness of SIGMA in learning more performant, temporally-aware, and robust video representations improving upon state-of-the-art methods. Our project website with code is available at: https://quva-lab.github.io/SIGMA.

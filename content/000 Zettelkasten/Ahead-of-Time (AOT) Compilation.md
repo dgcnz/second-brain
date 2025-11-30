@@ -3,8 +3,9 @@ tags:
   - compilers
   - pytorch
   - optimization
-share: true
+draft: true
 ---
+
 Generally: Compilation that occurs before the program is executed.
 
 Specifically to ML (PyTorch): 

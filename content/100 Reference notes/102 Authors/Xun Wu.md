@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Microsoft]]"
-  - "[[Tsinghua University]]"
-share: true
+- '[[Microsoft]]'
+- '[[Tsinghua University]]'
 ---

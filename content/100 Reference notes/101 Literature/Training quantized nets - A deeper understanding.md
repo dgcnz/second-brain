@@ -1,18 +1,19 @@
 ---
 authors:
-  - "[[Hao Li]]"
-  - "[[Soham De]]"
-  - "[[Zheng Xu]]"
-  - "[[Christoph Studer]]"
-  - "[[Hanan Samet]]"
-  - "[[Tom Goldstein]]"
+- '[[Hao Li]]'
+- '[[Soham De]]'
+- '[[Zheng Xu]]'
+- '[[Christoph Studer]]'
+- '[[Hanan Samet]]'
+- '[[Tom Goldstein]]'
 year: 2017
 tags:
-  - paper
-  - quantization
+- paper
+- quantization
 url: https://arxiv.org/abs/1706.02379
-share: true
+date: '2017-06-07'
 ---
+
 > [!tldr] Abstract 
 > Currently, deep neural networks are deployed on low-power portable devices by first training a full-precision model using powerful hardware, and then deriving a corresponding low-precision model for efficient inference on such systems. However, training models directly with coarsely quantized weights is a key step towards learning on embedded platforms that have limited computing resources, memory capacity, and power consumption. Numerous recent publications have studied methods for training quantized networks, but these studies have mostly been empirical. In this work, we investigate training methods for quantized neural networks from a theoretical viewpoint. We first explore accuracy guarantees for training methods under convexity assumptions. We then look at the behavior of these algorithms for non-convex problems, and show that training algorithms that exploit high-precision representations have an important greedy search phase that purely quantized training methods lack, which explains the difficulty of training using low-precision arithmetic.
 

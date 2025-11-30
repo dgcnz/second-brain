@@ -2,7 +2,7 @@
 tags:
   - efficient_dl
   - transformers
-share: true
+draft: true
 ---
 
 ![[Pasted image 20240613134825.png]]

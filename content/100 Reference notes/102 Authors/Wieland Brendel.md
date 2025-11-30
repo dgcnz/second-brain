@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Max Planck Institute for Intelligent Systems]]"
-share: true
+- '[[Max Planck Institute for Intelligent Systems]]'
 ---

@@ -3,8 +3,9 @@ tags:
   - question
   - foundation_models
   - computer_vision
-share: true
+date: 2024-01-01
 ---
+
 ## Object detection
 
 Research using DINOv2 as a backbone for object detection:

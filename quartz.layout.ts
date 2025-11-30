@@ -24,6 +24,21 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ContentMeta(),
     Component.TagList(),
   ],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+		limit: 20,
+        filter: (f) => {
+          const slug = (f.slug ?? "").toLowerCase()
+          return (
+            slug.startsWith("000-zettelkasten/") ||
+            slug.startsWith("100-reference-notes/101-literature/")
+          )
+        },
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),

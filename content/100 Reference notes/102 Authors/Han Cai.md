@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[MIT]]"
-  - "[[Shanghai Jiao Tong University]]"
-share: true
+- '[[MIT]]'
+- '[[Shanghai Jiao Tong University]]'
 ---

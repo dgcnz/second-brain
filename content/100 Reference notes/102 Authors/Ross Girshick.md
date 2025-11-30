@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-share: true
+- '[[FAIR]]'
 ---

@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[ETH Zurich]]"
-share: true
+- '[[ETH Zurich]]'
 ---

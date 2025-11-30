@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Harvard]]"
-  - "[[Kempner Institute]]"
-share: true
+- '[[Harvard]]'
+- '[[Kempner Institute]]'
 ---

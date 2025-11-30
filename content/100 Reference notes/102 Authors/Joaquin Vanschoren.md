@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[TU Eindhoven]]"
-share: true
+- '[[TU Eindhoven]]'
 ---

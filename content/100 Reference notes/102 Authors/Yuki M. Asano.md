@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[University of Amsterdam]]"
-  - "[[University of Technology Nuremberg]]"
-share: true
+- '[[University of Amsterdam]]'
+- '[[University of Technology Nuremberg]]'
 ---

@@ -2,7 +2,7 @@
 tags:
   - dl_theory
   - efficient_dl
-share: true
+date: 2024-01-01
 ---
 
 > [!important] Key Idea

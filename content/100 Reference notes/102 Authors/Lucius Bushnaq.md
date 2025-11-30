@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Apollo Research]]"
-share: true
+- '[[Apollo Research]]'
 ---

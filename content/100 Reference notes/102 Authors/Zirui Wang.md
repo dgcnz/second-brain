@@ -1,7 +1,6 @@
 ---
 affiliation:
-  - "[[Apple]]"
-  - "[[Google]]"
-  - "[[Carnegie Mellon University]]"
-share: true
+- '[[Apple]]'
+- '[[Google]]'
+- '[[Carnegie Mellon University]]'
 ---

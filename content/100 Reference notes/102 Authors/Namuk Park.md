@@ -1,6 +1,5 @@
 ---
-share: true
 affiliation:
-  - "[[Naver AI Lab]]"
-  - "[[Prescient Design, Genentech]]"
+- '[[Naver AI Lab]]'
+- '[[Prescient Design, Genentech]]'
 ---

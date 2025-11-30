@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Microsoft]]"
-share: true
+- '[[Microsoft]]'
 ---

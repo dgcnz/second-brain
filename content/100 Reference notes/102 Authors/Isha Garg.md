@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Purdue University]]"
-  - "[[Apple]]"
-share: true
+- '[[Purdue University]]'
+- '[[Apple]]'
 ---

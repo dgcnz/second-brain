@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Cohere]]"
-share: true
+- '[[Cohere]]'
 ---

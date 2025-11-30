@@ -1,16 +1,17 @@
 ---
 authors:
-  - "[[Xun Wu]]"
-  - "[[Shaohan Huang]]"
-  - "[[Furu Wei]]"
+- '[[Xun Wu]]'
+- '[[Shaohan Huang]]'
+- '[[Furu Wei]]'
 year: 2024
 tags:
-  - paper
-  - peft
-  - efficient_dl
+- paper
+- peft
+- efficient_dl
 url: https://arxiv.org/abs/2404.13628
-share: true
+date: '2024-04-21'
 ---
+
 > [!tldr] Abstract
 > LoRA has gained widespread acceptance in the fine-tuning of large pre-trained models to cater to a diverse array of downstream tasks, showcasing notable effectiveness and efficiency, thereby solidifying its position as one of the most prevalent fine-tuning techniques. Due to the modular nature of LoRA's plug-and-play plugins, researchers have delved into the amalgamation of multiple LoRAs to empower models to excel across various downstream tasks. Nonetheless, extant approaches for LoRA fusion grapple with inherent challenges. Direct arithmetic merging may result in the loss of the original pre-trained model's generative capabilities or the distinct identity of LoRAs, thereby yielding suboptimal outcomes. On the other hand, Reference tuning-based fusion exhibits limitations concerning the requisite flexibility for the effective combination of multiple LoRAs. In response to these challenges, this paper introduces the Mixture of LoRA Experts (MoLE) approach, which harnesses hierarchical control and unfettered branch selection. The MoLE approach not only achieves superior LoRA fusion performance in comparison to direct arithmetic merging but also retains the crucial flexibility for combining LoRAs effectively. Extensive experimental evaluations conducted in both the Natural Language Processing (NLP) and Vision & Language (V&L) domains substantiate the efficacy of MoLE.
 

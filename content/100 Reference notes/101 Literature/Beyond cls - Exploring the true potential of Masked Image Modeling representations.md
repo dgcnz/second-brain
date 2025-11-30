@@ -1,21 +1,19 @@
 ---
 authors:
-  - "[[Marcin Przewięźlikowski]]"
-  - "[[Randall Balestriero]]"
-  - "[[Wojciech Jasiński]]"
-  - "[[Marek Śmieja]]"
-  - "[[Bartosz Zieliński]]"
+- "[[Marcin Przewi\u0119\u017Alikowski]]"
+- '[[Randall Balestriero]]'
+- "[[Wojciech Jasi\u0144ski]]"
+- "[[Marek \u015Amieja]]"
+- "[[Bartosz Zieli\u0144ski]]"
 year: 2024
 tags:
-  - paper
-  - dl_theory
-  - vit
-  - transformers
+- paper
+- dl_theory
+- vit
+- transformers
 url: https://arxiv.org/abs/2412.03215
-share: true
+date: '2024-12-04'
 ---
-
-
 
 > [!tldr] Abstract
 > Masked Image Modeling (MIM) has emerged as a popular method for Self-Supervised Learning (SSL) of visual representations. However, for high-level perception tasks, MIM-pretrained models offer lower out-of-the-box representation quality than the Joint-Embedding Architectures (JEA) - another prominent SSL paradigm. To understand this performance gap, we analyze the information flow in Vision Transformers (ViT) learned by both approaches. We reveal that whereas JEAs construct their representation on a selected set of relevant image fragments, MIM models aggregate nearly whole image content. Moreover, we demonstrate that MIM-trained ViTs retain valuable information within their patch tokens, which is not effectively captured by the global [cls] token representations. Therefore, selective aggregation of relevant patch tokens, without any fine-tuning, results in consistently higher-quality of MIM representations. To our knowledge, we are the first to highlight the lack of effective representation aggregation as an emergent issue of MIM and propose directions to address it, contributing to future advances in Self-Supervised Learning.

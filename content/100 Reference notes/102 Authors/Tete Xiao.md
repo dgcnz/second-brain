@@ -1,5 +1,5 @@
 ---
-share: true
-affiliation: "[[FAIR]]"
+affiliation: '[[FAIR]]'
 ---
+
 Associations: [[FAIR]], [[UC Berkeley]]

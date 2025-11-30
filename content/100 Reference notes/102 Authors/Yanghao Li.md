@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[Apple]]"
-share: true
+- '[[FAIR]]'
+- '[[Apple]]'
 ---

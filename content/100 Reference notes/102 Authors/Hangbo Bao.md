@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Harbin Institute of Technology]]"
-share: true
+- '[[Harbin Institute of Technology]]'
 ---

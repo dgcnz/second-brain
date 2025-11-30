@@ -2,8 +2,9 @@
 tags:
   - dl_theory
   - question
-share: true
+date: 2025-01-01
 ---
+
 There's a general consensus that less inductive biases are better, intuitively because it helps optimization by allowing for more hardware-friendly architectures, etc.
 
 First, [[An image is worth 16x16 words - Transformers for image recognition at scale]] shows that ViTs, with minimal inductive biases, outperform ConvNets. ViTs have:

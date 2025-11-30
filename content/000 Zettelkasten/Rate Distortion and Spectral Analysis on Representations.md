@@ -3,7 +3,7 @@ tags:
   - dl_theory
   - information_theory
   - spectral
-share: true
+date: 2025-01-01
 ---
 
 This note gathers papers that use concepts from information theory and spectral theory for deep learning.
@@ -29,4 +29,4 @@ This note gathers papers that use concepts from information theory and spectral 
 - [[Learning Continually by Spectral Regularization]] — Maintains network plasticity in continual learning by constraining each layer’s largest singular value near one, preserving gradient diversity. 
 - [[Towards Understanding the Spectral Bias of Deep Learning]] — Provides a theoretical explanation linking NTK eigenvalues to faster learning of low-frequency functions, illuminating spectral bias. 
 
-PS: Personally curated list. (1-sentence summaries by o3 :p). 
+PS: Personally curated list. (1-sentence summaries by gpt-o3 because i was too lazy :p). 

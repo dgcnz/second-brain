@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Naver Labs Europe]]"
-  - "[[INRIA]]"
-share: true
+- '[[Naver Labs Europe]]'
+- '[[INRIA]]'
 ---

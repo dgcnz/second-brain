@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Google]]"
-  - "[[Stanford]]"
-share: true
+- '[[Google]]'
+- '[[Stanford]]'
 ---

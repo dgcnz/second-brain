@@ -1,17 +1,17 @@
 ---
 authors:
-  - "[[Amir Gholami]]"
-  - "[[Sehoon Kim]]"
-  - "[[Zhen Dong]]"
-  - "[[Zhewei Yao]]"
-  - "[[Michael W. Mahoney]]"
-  - "[[Kurt Keutzer]]"
+- '[[Amir Gholami]]'
+- '[[Sehoon Kim]]'
+- '[[Zhen Dong]]'
+- '[[Zhewei Yao]]'
+- '[[Michael W. Mahoney]]'
+- '[[Kurt Keutzer]]'
 year: 2021
 tags:
-  - paper
-  - efficient_dl
+- paper
+- efficient_dl
 url: https://arxiv.org/abs/2103.13630
-share: true
+date: '2021-03-25'
 ---
 
 > [!info] Abstract

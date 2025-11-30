@@ -1,21 +1,20 @@
 ---
 authors:
-  - "[[Yitian Zhang]]"
-  - "[[Huseyin Coskun]]"
-  - "[[Xu Ma]]"
-  - "[[Huan Wang]]"
-  - "[[Ke Ma]]"
-  - "[[ Xi]]"
-  - "[[ Chen]]"
-  - "[[Derek Hao Hu]]"
-  - "[[Yun Fu]]"
+- '[[Yitian Zhang]]'
+- '[[Huseyin Coskun]]'
+- '[[Xu Ma]]'
+- '[[Huan Wang]]'
+- '[[Ke Ma]]'
+- '[[ Xi]]'
+- '[[ Chen]]'
+- '[[Derek Hao Hu]]'
+- '[[Yun Fu]]'
 year: 2024
 tags:
-  - paper
+- paper
 url: http://arxiv.org/abs/2412.04786
-share: true
+date: '2024-12-06'
 ---
-
 
 > [!tldr] Abstract
 > Vision Transformers (ViT) is known for its scalability. In this work, we target to scale down a ViT to fit in an environment with dynamic-changing resource constraints. We observe that smaller ViTs are intrinsically the sub-networks of a larger ViT with different widths. Thus, we propose a general framework, named Scala, to enable a single network to represent multiple smaller ViTs with flexible inference capability, which aligns with the inherent design of ViT to vary from widths. Concretely, Scala activates several subnets during training, introduces Isolated Activation to disentangle the smallest sub-network from other subnets, and leverages Scale Coordination to ensure each sub-network receives simplified, steady, and accurate learning objectives. Comprehensive empirical validations on different tasks demonstrate that with only one-shot training, Scala learns slimmable representation without modifying the original ViT structure and matches the performance of Separate Training. Compared with the prior art, Scala achieves an average improvement of 1.6% on ImageNet-1K with fewer parameters. Code is available at here.

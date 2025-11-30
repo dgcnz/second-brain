@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[University of Bristol]]"
-  - "[[Google DeepMind]]"
-share: true
+- '[[University of Bristol]]'
+- '[[Google DeepMind]]'
 ---

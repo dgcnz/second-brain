@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Naver Cloud AI]]"
-share: true
+- '[[Naver Cloud AI]]'
 ---

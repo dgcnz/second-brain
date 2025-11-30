@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[University of Amsterdam]]"
-  - "[[QUVA Lab]]"
-share: true
+- '[[University of Amsterdam]]'
+- '[[QUVA Lab]]'
 ---

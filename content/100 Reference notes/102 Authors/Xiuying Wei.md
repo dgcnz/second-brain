@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[EPFL]]"
-  - "[[CLAIRE]]"
-share: true
+- '[[EPFL]]'
+- '[[CLAIRE]]'
 ---

@@ -1,6 +1,5 @@
 ---
-share: true
 affiliation:
-  - "[[Google DeepMind]]"
-  - "[[Anthropic]]"
+- '[[Google DeepMind]]'
+- '[[Anthropic]]'
 ---

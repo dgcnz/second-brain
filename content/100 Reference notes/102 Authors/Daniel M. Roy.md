@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Vector Institute]]"
-share: true
+- '[[Vector Institute]]'
 ---

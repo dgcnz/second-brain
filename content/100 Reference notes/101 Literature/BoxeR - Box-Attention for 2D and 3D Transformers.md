@@ -1,17 +1,18 @@
 ---
 authors:
-  - "[[Duy-Kien Nguyen]]"
-  - "[[Jihong Ju]]"
-  - "[[Olaf Booij]]"
-  - "[[Martin R. Oswald]]"
-  - "[[Cees G. M. Snoek]]"
+- '[[Duy-Kien Nguyen]]'
+- '[[Jihong Ju]]'
+- '[[Olaf Booij]]'
+- '[[Martin R. Oswald]]'
+- '[[Cees G. M. Snoek]]'
 year: 2021
 tags:
-  - paper
-  - transformers
-  - object_detection
+- paper
+- transformers
+- object_detection
 url: https://arxiv.org/abs/2111.13087
-share: true
+date: '2021-11-25'
 ---
+
 > [!tldr] Abstract
 > In this paper, we propose a simple attention mechanism, we call box-attention. It enables spatial interaction between grid features, as sampled from boxes of interest, and improves the learning capability of transformers for several vision tasks. Specifically, we present BoxeR, short for Box Transformer, which attends to a set of boxes by predicting their transformation from a reference window on an input feature map. The BoxeR computes attention weights on these boxes by considering its grid structure. Notably, BoxeR-2D naturally reasons about box information within its attention module, making it suitable for end-to-end instance detection and segmentation tasks. By learning invariance to rotation in the box-attention module, BoxeR-3D is capable of generating discriminative information from a bird's-eye view plane for 3D end-to-end object detection. Our experiments demonstrate that the proposed BoxeR-2D achieves state-of-the-art results on COCO detection and instance segmentation. Besides, BoxeR-3D improves over the end-to-end 3D object detection baseline and already obtains a compelling performance for the vehicle category of Waymo Open, without any class-specific optimization. Code is available at [this https URL](https://github.com/kienduynguyen/BoxeR).

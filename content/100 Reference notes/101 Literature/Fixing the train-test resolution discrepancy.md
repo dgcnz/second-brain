@@ -1,16 +1,17 @@
 ---
 authors:
-  - "[[Hugo Touvron]]"
-  - "[[Andrea Vedaldi]]"
-  - "[[Matthijs Douze]]"
-  - "[[Hervé Jegou]]"
+- '[[Hugo Touvron]]'
+- '[[Andrea Vedaldi]]'
+- '[[Matthijs Douze]]'
+- "[[Herv\xE9 Jegou]]"
 year: 2019
 tags:
-  - paper
-  - vit
+- paper
+- vit
 url: https://arxiv.org/abs/1906.06423
-share: true
+date: '2019-06-14'
 ---
+
 > [!tldr] Abstract
 > Data-augmentation is key to the training of neural networks for image classification. This paper first shows that existing augmentations induce a significant discrepancy between the typical size of the objects seen by the classifier at train and test time. We experimentally validate that, for a target test resolution, using a lower train resolution offers better classification at test time.  
 > We then propose a simple yet effective and efficient strategy to optimize the classifier performance when the train and test resolutions differ. It involves only a computationally cheap fine-tuning of the network at the test resolution. This enables training strong classifiers using small training images. For instance, we obtain 77.1% top-1 accuracy on ImageNet with a ResNet-50 trained on 128x128 images, and 79.8% with one trained on 224x224 image. In addition, if we use extra training data we get 82.5% with the ResNet-50 train with 224x224 images.  

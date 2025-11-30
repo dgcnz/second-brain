@@ -1,35 +1,34 @@
 ---
 authors:
-  - "[[Randall Balestriero]]"
-  - "[[Mark Ibrahim]]"
-  - "[[Vlad Sobal]]"
-  - "[[Ari Morcos]]"
-  - "[[Shashank Shekhar]]"
-  - "[[Tom Goldstein]]"
-  - "[[Florian Bordes]]"
-  - "[[Adrien Bardes]]"
-  - "[[Gregoire Mialon]]"
-  - "[[Yuandong Tian]]"
-  - "[[Avi Schwarzschild]]"
-  - "[[Andrew Gordon Wilson]]"
-  - "[[Jonas Geiping]]"
-  - "[[Quentin Garrido]]"
-  - "[[Pierre Fernandez]]"
-  - "[[Amir Bar]]"
-  - "[[Hamed Pirsiavash]]"
-  - "[[Yann LeCun]]"
-  - "[[Micah Goldblum]]"
+- '[[Randall Balestriero]]'
+- '[[Mark Ibrahim]]'
+- '[[Vlad Sobal]]'
+- '[[Ari Morcos]]'
+- '[[Shashank Shekhar]]'
+- '[[Tom Goldstein]]'
+- '[[Florian Bordes]]'
+- '[[Adrien Bardes]]'
+- '[[Gregoire Mialon]]'
+- '[[Yuandong Tian]]'
+- '[[Avi Schwarzschild]]'
+- '[[Andrew Gordon Wilson]]'
+- '[[Jonas Geiping]]'
+- '[[Quentin Garrido]]'
+- '[[Pierre Fernandez]]'
+- '[[Amir Bar]]'
+- '[[Hamed Pirsiavash]]'
+- '[[Yann LeCun]]'
+- '[[Micah Goldblum]]'
 year: 2023
 tags:
-  - paper
-  - ssl
-  - dense_ssl
-  - dl_theory
-  - representation_learning
+- paper
+- ssl
+- dense_ssl
+- dl_theory
+- representation_learning
 url: http://arxiv.org/abs/2304.12210
-share: true
+date: '2023-04-24'
 ---
-
 
 > [!tldr] Abstract
 > Self-supervised learning, dubbed the dark matter of intelligence, is a promising path to advance machine learning. Yet, much like cooking, training SSL methods is a delicate art with a high barrier to entry. While many components are familiar, successfully training a SSL method involves a dizzying set of choices from the pretext tasks to training hyper-parameters. Our goal is to lower the barrier to entry into SSL research by laying the foundations and latest SSL recipes in the style of a cookbook. We hope to empower the curious researcher to navigate the terrain of methods, understand the role of the various knobs, and gain the know-how required to explore how delicious SSL can be.

@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[UC Santa Barbara]]"
-share: true
+- '[[FAIR]]'
+- '[[UC Santa Barbara]]'
 ---

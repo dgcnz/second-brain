@@ -1,7 +1,7 @@
 ---
 tags:
   - efficient_dl
-share: true
+draft: true
 ---
 
 ![[Pasted image 20240802145100.png]]

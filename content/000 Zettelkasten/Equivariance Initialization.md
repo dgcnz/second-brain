@@ -1,7 +1,7 @@
 ---
 tags:
   - dl_theory
-share: true
+draft: true
 ---
 
 Related:

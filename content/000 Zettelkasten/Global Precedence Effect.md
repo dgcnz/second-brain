@@ -2,8 +2,9 @@
 tags:
   - cognitive-science
   - psychology
-share: true
+date: 2025-01-01
 ---
+
 From: https://www.neurobs.com/manager/content/docs/psychlab101_experiments/Global%20Precedence/description.html
 > How do we process visual information? When we look at someone we know, we could recognize them by identifying individual parts of their face in isolation: the mouth, nose, ears, eyes, and son. But we could also recognize the configuration all the parts: how close their eyes are to their nose, the shape of the face and hairline, the height of their ears, and so on. Navon (1977) was interested in whether we process visual information piece-by-piece or in a more "global" holistic sense. To study that, he devised what are now called Navon hierarchical figures. Here's an example of a "Navon letter" in which a larger stimulus (a letter) is comprised of smaller stimuli (different letters):
 ![[Pasted image 20250608124025.png|100]]

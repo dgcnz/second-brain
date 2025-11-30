@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[EPFL]]"
-share: true
+- '[[EPFL]]'
 ---

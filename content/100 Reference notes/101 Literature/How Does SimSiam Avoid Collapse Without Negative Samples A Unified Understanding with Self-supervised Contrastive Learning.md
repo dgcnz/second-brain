@@ -1,22 +1,21 @@
 ---
 authors:
-  - "[[Chaoning Zhang]]"
-  - "[[Kang Zhang]]"
-  - "[[Chenshuang Zhang]]"
-  - "[[Trung X. Pham]]"
-  - "[[Chang D. Yoo]]"
-  - "[[In So Kweon]]"
+- '[[Chaoning Zhang]]'
+- '[[Kang Zhang]]'
+- '[[Chenshuang Zhang]]'
+- '[[Trung X. Pham]]'
+- '[[Chang D. Yoo]]'
+- '[[In So Kweon]]'
 year: 2022
 tags:
-  - paper
-  - dl_theory
-  - computer_vision
-  - contrastive_learning
-  - ssl
+- paper
+- dl_theory
+- computer_vision
+- contrastive_learning
+- ssl
 url: http://arxiv.org/abs/2203.16262
-share: true
+date: '2022-03-30'
 ---
-
 
 > [!tldr] Abstract
 > To avoid collapse in self-supervised learning (SSL), a contrastive loss is widely used but often requires a large number of negative samples. Without negative samples yet achieving competitive performance, a recent work (Chen & He, 2021) has attracted signiﬁcant attention for providing a minimalist simple Siamese (SimSiam) method to avoid collapse. However, the reason for how it avoids collapse without negative samples remains not fully clear and our investigation starts by revisiting the explanatory claims in the original SimSiam. After refuting their claims, we introduce vector decomposition for analyzing the collapse based on the gradient analysis of the l2-normalized representation vector. This yields a uniﬁed perspective on how negative samples and SimSiam alleviate collapse. Such a uniﬁed perspective comes timely for understanding the recent progress in SSL.

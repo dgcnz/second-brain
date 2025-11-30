@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[Mila Quebec AI Institute]]"
-share: true
+- '[[FAIR]]'
+- '[[Mila Quebec AI Institute]]'
 ---

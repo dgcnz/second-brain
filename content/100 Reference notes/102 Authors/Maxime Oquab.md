@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[INRIA]]"
-share: true
+- '[[FAIR]]'
+- '[[INRIA]]'
 ---

@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[University of Amsterdam]]"
-  - "[[VIS Lab]]"
-share: true
+- '[[University of Amsterdam]]'
+- '[[VIS Lab]]'
 ---

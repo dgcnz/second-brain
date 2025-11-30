@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Yonsei University]]"
-share: true
+- '[[Yonsei University]]'
 ---

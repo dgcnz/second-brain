@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Stanford]]"
-  - "[[NVIDIA]]"
-share: true
+- '[[Stanford]]'
+- '[[NVIDIA]]'
 ---

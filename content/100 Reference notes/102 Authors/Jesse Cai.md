@@ -1,7 +1,6 @@
 ---
 affiliation:
-  - "[[Meta]]"
-  - "[[UCLA]]"
-  - "[[PyTorch]]"
-share: true
+- '[[Meta]]'
+- '[[UCLA]]'
+- '[[PyTorch]]'
 ---

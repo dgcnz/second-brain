@@ -1,29 +1,30 @@
 ---
 authors:
-  - "[[Micah Goldblum]]"
-  - "[[Hossein Souri]]"
-  - "[[Renkun Ni]]"
-  - "[[Manli Shu]]"
-  - "[[Viraj Prabhu]]"
-  - "[[Gowthami Somepalli]]"
-  - "[[Prithvijt Chattopadhyay]]"
-  - "[[Mark Ibrahim]]"
-  - "[[Adrien Bardes]]"
-  - "[[Judy Hoffman]]"
-  - "[[Rama Chellappa]]"
-  - "[[Andrew Gordon Wilson]]"
-  - "[[Tom Goldstein]]"
+- '[[Micah Goldblum]]'
+- '[[Hossein Souri]]'
+- '[[Renkun Ni]]'
+- '[[Manli Shu]]'
+- '[[Viraj Prabhu]]'
+- '[[Gowthami Somepalli]]'
+- '[[Prithvijt Chattopadhyay]]'
+- '[[Mark Ibrahim]]'
+- '[[Adrien Bardes]]'
+- '[[Judy Hoffman]]'
+- '[[Rama Chellappa]]'
+- '[[Andrew Gordon Wilson]]'
+- '[[Tom Goldstein]]'
 year: 2023
 tags:
-  - paper
-  - foundation_models
-  - computer_vision
-  - vit
-  - transformers
-  - cnn
+- paper
+- foundation_models
+- computer_vision
+- vit
+- transformers
+- cnn
 url: https://arxiv.org/abs/2310.19909
-share: true
+date: '2023-10-30'
 ---
+
 > [!tldr] Abstract
 > Neural network based computer vision systems are typically built on a backbone, a pretrained or randomly initialized feature extractor. Several years ago, the default option was an ImageNet-trained convolutional neural network. However, the recent past has seen the emergence of countless backbones pretrained using various algorithms and datasets. While this abundance of choice has led to performance increases for a range of systems, it is difficult for practitioners to make informed decisions about which backbone to choose. Battle of the Backbones (BoB) makes this choice easier by benchmarking a diverse suite of pretrained models, including vision-language models, those trained via self-supervised learning, and the Stable Diffusion backbone, across a diverse set of computer vision tasks ranging from classification to object detection to OOD generalization and more. Furthermore, BoB sheds light on promising directions for the research community to advance computer vision by illuminating strengths and weakness of existing approaches through a comprehensive analysis conducted on more than 1500 training runs. While vision transformers (ViTs) and self-supervised learning (SSL) are increasingly popular, we find that convolutional neural networks pretrained in a supervised fashion on large training sets still perform best on most tasks among the models we consider. Moreover, in apples-to-apples comparisons on the same architectures and similarly sized pretraining datasets, we find that SSL backbones are highly competitive, indicating that future works should perform SSL pretraining with advanced architectures and larger pretraining datasets. We release the raw results of our experiments along with code that allows researchers to put their own backbones through the gauntlet here: [this https URL](https://github.com/hsouri/Battle-of-the-Backbones)
 

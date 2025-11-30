@@ -1,17 +1,16 @@
 ---
 authors:
-  - "[[Wei Li]]"
-  - "[[Jiahao Xie]]"
-  - "[[Chen Change Loy]]"
+- '[[Wei Li]]'
+- '[[Jiahao Xie]]'
+- '[[Chen Change Loy]]'
 year: 2023
 tags:
-  - paper
-  - ssl
-  - dense_ssl
+- paper
+- ssl
+- dense_ssl
 url: http://arxiv.org/abs/2303.12670
-share: true
+date: '2023-03-22'
 ---
-
 
 > [!tldr] Abstract
 > We introduce Correlational Image Modeling (CIM), a novel and surprisingly effective approach to self-supervised visual pre-training. Our CIM performs a simple pretext task: we randomly crop image regions (exemplars) from an input image (context) and predict correlation maps between the exemplars and the context. Three key designs enable correlational image modeling as a nontrivial and meaningful self-supervisory task. First, to generate useful exemplar-context pairs, we consider cropping image regions with various scales, shapes, rotations, and transformations. Second, we employ a bootstrap learning framework that involves online and target encoders. During pre-training, the former takes exemplars as inputs while the latter converts the context. Third, we model the output correlation maps via a simple cross-attention block, within which the context serves as queries and the exemplars offer values and keys. We show that CIM performs on par or better than the current state of the art on self-supervised and transfer benchmarks. Code is available at https://github.com/weivision/ Correlational-Image-Modeling.git.

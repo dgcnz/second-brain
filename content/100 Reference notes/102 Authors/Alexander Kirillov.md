@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[OpenAI]]"
-  - "[[FAIR]]"
-share: true
+- '[[OpenAI]]'
+- '[[FAIR]]'
 ---

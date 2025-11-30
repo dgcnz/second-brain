@@ -2,8 +2,9 @@
 tags:
   - quantization
   - efficient_dl
-share: true
+draft: true
 ---
+
 Related:
 - [HuggingFace Docs](https://huggingface.co/docs/transformers/en/main_classes/quantization)
 - [[A survey of quantization methods for efficient neural network inference]]

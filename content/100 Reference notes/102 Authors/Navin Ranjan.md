@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Rochester Institute of Technology]]"
-share: true
+- '[[Rochester Institute of Technology]]'
 ---

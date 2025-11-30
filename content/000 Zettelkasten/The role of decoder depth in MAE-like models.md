@@ -1,6 +1,8 @@
 ---
-tags: 
-share: false
+tags:
+  - dl-theory
+draft: true
+date: 2025-01-01
 ---
 
 From [[What Do Self-Supervised Vision Transformers Learn?]]

@@ -1,20 +1,19 @@
 ---
 authors:
-  - "[[Shashanka Venkataramanan]]"
-  - "[[Mamshad Nayeem Rizve]]"
-  - "[[João Carreira]]"
-  - "[[Yuki M. Asano]]"
-  - "[[Yannis Avrithis]]"
+- '[[Shashanka Venkataramanan]]'
+- '[[Mamshad Nayeem Rizve]]'
+- "[[Jo\xE3o Carreira]]"
+- '[[Yuki M. Asano]]'
+- '[[Yannis Avrithis]]'
 year: 2024
 tags:
-  - paper
-  - ssl
-  - temporal
-  - video
+- paper
+- ssl
+- temporal
+- video
 url: http://arxiv.org/abs/2310.08584
-share: true
+date: '2023-10-12'
 ---
-
 
 > [!tldr] Abstract
 > Self-supervised learning has unlocked the potential of scaling up pretraining to billions of images, since annotation is unnecessary. But are we making the best use of data? How more economical can we be? In this work, we attempt to answer this question by making two contributions. First, we investigate first-person videos and introduce a “Walking Tours” dataset. These videos are high-resolution, hourslong, captured in a single uninterrupted take, depicting a large number of objects and actions with natural scene transitions. They are unlabeled and uncurated, thus realistic for self-supervision and comparable with human learning.

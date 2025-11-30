@@ -1,20 +1,20 @@
 ---
 authors:
-  - "[[Adrien Bardes]]"
-  - "[[Quentin Garrido]]"
-  - "[[Jean Ponce]]"
-  - "[[Xinlei Chen]]"
-  - "[[Michael Rabbat]]"
-  - "[[Yann LeCun]]"
-  - "[[Mahmoud Assran]]"
-  - "[[Nicolas Ballas]]"
+- '[[Adrien Bardes]]'
+- '[[Quentin Garrido]]'
+- '[[Jean Ponce]]'
+- '[[Xinlei Chen]]'
+- '[[Michael Rabbat]]'
+- '[[Yann LeCun]]'
+- '[[Mahmoud Assran]]'
+- '[[Nicolas Ballas]]'
 year: 2024
 tags:
-  - paper
-  - video
-  - ssl
+- paper
+- video
+- ssl
 url: http://arxiv.org/abs/2404.08471
-share: true
+date: '2024-02-15'
 ---
 
 > [!tldr] Abstract

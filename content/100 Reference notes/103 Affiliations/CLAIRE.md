@@ -1,6 +1,7 @@
 ---
-share: true
+{}
 ---
+
 ## Three essential pilars of the lab
 
 Efficient deep learning algorithms

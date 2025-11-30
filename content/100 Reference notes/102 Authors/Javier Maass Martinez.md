@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[University of Chile]]"
-share: true
+- '[[University of Chile]]'
 ---

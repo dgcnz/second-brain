@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[TNO]]"
-share: true
+- '[[TNO]]'
 ---

@@ -2,8 +2,9 @@
 tags:
   - dl_theory
   - transformers
-share: true
+date: 2024-01-01
 ---
+
 Introduced in [[An image is worth 16x16 words - Transformers for image recognition at scale]].
 
 From [[What Do Self-Supervised Vision Transformers Learn?]]

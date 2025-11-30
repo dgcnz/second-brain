@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[University of Amsterdam]]"
-  - "[[EPFL]]"
-share: true
+- '[[University of Amsterdam]]'
+- '[[EPFL]]'
 ---

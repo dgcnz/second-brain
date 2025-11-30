@@ -1,8 +1,9 @@
 ---
 tags:
   - knowledge_representation
-share: true
+draft: true
 ---
+
 ## Positive logic programs
 
 Two components: 

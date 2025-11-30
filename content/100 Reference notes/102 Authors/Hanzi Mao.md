@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[NVIDIA]]"
-share: true
+- '[[FAIR]]'
+- '[[NVIDIA]]'
 ---

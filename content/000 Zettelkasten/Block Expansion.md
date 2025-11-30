@@ -2,8 +2,9 @@
 tags:
   - efficient_dl
   - transformers
-share: true
+date: 2024-01-01
 ---
+
 Key idea:
 - Introduce extra transformer block that is initialized to be the identity function and train that. 
 

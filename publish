@@ -25,7 +25,8 @@ content_root="$quartz_root/content"
 tmp_list=$(mktemp)
 tmp_ignore=$(mktemp)
 tmp_rel=$(mktemp)
-trap 'rm -f "$tmp_list" "$tmp_ignore" "$tmp_rel" "$tmp_list.filtered"' EXIT
+tmp_include=$(mktemp)
+trap 'rm -f "$tmp_list" "$tmp_ignore" "$tmp_rel" "$tmp_include" "$tmp_list.filtered"' EXIT
 
 # Build wlls args
 wlls_args=()
@@ -66,10 +67,46 @@ done < <(yq -r '.ignore[]? // ""' "$CONFIG_PATH")
 grep -F -v -f "$tmp_ignore" "$tmp_rel" >"$tmp_rel.filtered" || true
 mv "$tmp_rel.filtered" "$tmp_rel"
 
+# Build include list (directories + files) for rsync
+while IFS= read -r path; do
+  [[ -n "$path" ]] || continue
+  # add parent directories
+  IFS='/' read -ra parts <<<"$path"
+  acc=""
+  for ((i = 0; i < ${#parts[@]} - 1; i++)); do
+    acc="${acc}/${parts[i]}"
+    echo "${acc}/" >>"$tmp_include"
+  done
+  echo "/$path" >>"$tmp_include"
+done <"$tmp_rel"
+
+# Sort/uniq include list
+sort -u "$tmp_include" -o "$tmp_include"
+
+# Preserve local index.md (not in vault) by backing it up and restoring after sync
+index_backup=""
+if [[ -f "$content_root/index.md" ]]; then
+  index_backup=$(mktemp)
+  cp "$content_root/index.md" "$index_backup"
+fi
+
 if [[ $DRY_RUN -eq 1 ]]; then
-  cat "$tmp_rel"
+  cat "$tmp_include"
+  [[ -n "$index_backup" ]] && echo "/index.md (kept locally)"
   exit 0
 fi
 
-rsync -a --delete --files-from="$tmp_rel" "$vault_root/" "$content_root/"
+rsync -a -m --delete --delete-excluded \
+  -NUt \
+  --include-from="$tmp_include" \
+  --include='*/' \
+  --exclude='*' \
+  "$vault_root/" "$content_root/"
+
+# Restore local index.md if it existed
+if [[ -n "$index_backup" ]]; then
+  cp "$index_backup" "$content_root/index.md"
+  rm -f "$index_backup"
+fi
+
 echo "Synced reachable set to $content_root"

@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[New York University]]"
-share: true
+- '[[FAIR]]'
+- '[[New York University]]'
 ---

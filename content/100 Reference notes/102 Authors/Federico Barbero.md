@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[University of Oxford]]"
-share: true
+- '[[University of Oxford]]'
 ---

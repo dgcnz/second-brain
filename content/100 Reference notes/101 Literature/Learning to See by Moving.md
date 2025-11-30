@@ -1,16 +1,14 @@
 ---
-authors: 
-- "[[Pulkit Agrawal]]"
-- "[[Joao Carreira]]"
-- "[[Jitendra Malik]]"
-
-year:  2015
+authors:
+- '[[Pulkit Agrawal]]'
+- '[[Joao Carreira]]'
+- '[[Jitendra Malik]]'
+year: 2015
 tags:
-  - paper
+- paper
 url: http://ieeexplore.ieee.org/document/7410370/
-share: false
+draft: true
 ---
-
 
 > [!tldr] Abstract
 > 

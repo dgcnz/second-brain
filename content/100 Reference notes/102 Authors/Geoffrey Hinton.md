@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Google]]"
-share: true
+- '[[Google]]'
 ---

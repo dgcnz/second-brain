@@ -1,14 +1,14 @@
 ---
 authors:
-  - "[[David W. Romero]]"
-  - "[[Suhas Lohit]]"
+- '[[David W. Romero]]'
+- '[[Suhas Lohit]]'
 tags:
-  - dl2
-  - equivariance
-  - partial_equivariance
+- dl2
+- equivariance
+- partial_equivariance
 year: 2021
 url: https://arxiv.org/abs/2110.10211
-share: true
+date: '2021-10-19'
 ---
 
 > [!faq] Monte Carlo Approximation of Group Convolutions

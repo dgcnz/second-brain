@@ -2,8 +2,9 @@
 tags:
   - efficient_dl
   - hardware_aware_dl
-share: true
+date: 2024-01-01
 ---
+
 > [!important] Key Idea
 > Some GPU architectures can take advantage of specific sparsity patterns.
 

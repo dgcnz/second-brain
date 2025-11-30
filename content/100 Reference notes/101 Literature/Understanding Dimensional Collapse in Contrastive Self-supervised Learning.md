@@ -1,17 +1,16 @@
 ---
-authors: 
-- "[[Li Jing]]"
-- "[[Pascal Vincent]]"
-- "[[Yann LeCun]]"
-- "[[Yuandong Tian]]"
-
-year:  2022
+authors:
+- '[[Li Jing]]'
+- '[[Pascal Vincent]]'
+- '[[Yann LeCun]]'
+- '[[Yuandong Tian]]'
+year: 2022
 tags:
-  - paper
+- paper
 url: http://arxiv.org/abs/2110.09348
-share: false
+date: '2021-10-18'
+draft: true
 ---
-
 
 > [!tldr] Abstract
 > Self-supervised visual representation learning aims to learn useful representations without relying on human annotations. Joint embedding approach bases on maximizing the agreement between embedding vectors from different views of the same image. Various methods have been proposed to solve the collapsing problem where all embedding vectors collapse to a trivial constant solution. Among these methods, contrastive learning prevents collapse via negative sample pairs. It has been shown that non-contrastive methods suffer from a lesser collapse problem of a different nature: dimensional collapse, whereby the embedding vectors end up spanning a lower-dimensional subspace instead of the entire available embedding space. Here, we show that dimensional collapse also happens in contrastive learning. In this paper, we shed light on the dynamics at play in contrastive learning that leads to dimensional collapse. Inspired by our theory, we propose a novel contrastive learning method, called DirectCLR, which directly optimizes the representation space without relying on an explicit trainable projector. Experiments show that DirectCLR outperforms SimCLR with a trainable linear projector on ImageNet.

@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Google DeepMind]]"
-share: true
+- '[[Google DeepMind]]'
 ---

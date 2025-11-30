@@ -1,9 +1,9 @@
 ---
 affiliation:
-  - "[[University of Amsterdam]]"
-  - "[[VIS Lab]]"
-share: true
+- '[[University of Amsterdam]]'
+- '[[VIS Lab]]'
 ---
+
 ```dataview
 table year, tags, authors
 from "100 Reference notes/101 Literature"

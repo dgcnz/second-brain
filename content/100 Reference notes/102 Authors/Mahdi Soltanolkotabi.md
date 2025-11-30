@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[University of Southern California]]"
-share: true
+- '[[University of Southern California]]'
 ---

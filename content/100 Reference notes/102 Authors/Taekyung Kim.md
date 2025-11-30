@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Naver AI Lab]]"
-share: true
+- '[[Naver AI Lab]]'
 ---

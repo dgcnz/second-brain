@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 [[Equivariant SSL]]
 [[Unsupervised Learning of Visual Representations by Solving Jigsaw Puzzles]]
 [[Unsupervised Representation Learning by Predicting Image Rotations]]

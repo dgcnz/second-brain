@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[Google]]"
-  - "[[OpenAI]]"
-share: true
+- '[[Google]]'
+- '[[OpenAI]]'
 ---

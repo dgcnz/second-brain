@@ -2,7 +2,7 @@
 tags:
   - quantization
   - efficient_dl
-share: true
+date: 2024-01-01
 ---
 
 There seems to be quite a few possible ways to do this:

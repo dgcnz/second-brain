@@ -2,7 +2,7 @@
 tags:
   - efficient_dl
   - efficient_vision
-share: true
+date: 2025-01-01
 ---
 
 At the embedding level

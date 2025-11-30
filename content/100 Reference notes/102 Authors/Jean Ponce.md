@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[INRIA]]"
-  - "[[New York University]]"
-share: true
+- '[[INRIA]]'
+- '[[New York University]]'
 ---

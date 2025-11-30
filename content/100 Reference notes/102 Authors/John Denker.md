@@ -1,5 +1,4 @@
 ---
 affiliation:
-  - "[[Nokia Bell Labs]]"
-share: true
+- '[[Nokia Bell Labs]]'
 ---

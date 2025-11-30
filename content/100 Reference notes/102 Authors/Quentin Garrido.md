@@ -1,6 +1,5 @@
 ---
 affiliation:
-  - "[[FAIR]]"
-  - "[[Univ Gustave Eiffel]]"
-share: true
+- '[[FAIR]]'
+- '[[Univ Gustave Eiffel]]'
 ---
