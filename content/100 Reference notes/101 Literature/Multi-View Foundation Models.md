@@ -9,7 +9,7 @@ tags:
   - paper
   - foundation_models
 url: http://arxiv.org/abs/2512.15708
-draft: true
+draft: false
 ---
 
 
