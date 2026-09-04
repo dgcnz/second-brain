@@ -13,7 +13,7 @@ authors:
   - "[[Yisong Yue]]"
   - "[[Yejin Choi]]"
   - "[[Yuke Zhu]]"
-  - "[[Linxi "Jim" Fan]]"
+  - '[[Linxi "Jim" Fan]]'
 year: 2026
 date: 2026-01-04
 tags:
