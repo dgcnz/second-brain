@@ -1,7 +1,7 @@
 # Quartz 4.5.2 → 5.0.0 migration: first pass
 
 Branch `v5` (worktree at `../second-brain-v5`), based on `upstream/v5` @ `075afd3f`.
-Nothing here is committed yet. Deploy target is Cloudflare Pages.
+Deploy target is Cloudflare Pages, production branch `v5`.
 
 ## Status
 
@@ -28,12 +28,16 @@ Cloudflare Pages project `second-brain` is set to:
 | setting | value |
 | --- | --- |
 | Production branch | `v5` |
-| Build command | `npx quartz plugin install && npx quartz build` |
+| Build command | `npx quartz plugin install --from-config && npx quartz build` |
 | Build output | `public` |
 | Build system | Version 3 |
 
 v5 requires plugins to be installed before the build runs; a plain
-`npx quartz build` fails. `main` is left on v4 as a rollback target — flipping
+`npx quartz build` fails. `--from-config` matters: without it `plugin install`
+reads `quartz.lock.json`, whose `resolved` field holds absolute paths from
+whichever machine last ran it, so all five local plugins fail to install in CI.
+The lockfile is gitignored for that reason; it pins nothing useful here, since
+every community plugin comes from npm via `package-lock.json`. `main` is left on v4 as a rollback target — flipping
 the production branch back restores the old site.
 
 Two things that are already handled and need no dashboard change:
@@ -104,18 +108,12 @@ for any other callback option (e.g. Explorer's `sortFn`/`filterFn`).
 
 ## Reproducing the build locally
 
-`content/` on this branch is empty; the verification build pointed it at the
-real vault.
-
 ```shell
-ln -s ../second-brain/content content   # or run ./publish as usual
 npm i
-npx quartz plugin install && npx quartz build
+npx quartz plugin install --from-config && npx quartz build
 ```
 
 `./publish` needs no changes — it only syncs the vault into `content/`.
-
-The `Makefile` (rsync to `rpi`) is dead and should be deleted on this branch.
 
 ## Unrelated content bug found and fixed
 

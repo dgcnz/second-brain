@@ -12,3 +12,7 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+
+# resolved paths in this file are machine-specific; plugins are installed
+# from quartz.config.yaml via `quartz plugin install --from-config`
+quartz.lock.json
