@@ -301,9 +301,9 @@ plugins:
       priority: 10
       condition: index-only
 
-  # NEW in v5: Andy Matuschak-style sliding panes
+  # NEW in v5: Andy Matuschak-style sliding panes. Disabled - not wanted.
   - source: "@quartz-community/stacked-pages"
-    enabled: true
+    enabled: false
     layout:
       position: afterBody
       priority: 50
@@ -367,13 +367,11 @@ layout:
       exclude:
         - reader-mode
         - author-info
-        - stacked-pages
       positions:
         right: []
     tag:
       exclude:
         - reader-mode
         - author-info
-        - stacked-pages
       positions:
         right: []
