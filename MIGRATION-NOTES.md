@@ -21,16 +21,20 @@ verified present in the output:
 Output parity vs. the v4 build of the same content: 705 HTML pages, 91 tag
 pages, 10 RSS items — identical on both.
 
-## The one thing that must change before deploying
+## Deploy configuration (applied)
 
-**Cloudflare Pages build command.** v5 requires plugins to be installed before
-the build runs, so the command must become:
+Cloudflare Pages project `second-brain` is set to:
 
-```shell
-npx quartz plugin install && npx quartz build
-```
+| setting | value |
+| --- | --- |
+| Production branch | `v5` |
+| Build command | `npx quartz plugin install && npx quartz build` |
+| Build output | `public` |
+| Build system | Version 3 |
 
-A plain `npx quartz build` will fail. Output directory stays `public`.
+v5 requires plugins to be installed before the build runs; a plain
+`npx quartz build` fails. `main` is left on v4 as a rollback target — flipping
+the production branch back restores the old site.
 
 Two things that are already handled and need no dashboard change:
 
