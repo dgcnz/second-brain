@@ -11,6 +11,8 @@ date: 2025-04-20
 tags:
   - paper
   - computer_vision
+  - temporal
+  - vit
 url: http://arxiv.org/abs/2501.12218
 draft: false
 ---

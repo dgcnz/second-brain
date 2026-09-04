@@ -1,0 +1,29 @@
+---
+authors:
+  - "[[Taojiannan Yang]]"
+  - "[[Yi Zhu]]"
+  - "[[Yusheng Xie]]"
+  - "[[Aston Zhang]]"
+  - "[[Chen Chen]]"
+  - "[[Mu Li]]"
+year: 2023
+date: 2023-02-06
+tags:
+  - paper
+  - video
+  - image
+  - computer_vision
+  - adaptation
+url: http://arxiv.org/abs/2302.03024
+draft: false
+---
+
+
+> [!tldr] Abstract
+> Recent vision transformer based video models mostly follow the “image pretraining then ﬁnetuning” paradigm and have achieved great success on multiple video benchmarks. However, full ﬁnetuning such a video model could be computationally expensive and unnecessary, given the pre-trained image transformer models have demonstrated exceptional transferability. In this work, we propose a novel method to Adapt pre-trained Image Models (AIM) for efﬁcient video understanding. By freezing the pre-trained image model and adding a few lightweight Adapters, we introduce spatial adaptation, temporal adaptation and joint adaptation to gradually equip an image model with spatiotemporal reasoning capability. We show that our proposed AIM can achieve competitive or even better performance than prior arts with substantially fewer tunable parameters on four video action recognition benchmarks. Thanks to its simplicity, our method is also generally applicable to different image pre-trained models, which has the potential to leverage more powerful image foundation models in the future. The project webpage is https://adapt-image-models.github.io/.
+
+
+
+## Notes
+
+[Zotero Link](zotero://select/library/items/6MZPVL9X)
