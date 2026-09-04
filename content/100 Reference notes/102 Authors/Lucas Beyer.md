@@ -1,0 +1,5 @@
+---
+affiliation:
+- '[[Google]]'
+- '[[OpenAI]]'
+---

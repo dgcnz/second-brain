@@ -1,0 +1,6 @@
+---
+affiliation:
+- '[[Meta]]'
+- '[[INRIA]]'
+- '[[FAIR]]'
+---

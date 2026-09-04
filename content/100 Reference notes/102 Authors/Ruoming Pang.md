@@ -1,0 +1,5 @@
+---
+affiliation:
+- '[[Apple]]'
+- '[[Princeton University]]'
+---

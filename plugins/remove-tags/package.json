@@ -1,0 +1,25 @@
+{
+  "name": "@second-brain/remove-tags",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "quartz": {
+    "name": "remove-tags",
+    "displayName": "Remove Tags",
+    "description": "Strips configured tags from frontmatter so they never reach tag pages or listings",
+    "version": "0.1.0",
+    "category": "transformer",
+    "quartzVersion": ">=5.0.0",
+    "defaultOrder": 35,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "ignore": []
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

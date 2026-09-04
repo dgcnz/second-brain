@@ -1,0 +1,32 @@
+{
+  "name": "@second-brain/home-recent-notes",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components.js"
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "quartz": {
+    "name": "home-recent-notes",
+    "displayName": "Home Recent Notes",
+    "description": "Recent Notes restricted to zettelkasten and literature notes (wraps @quartz-community/recent-notes)",
+    "version": "0.1.0",
+    "category": "component",
+    "quartzVersion": ">=5.0.0",
+    "defaultEnabled": true,
+    "components": {
+      "HomeRecentNotes": {
+        "name": "home-recent-notes",
+        "displayName": "Home Recent Notes",
+        "description": "Filtered recent notes list for the index page",
+        "version": "0.1.0",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 10
+      }
+    }
+  }
+}

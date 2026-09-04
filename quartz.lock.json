@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "plugins": {
+    "author-info": {
+      "source": "./plugins/author-info",
+      "resolved": "/Users/dgcnz/development/hosting/second-brain-v5/plugins/author-info",
+      "commit": "local",
+      "installedAt": "2026-09-04T15:53:00.819Z"
+    },
+    "author-links": {
+      "source": "./plugins/author-links",
+      "resolved": "/Users/dgcnz/development/hosting/second-brain-v5/plugins/author-links",
+      "commit": "local",
+      "installedAt": "2026-09-04T15:53:00.819Z"
+    },
+    "home-recent-notes": {
+      "source": "./plugins/home-recent-notes",
+      "resolved": "/Users/dgcnz/development/hosting/second-brain-v5/plugins/home-recent-notes",
+      "commit": "local",
+      "installedAt": "2026-09-04T15:53:00.819Z"
+    },
+    "remove-tags": {
+      "source": "./plugins/remove-tags",
+      "resolved": "/Users/dgcnz/development/hosting/second-brain-v5/plugins/remove-tags",
+      "commit": "local",
+      "installedAt": "2026-09-04T15:53:00.818Z"
+    },
+    "sidebar-image": {
+      "source": "./plugins/sidebar-image",
+      "resolved": "/Users/dgcnz/development/hosting/second-brain-v5/plugins/sidebar-image",
+      "commit": "local",
+      "installedAt": "2026-09-04T15:53:00.819Z"
+    }
+  }
+}

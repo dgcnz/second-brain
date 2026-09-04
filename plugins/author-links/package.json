@@ -1,0 +1,28 @@
+{
+  "name": "@second-brain/author-links",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "quartz": {
+    "name": "author-links",
+    "displayName": "Author Links",
+    "description": "Treats wikilinks in the frontmatter `authors` field as real outgoing links so they show up in the graph and backlinks",
+    "version": "0.1.0",
+    "category": "transformer",
+    "quartzVersion": ">=5.0.0",
+    "defaultOrder": 65,
+    "defaultEnabled": true,
+    "dependencies": [
+      "@quartz-community/crawl-links"
+    ],
+    "defaultOptions": {
+      "markdownLinkResolution": "shortest"
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

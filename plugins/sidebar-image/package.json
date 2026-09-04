@@ -1,0 +1,39 @@
+{
+  "name": "@second-brain/sidebar-image",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components.js"
+  },
+  "quartz": {
+    "name": "sidebar-image",
+    "displayName": "Sidebar Image",
+    "description": "Renders a static image (site icon) in the sidebar",
+    "version": "0.1.0",
+    "category": "component",
+    "quartzVersion": ">=5.0.0",
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "src": "static/icon.png",
+      "alt": "Icon",
+      "class": "sidebar-icon",
+      "width": 224,
+      "height": 224
+    },
+    "components": {
+      "SidebarImage": {
+        "name": "sidebar-image",
+        "displayName": "Sidebar Image",
+        "description": "Static image at the top of the sidebar",
+        "version": "0.1.0",
+        "defaultPosition": "left",
+        "defaultPriority": 5
+      }
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

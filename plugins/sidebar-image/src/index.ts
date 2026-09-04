@@ -1,0 +1,1 @@
+export { SidebarImage } from "./components"

@@ -1,0 +1,32 @@
+{
+  "name": "@second-brain/author-info",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components.js"
+  },
+  "quartz": {
+    "name": "author-info",
+    "displayName": "Author Info",
+    "description": "Renders frontmatter `authors` wikilinks and `url` below the article title",
+    "version": "0.1.0",
+    "category": "component",
+    "quartzVersion": ">=5.0.0",
+    "defaultEnabled": true,
+    "components": {
+      "AuthorInfo": {
+        "name": "author-info",
+        "displayName": "Author Info",
+        "description": "Author and source-URL line for literature notes",
+        "version": "0.1.0",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 15
+      }
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}
