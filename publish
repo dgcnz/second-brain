@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DRY_RUN=0
+case "${1-}" in
+  -n|--dry-run) DRY_RUN=1; shift;;
+esac
+
+CONFIG_PATH="${1:-publish.yaml}"
+
+command -v yq >/dev/null || { echo "yq not found" >&2; exit 1; }
+command -v wlls >/dev/null || { echo "wlls not found" >&2; exit 1; }
+command -v rsync >/dev/null || { echo "rsync not found" >&2; exit 1; }
+
+[[ -f "$CONFIG_PATH" ]] || { echo "Missing config: $CONFIG_PATH" >&2; exit 1; }
+
+vault_root=$(yq -r '.vault_root' "$CONFIG_PATH")
+quartz_root=$(yq -r '.quartz_root // "."' "$CONFIG_PATH")
+content_root="$quartz_root/content"
+
+[[ -n "$vault_root" && "$vault_root" != "null" ]] || { echo "vault_root missing in config" >&2; exit 1; }
+[[ -d "$vault_root" ]] || { echo "vault_root not found: $vault_root" >&2; exit 1; }
+[[ -d "$quartz_root" ]] || { echo "quartz_root not found: $quartz_root" >&2; exit 1; }
+
+tmp_list=$(mktemp)
+tmp_ignore=$(mktemp)
+tmp_rel=$(mktemp)
+tmp_include=$(mktemp)
+trap 'rm -f "$tmp_list" "$tmp_ignore" "$tmp_rel" "$tmp_include" "$tmp_list.filtered"' EXIT
+
+# Build wlls args
+wlls_args=()
+while IFS= read -r root; do
+  [[ -n "$root" ]] || continue
+  if [[ "$root" == *[\*\?\[]* ]]; then
+    pattern="$root" prefix=""
+    if [[ "$root" != /* ]]; then
+      pattern="$vault_root/$root"
+      prefix="${vault_root%/}/"
+    fi
+    matches=()
+    while IFS= read -r m; do matches+=("$m"); done < <(compgen -G "$pattern")
+    [[ ${#matches[@]} -gt 0 ]] || { echo "glob matched nothing: $root" >&2; exit 1; }
+    for m in "${matches[@]}"; do
+      [[ -n "$prefix" ]] && m="${m#"$prefix"}"
+      wlls_args+=("$m")
+    done
+  else
+    wlls_args+=("$root")
+  fi
+done < <(yq -r '.roots[]' "$CONFIG_PATH")
+
+[[ ${#wlls_args[@]} -gt 0 ]] || { echo "no roots provided" >&2; exit 1; }
+
+# Generate reachable set
+wlls --skip-missing-refs -R "$vault_root" "${wlls_args[@]}" >"$tmp_list"
+
+# Convert to vault-root-relative paths for rsync
+sed "s|^${vault_root%/}/||" "$tmp_list" >"$tmp_rel"
+
+# Build ignore pattern file (vault-root-relative to absolute); safe even if empty
+while IFS= read -r pattern; do
+  [[ -n "$pattern" ]] || continue
+  echo "$pattern" >>"$tmp_ignore"
+done < <(yq -r '.ignore[]? // ""' "$CONFIG_PATH")
+
+grep -F -v -f "$tmp_ignore" "$tmp_rel" >"$tmp_rel.filtered" || true
+mv "$tmp_rel.filtered" "$tmp_rel"
+
+# Build include list (directories + files) for rsync
+while IFS= read -r path; do
+  [[ -n "$path" ]] || continue
+  # add parent directories
+  IFS='/' read -ra parts <<<"$path"
+  acc=""
+  for ((i = 0; i < ${#parts[@]} - 1; i++)); do
+    acc="${acc}/${parts[i]}"
+    echo "${acc}/" >>"$tmp_include"
+  done
+  echo "/$path" >>"$tmp_include"
+done <"$tmp_rel"
+
+# Sort/uniq include list
+sort -u "$tmp_include" -o "$tmp_include"
+
+# Preserve local index.md (not in vault) by backing it up and restoring after sync
+index_backup=""
+if [[ -f "$content_root/index.md" ]]; then
+  index_backup=$(mktemp)
+  cp "$content_root/index.md" "$index_backup"
+fi
+
+if [[ $DRY_RUN -eq 1 ]]; then
+  cat "$tmp_include"
+  [[ -n "$index_backup" ]] && echo "/index.md (kept locally)"
+  exit 0
+fi
+
+rsync -a -m --delete --delete-excluded \
+  -NUt \
+  --include-from="$tmp_include" \
+  --include='*/' \
+  --exclude='*' \
+  "$vault_root/" "$content_root/"
+
+# Restore local index.md if it existed
+if [[ -n "$index_backup" ]]; then
+  cp "$index_backup" "$content_root/index.md"
+  rm -f "$index_backup"
+fi
+
+echo "Synced reachable set to $content_root"
