@@ -341,11 +341,16 @@ plugins:
     layout:
       position: afterBody
       priority: 10
+  # Replaces the 2258-line vendored quartz/styles/themes/_index.scss carried
+  # over from v4. themeFonts stays false so configuration.theme.typography
+  # above (Schibsted Grotesk / Source Sans Pro / IBM Plex Mono) still wins.
+  # The theme itself ships as its own package, pinned in package.json.
   - source: "@quartz-themes/core"
-    enabled: false
+    enabled: true
     options:
-      theme: tokyo-night
+      theme: github-theme
       mode: both
+      themeFonts: false
   - source: "@quartz-community/encrypted-pages"
     enabled: false
     order: 900
