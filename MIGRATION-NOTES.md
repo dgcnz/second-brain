@@ -1,7 +1,8 @@
 # Quartz 4.5.2 → 5.0.0 migration: first pass
 
-Branch `v5` (worktree at `../second-brain-v5`), based on `upstream/v5` @ `075afd3f`.
-Deploy target is Cloudflare Pages, production branch `v5`.
+Lives on `main`, based on `upstream/v5` @ `075afd3f`. The old Quartz 4 site is
+archived on the `v4` branch (unrelated history — the two cannot be merged).
+Deploy target is Cloudflare Pages, production branch `main`.
 
 ## Status
 
@@ -27,7 +28,7 @@ Cloudflare Pages project `second-brain` is set to:
 
 | setting | value |
 | --- | --- |
-| Production branch | `v5` |
+| Production branch | `main` |
 | Build command | `npx quartz plugin install --from-config && npx quartz build` |
 | Build output | `public` |
 | Build system | Version 3 |
@@ -37,8 +38,9 @@ v5 requires plugins to be installed before the build runs; a plain
 reads `quartz.lock.json`, whose `resolved` field holds absolute paths from
 whichever machine last ran it, so all five local plugins fail to install in CI.
 The lockfile is gitignored for that reason; it pins nothing useful here, since
-every community plugin comes from npm via `package-lock.json`. `main` is left on v4 as a rollback target — flipping
-the production branch back restores the old site.
+every community plugin comes from npm via `package-lock.json`. The `v4` branch is
+kept as a rollback target — pointing the production branch back at it restores
+the old site.
 
 Two things that are already handled and need no dashboard change:
 
@@ -121,6 +123,6 @@ npx quartz plugin install --from-config && npx quartz build
 for Generalist Gaming Agents.md` had `- "[[Linxi "Jim" Fan]]"` in its frontmatter
 — unescaped inner double quotes, which is invalid YAML. This aborts the build on
 **v4 as well as v5**; the note arrived in a vault sync during this session, so
-`main` currently does not build and the last Cloudflare deploy would have failed.
-Fixed on `main` by switching to single quotes, but the same fix is needed in the
+the build broke and the Cloudflare deploy would have failed.
+Fixed by switching to single quotes, but the same fix is needed in the
 Obsidian vault or the next `./publish` will reintroduce it.
