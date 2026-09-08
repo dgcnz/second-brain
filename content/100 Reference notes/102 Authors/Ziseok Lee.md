@@ -1,0 +1,4 @@
+---
+affiliation:
+  - "[[Seoul National University]]"
+---

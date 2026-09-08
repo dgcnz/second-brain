@@ -2,7 +2,7 @@
 authors:
   - "[[Jan F. Meier]]"
   - "[[Felix B. Mueller]]"
-  - "[[Alexander Ecker]]"
+  - "[[Alexander S. Ecker]]"
   - "[[Timo Lüddecke]]"
 year: 2026
 date: 2026-06-02

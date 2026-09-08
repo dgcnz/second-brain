@@ -1,0 +1,4 @@
+---
+affiliation:
+- '[[Fondazione Bruno Kessler]]'
+---

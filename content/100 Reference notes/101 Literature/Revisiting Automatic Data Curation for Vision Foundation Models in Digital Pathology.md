@@ -1,0 +1,34 @@
+---
+authors:
+  - "[[Boqi Chen]]"
+  - "[[Cédric Vincent-Cuaz]]"
+  - "[[Lydia A. Schoenpflug]]"
+  - "[[Manuel Madeira]]"
+  - "[[Lisa Fournier]]"
+  - "[[Vaishnavi Subramanian]]"
+  - "[[Sonali Andani]]"
+  - "[[Samuel Ruiperez-Campillo]]"
+  - "[[Julia E. Vogt]]"
+  - "[[Raphaëlle Luisier]]"
+  - "[[Dorina Thanou]]"
+  - "[[Viktor H. Koelzer]]"
+  - "[[Pascal Frossard]]"
+  - "[[Gabriele Campanella]]"
+  - "[[Gunnar Rätsch]]"
+year: 2025
+date: 2025-03-24
+tags:
+  - paper
+url: https://arxiv.org/abs/2503.18709
+draft: false
+---
+
+
+> [!tldr] Abstract
+> Vision foundation models (FMs) are accelerating the development of digital pathology algorithms and transforming biomedical research. These models learn, in a self-supervised manner, to represent histological features in highly heterogeneous tiles extracted from whole-slide images (WSIs) of real-world patient samples. The performance of these FMs is significantly influenced by the size, diversity, and balance of the pre-training data. However, data selection has been primarily guided by expert knowledge at the WSI level, focusing on factors such as disease classification and tissue types, while largely overlooking the granular details available at the tile level. In this paper, we investigate the potential of unsupervised automatic data curation at the tile-level, taking into account 350 million tiles. Specifically, we apply hierarchical clustering trees to pre-extracted tile embeddings, allowing us to sample balanced datasets uniformly across the embedding space of the pretrained FM. We further identify these datasets are subject to a trade-off between size and balance, potentially compromising the quality of representations learned by FMs, and propose tailored batch sampling strategies to mitigate this effect. We demonstrate the effectiveness of our method through improved performance on a diverse range of clinically relevant downstream tasks.
+
+
+
+## Notes
+
+[Zotero Link](zotero://select/library/items/DCU8YKRI)

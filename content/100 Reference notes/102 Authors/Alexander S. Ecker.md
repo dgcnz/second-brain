@@ -1,4 +1,5 @@
 ---
 affiliation:
   - "[[University of Göttingen]]"
+  - "[[Max Planck Institute for Dynamics and Self-Organization]]"
 ---

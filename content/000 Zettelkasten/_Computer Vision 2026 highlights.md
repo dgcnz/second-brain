@@ -6,7 +6,7 @@ draft: true
 date: 2026-09-04
 ---
 
-> [!warning] Written by Claude (Fable 5.1) on 2026-09-04 from a sweep of NeurIPS 2025, ICCV 2025, ICLR 2026, CVPR 2026, ECCV 2026 orals and venue-less releases, Sept 2025 to Sept 2026. Maybe will be refined manually later.
+> [!warning] Written by Claude (Fable 5.1) on 2026-09-04 from a sweep of NeurIPS 2025, ICCV 2025, ICLR 2026, CVPR 2026, ECCV 2026 orals and venue-less releases, Sept 2025 to Sept 2026. Slight manual revisions
 
 Shape of the year
 - Award slates are feed-forward spatial intelligence (D4RT, SAM 3D, TRELLIS.2, RayZer, VGGT-Ω, DA3).
@@ -36,14 +36,14 @@ Shape of the year
 - [[Emergent Outlier View Rejection in Visual Geometry Grounded Transformers]] (2512.04012). VGGT separates distractor views internally.
 
 ## Representation learning and SSL
-- [[DINOv3]] (2508.10104). Still the default frozen encoder.
+- [[DINOv3]] (2508.10104). Not meaningfully better than DINOv2, maybe on some specific benchmarks.
 - [[In Pursuit of Pixel Supervision for Visual Pre-training|Pixio]] (Meta FAIR, 2512.15715). MAE plus 2B images matches DINOv3 on depth, 3D, segmentation.
 - [[MuM - Multi-View Masked Image Modeling for 3D Vision|MuM]] (2511.17309). Multi-view MIM beats DINOv3 and CroCo v2 on matching and pose.
 - [[Back to Basics - Let Denoising Generative Models Denoise|JiT]] (Kaiming He, 2511.13720). Denoise raw pixels with a plain ViT, no tokenizer.
 - [[Scaling Language-Free Visual Representation Learning|Web-SSL]] (ICCV, 2504.01017). Language-free SSL to 7B matches CLIP on VQA.
 - [[Perception Encoder - The best visual embeddings are not at the output of the network|Perception Encoder]] (NeurIPS oral, 2504.13181). Best features in intermediate layers.
 - [[V-JEPA 2.1 - Unlocking Dense Features in Video Self-Supervised Learning|V-JEPA 2.1]] (2603.14482). Dense predictive loss; the only V-JEPA successor.
-- [[Steerable Visual Representations|SteerViT]] (ECCV oral, 2604.02327). Text-gated cross-attention steers a frozen ViT.
+- [[Steerable Visual Representations|SteerViT]] (ECCV oral, 2604.02327). Text-gated cross-attention steers a frozen ViT. (Yuki!)
 - [[AnyUp - Universal Feature Upsampling|AnyUp]] (ICLR oral, 2510.12764). Encoder-agnostic feature upsampling.
 
 ## Corrections and audits
@@ -62,18 +62,23 @@ Shape of the year
 - [[Mean Flows for One-step Generative Modeling|Mean Flows]] (NeurIPS oral, 2505.13447). One-step generation from scratch.
 - [[Self Forcing - Bridging the Train-Test Gap in Autoregressive Video Diffusion|Self Forcing]] (NeurIPS spotlight, 2506.08009). Streaming AR video diffusion.
 
+## VLMs as vision models
+VLMs are surprisingly good at vision given the right interface. Sibling of the generators section.
+- [[DepthLM - Metric Depth From Vision Language Models|DepthLM]] (ICLR oral, 2509.25413). A stock VLM does metric depth.
+- [[Chain-of-Visual-Thought - Teaching VLMs to See and Think Better with Continuous Visual Tokens|Chain-of-Visual-Thought]] (ECCV oral, 2511.19418). VLMs reason through tokens distilled from DINO, depth, segmentation.
+- [[Molmo2 - Open Weights and Data for Vision-Language Models with Video Understanding and Grounding|Molmo2]] (CVPR oral, 2601.10611). Open video pointing and tracking.
+
+## Task-specific frontier
+Pushing one task with a dedicated model.
+- [[SAM 3 - Segment Anything with Concepts|SAM 3]] (2511.16719).
+- [[CoTracker3 - Simpler and Better Point Tracking by Pseudo-Labelling Real Videos|CoTracker3]] (ICCV, 2410.11831).
+- [[The SA-FARI Dataset - Segment Anything in Footage of Animals for Recognition and Identification|SA-FARI]] (CVPR oral, 2511.15622). 11,609 camera-trap videos, 99 species.
+
 ## World models and embodied
 - Closed releases: [Genie 3](https://deepmind.google/blog/genie-3), [Marble](https://www.worldlabs.ai/blog/marble-world-model), [Atlas](https://www.worldlabs.ai/blog/atlas).
 - [[NitroGen - An Open Foundation Model for Generalist Gaming Agents|NitroGen]] (CVPR honourable mention, 2601.02427). 40k hours of gameplay.
 - [[A Frame is Worth One Token - Efficient Generative World Modeling with Delta Tokens|Delta Tokens]] (CVPR highlight, 2604.04913).
 - [[Knowledge Insulating Vision-Language-Action Models - Train Fast, Run Fast, Generalize Better|Knowledge Insulating VLAs]] (NeurIPS spotlight, 2505.23705).
 
-## Segmentation, tracking, VLMs
-- [[SAM 3 - Segment Anything with Concepts|SAM 3]] (2511.16719).
-- [[Molmo2 - Open Weights and Data for Vision-Language Models with Video Understanding and Grounding|Molmo2]] (CVPR oral, 2601.10611). Open video pointing and tracking.
-- [[CoTracker3 - Simpler and Better Point Tracking by Pseudo-Labelling Real Videos|CoTracker3]] (ICCV, 2410.11831).
-- [[The SA-FARI Dataset - Segment Anything in Footage of Animals for Recognition and Identification|SA-FARI]] (CVPR oral, 2511.15622). 11,609 camera-trap videos, 99 species.
-- [[Chain-of-Visual-Thought - Teaching VLMs to See and Think Better with Continuous Visual Tokens|Chain-of-Visual-Thought]] (ECCV oral, 2511.19418). VLMs reason through tokens distilled from DINO, depth, segmentation.
-- [[DepthLM - Metric Depth From Vision Language Models|DepthLM]] (ICLR oral, 2509.25413). A stock VLM does metric depth.
 
 Caveats: ECCV 2026 awards not announced yet. RayZer's award category differs between sources.

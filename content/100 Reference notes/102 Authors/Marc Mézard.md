@@ -1,0 +1,4 @@
+---
+affiliation:
+  - "[[Bocconi University]]"
+---

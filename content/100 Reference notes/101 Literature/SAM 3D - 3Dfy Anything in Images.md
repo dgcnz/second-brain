@@ -10,7 +10,7 @@ authors:
   - "[[Weiyao Wang]]"
   - "[[Michelle Guo]]"
   - "[[Thibaut Hardin]]"
-  - "[[Xiang Li]]"
+  - "[[Xiang (Ryan) Li]]"
   - "[[Aohan Lin]]"
   - "[[Jiawei Liu]]"
   - "[[Ziqi Ma]]"
