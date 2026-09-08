@@ -1,0 +1,5 @@
+---
+affiliation:
+  - "[[Amazon]]"
+  - "[[NVIDIA]]"
+---

@@ -1,0 +1,4 @@
+---
+affiliation:
+  - "[[Ford Motor Company]]"
+---
