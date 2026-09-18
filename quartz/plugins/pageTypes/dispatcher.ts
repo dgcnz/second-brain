@@ -182,7 +182,7 @@ export const PageTypeDispatcher: QuartzEmitterPlugin<Partial<DispatcherOptions>>
       }> = []
       for (const pt of pageTypes) {
         if (!pt.generate) continue
-        const virtualPages = pt.generate({ content, cfg, ctx })
+        const virtualPages = await pt.generate({ content, cfg, ctx })
         const layout = resolveLayout(pt, defaults, byPageType)
         for (const vp of virtualPages) {
           const vpSlug = vp.slug as FullSlug
@@ -276,7 +276,7 @@ export const PageTypeDispatcher: QuartzEmitterPlugin<Partial<DispatcherOptions>>
       }> = []
       for (const pt of pageTypes) {
         if (!pt.generate) continue
-        const virtualPages = pt.generate({ content, cfg, ctx })
+        const virtualPages = await pt.generate({ content, cfg, ctx })
         const layout = resolveLayout(pt, defaults, byPageType)
         for (const vp of virtualPages) {
           const vpSlug = vp.slug as FullSlug

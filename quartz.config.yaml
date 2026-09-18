@@ -177,9 +177,14 @@ plugins:
     enabled: true
   - source: "@quartz-community/tag-page"
     enabled: true
-  # no .canvas / .base files in content/ yet — flip on when you add some
-  - source: "@quartz-community/canvas-page"
-    enabled: false
+  # fork: text cards go through the site's markdown pipeline (wikilinks, math),
+  # Obsidian-style trackpad pan/zoom. Needs the `await pt.generate` patch in
+  # quartz/plugins/pageTypes/dispatcher.ts.
+  - source: "github:dgcnz/canvas-page#v1.1.0-dgcnz.1"
+    enabled: true
+    options:
+      initialFit: width
+  # no .base files in content/ yet — flip on when you add some
   - source: "@quartz-community/bases-page"
     enabled: false
     order: 50
