@@ -1,0 +1,22 @@
+---
+authors:
+  - "[[Maksim Zhdanov]]"
+  - "[[Max Welling]]"
+  - "[[Jan-Willem van de Meent]]"
+year: 2025
+date: 2025-02-24
+tags:
+  - paper
+url: https://arxiv.org/abs/2502.17019
+draft: false
+---
+
+
+> [!tldr] Abstract
+> Large-scale physical systems defined on irregular grids pose significant scalability challenges for deep learning methods, especially in the presence of long-range interactions and multi-scale coupling. Traditional approaches that compute all pairwise interactions, such as attention, become computationally prohibitive as they scale quadratically with the number of nodes. We present Erwin, a hierarchical transformer inspired by methods from computational many-body physics, which combines the efficiency of tree-based algorithms with the expressivity of attention mechanisms. Erwin employs ball tree partitioning to organize computation, which enables linear-time attention by processing nodes in parallel within local neighborhoods of fixed size. Through progressive coarsening and refinement of the ball tree structure, complemented by a novel cross-ball interaction mechanism, it captures both fine-grained local details and global features. We demonstrate Erwin's effectiveness across multiple domains, including cosmology, molecular dynamics, PDE solving, and particle fluid dynamics, where it consistently outperforms baseline methods both in accuracy and computational efficiency.
+
+
+
+## Notes
+
+[Zotero Link](zotero://select/library/items/EXQBMQ9V)

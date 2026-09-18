@@ -28,4 +28,8 @@ date: '2025-04-02'
 
 [Zotero Link](zotero://select/library/items/ETHPH37S)
 
+## Summary
 
+**2025 · Learning from Streaming Video with Orthogonal Gradients**
+
+Modify updates using problem structure. Subtract the component of the current gradient parallel to an EMA of past raw gradients, then feed the result into SGD/AdamW. Addresses correlated updates from sequential video.

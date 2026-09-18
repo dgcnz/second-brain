@@ -21,3 +21,9 @@ date: '2024-02-17'
 ## Notes
 
 ![[Pasted image 20240703203703.png]]
+
+## Summary
+
+**2024 · On Good Practices for Task-Specific Distillation of Large Pretrained Visual Models**
+
+Frozen foundation teacher to specialized student. Train a task head on a frozen teacher encoder; distill alongside task supervision. Show that task-specific distillation complements generic distillation, and that diffusion-based image mixing can improve limited-domain training.

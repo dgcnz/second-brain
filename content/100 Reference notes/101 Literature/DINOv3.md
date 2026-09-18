@@ -46,3 +46,9 @@ draft: false
 ## Notes
 
 [Zotero Link](zotero://select/library/items/3GKP79ES)
+
+## Summary
+
+**2025 · DINOv3**
+
+Vision foundation teacher. Large self-supervised visual encoders; Gram anchoring addresses degradation of dense features during extended training.
